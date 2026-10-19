@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Import and Export",
+    "description": "Import hosts from a JSON file or an SSH config file and export them to share or back up."
+  },
+  "permissions": {
+    "use": {
+      "title": "Import and export hosts",
+      "description": "Import hosts from files and export them."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Download Sample",
+    "importSkipExisting": "Import (skip existing)",
+    "importSSHConfig": "Import from SSH config",
+    "importOverwrite": "Import (overwrite)",
+    "importExportBtn": "Import / Export",
+    "hostsExported": "Hosts exported successfully",
+    "export": {
+      "menuItem": "Export...",
+      "title": "Export hosts",
+      "scope": "Scope",
+      "scopeAll": "All",
+      "scopeSelected": "Selected",
+      "searchHosts": "Search hosts...",
+      "include": "Include",
+      "groupConnection": "Connection",
+      "groupCredentials": "Credentials",
+      "groupNotes": "Notes",
+      "groupTags": "Tags & pin",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Plugin settings",
+      "groupAdvanced": "Advanced config",
+      "preview": "Preview",
+      "moreHosts_one": "... {{count}} more host",
+      "moreHosts_other": "... {{count}} more hosts",
+      "summary": "{{selected}} of {{total}} hosts",
+      "credentialsIncluded": "credentials included",
+      "credentialsExcluded": "credentials excluded",
+      "noneSelected": "No hosts selected",
+      "cancel": "Cancel",
+      "confirm": "Export",
+      "fetchFailed": "Failed to load hosts for export",
+      "bulkButton": "Export"
+    },
+    "importNoHosts": "No hosts found in the file",
+    "importTooMany": "You can import up to {{max}} hosts at once",
+    "importSummary": "Import done: {{imported}} imported, {{updated}} updated, {{failed}} failed",
+    "importHostsFailed": "Failed to import hosts",
+    "importConfigFailed": "Failed to import SSH config"
+  }
+}

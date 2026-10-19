@@ -1,0 +1,66 @@
+{
+  "id": "import-export",
+  "name": "Import and Export",
+  "version": "1.0.0",
+  "description": "Import hosts from a JSON file or an SSH config file and export them to share or back up.",
+  "author": {
+    "name": "Termix"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/Termix-SSH/Plugin-Import-Export",
+  "docs": "https://docs.termix.site/plugins/import-export",
+  "category": "Productivity",
+  "icon": "ArrowDownUp",
+  "features": [
+    "Import hosts from a Termix JSON file",
+    "Import hosts from an SSH config file",
+    "Skip or overwrite hosts that already exist",
+    "Export all or some hosts and pick which fields to include",
+    "Share an export without any passwords or keys"
+  ],
+  "env": [],
+  "engine": {
+    "termix": ">=26.10.3",
+    "api": "^1.5"
+  },
+  "capabilities": [
+    "network:serve",
+    "hosts:read",
+    "hosts:write",
+    "hosts:export",
+    "credentials:write",
+    "ui:surface"
+  ],
+  "locales": "locales",
+  "platforms": ["linux", "win32", "darwin"],
+  "contributes": {
+    "permissions": [
+      {
+        "name": "use",
+        "titleKey": "permissions.use.title",
+        "descriptionKey": "permissions.use.description",
+        "defaultRoles": ["user"]
+      }
+    ],
+    "http": {
+      "legacyRedirects": [
+        {
+          "from": "/host/bulk-import",
+          "to": "/bulk-import"
+        },
+        {
+          "from": "/host/ssh-config-import",
+          "to": "/ssh-config-import"
+        },
+        {
+          "from": "/host/db/hosts/export",
+          "to": "/export"
+        },
+        {
+          "from": "/host/db/host",
+          "to": "/db/host"
+        }
+      ]
+    }
+  }
+}
