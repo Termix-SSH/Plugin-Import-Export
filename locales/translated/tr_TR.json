@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "İçe Aktar ve Dışa Aktar",
+    "description": "Ana bilgisayarları bir JSON dosyasından veya SSH yapılandırma dosyasından içe aktarın ve paylaşmak veya yedeklemek için dışa aktarın."
+  },
+  "permissions": {
+    "use": {
+      "title": "Ana bilgisayarları içe ve dışa aktar",
+      "description": "Ana bilgisayarları dosyalardan içe aktarın ve dışa aktarın."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Örnek İndir",
+    "importSkipExisting": "İçe Aktar (var olanları atla)",
+    "importSSHConfig": "SSH yapılandırmasından içe aktar",
+    "importOverwrite": "İçe Aktar (üzerine yaz)",
+    "importExportBtn": "İçe Aktar / Dışa Aktar",
+    "hostsExported": "Ana bilgisayarlar başarıyla dışa aktarıldı",
+    "export": {
+      "menuItem": "Dışa Aktar...",
+      "title": "Ana bilgisayarları dışa aktar",
+      "scope": "Kapsam",
+      "scopeAll": "Tümü",
+      "scopeSelected": "Seçili",
+      "searchHosts": "Ana bilgisayarları ara...",
+      "include": "Dahil Et",
+      "groupConnection": "Bağlantı",
+      "groupCredentials": "Kimlik Bilgileri",
+      "groupNotes": "Notlar",
+      "groupTags": "Etiketler ve sabitleme",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Atlayıcı ana bilgisayarlar",
+      "groupFeatureFlags": "Eklenti ayarları",
+      "groupAdvanced": "Gelişmiş yapılandırma",
+      "preview": "Önizleme",
+      "moreHosts_one": "... {{count}} ana bilgisayar daha",
+      "moreHosts_other": "... {{count}} ana bilgisayar daha",
+      "summary": "{{total}} ana bilgisayardan {{selected}}",
+      "credentialsIncluded": "kimlik bilgileri dahil",
+      "credentialsExcluded": "kimlik bilgileri hariç",
+      "noneSelected": "Hiçbir ana bilgisayar seçilmedi",
+      "cancel": "İptal",
+      "confirm": "Dışa Aktar",
+      "fetchFailed": "Dışa aktarmak için ana bilgisayarlar yüklenemedi",
+      "bulkButton": "Dışa Aktar"
+    },
+    "importNoHosts": "Dosyada ana bilgisayar bulunamadı",
+    "importTooMany": "Tek seferde en fazla {{max}} ana bilgisayar içe aktarabilirsiniz",
+    "importSummary": "İçe aktarma tamamlandı: {{imported}} içe aktarıldı, {{updated}} güncellendi, {{failed}} başarısız oldu",
+    "importHostsFailed": "Ana bilgisayarlar içe aktarılamadı",
+    "importConfigFailed": "SSH yapılandırması içe aktarılamadı"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Importera och exportera",
+    "description": "Importera värdar från en JSON-fil eller en SSH-konfigurationsfil och exportera dem för att dela eller säkerhetskopiera."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importera och exportera värdar",
+      "description": "Importera värdar från filer och exportera dem."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Ladda ner exempel",
+    "importSkipExisting": "Importera (hoppa över befintliga)",
+    "importSSHConfig": "Importera från SSH-konfiguration",
+    "importOverwrite": "Importera (skriv över)",
+    "importExportBtn": "Importera / Exportera",
+    "hostsExported": "Värdar exporterades korrekt",
+    "export": {
+      "menuItem": "Exportera...",
+      "title": "Exportera värdar",
+      "scope": "Omfattning",
+      "scopeAll": "Alla",
+      "scopeSelected": "Valda",
+      "searchHosts": "Sök värdar...",
+      "include": "Inkludera",
+      "groupConnection": "Anslutning",
+      "groupCredentials": "Inloggningsuppgifter",
+      "groupNotes": "Anteckningar",
+      "groupTags": "Taggar och fäst",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Inställningar för plugin",
+      "groupAdvanced": "Avancerad konfiguration",
+      "preview": "Förhandsgranskning",
+      "moreHosts_one": "... {{count}} till värd",
+      "moreHosts_other": "... {{count}} till värdar",
+      "summary": "{{selected}} av {{total}} värdar",
+      "credentialsIncluded": "inloggningsuppgifter inkluderade",
+      "credentialsExcluded": "inloggningsuppgifter exkluderade",
+      "noneSelected": "Inga värdar valda",
+      "cancel": "Avbryt",
+      "confirm": "Exportera",
+      "fetchFailed": "Kunde inte ladda värdar för export",
+      "bulkButton": "Exportera"
+    },
+    "importNoHosts": "Inga värdar hittades i filen",
+    "importTooMany": "Du kan importera upp till {{max}} värdar åt gången",
+    "importSummary": "Import klar: {{imported}} importerade, {{updated}} uppdaterade, {{failed}} misslyckade",
+    "importHostsFailed": "Kunde inte importera värdar",
+    "importConfigFailed": "Kunde inte importera SSH-konfiguration"
+  }
+}

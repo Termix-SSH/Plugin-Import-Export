@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Importálás és exportálás",
+    "description": "Hostok importálása JSON- vagy SSH-konfigurációs fájlból, valamint exportálása megosztáshoz vagy biztonsági mentéshez."
+  },
+  "permissions": {
+    "use": {
+      "title": "Hostok importálása és exportálása",
+      "description": "Hostok importálása fájlokból és exportálása."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Minta letöltése",
+    "importSkipExisting": "Importálás (létezők kihagyása)",
+    "importSSHConfig": "Importálás SSH-konfigurációból",
+    "importOverwrite": "Importálás (felülírás)",
+    "importExportBtn": "Importálás / Exportálás",
+    "hostsExported": "A hostok sikeresen exportálva",
+    "export": {
+      "menuItem": "Exportálás...",
+      "title": "Hostok exportálása",
+      "scope": "Hatókör",
+      "scopeAll": "Összes",
+      "scopeSelected": "Kijelöltek",
+      "searchHosts": "Hostok keresése...",
+      "include": "Belefoglalás",
+      "groupConnection": "Csatlakozás",
+      "groupCredentials": "Hitelesítő adatok",
+      "groupNotes": "Jegyzetek",
+      "groupTags": "Címkék és rögzítés",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Átjáró hostok",
+      "groupFeatureFlags": "Bővítménybeállítások",
+      "groupAdvanced": "Haladó konfiguráció",
+      "preview": "Előnézet",
+      "moreHosts_one": "... még {{count}} host",
+      "moreHosts_other": "... még {{count}} host",
+      "summary": "{{selected}} / {{total}} host",
+      "credentialsIncluded": "hitelesítő adatok beletartoznak",
+      "credentialsExcluded": "hitelesítő adatok kizárva",
+      "noneSelected": "Nincs kijelölt host",
+      "cancel": "Mégse",
+      "confirm": "Exportálás",
+      "fetchFailed": "Nem sikerült betölteni a hostokat az exportáláshoz",
+      "bulkButton": "Exportálás"
+    },
+    "importNoHosts": "Nem található host a fájlban",
+    "importTooMany": "Egyszerre legfeljebb {{max}} hostot importálhatsz",
+    "importSummary": "Importálás kész: {{imported}} importálva, {{updated}} frissítve, {{failed}} sikertelen",
+    "importHostsFailed": "Nem sikerült importálni a hostokat",
+    "importConfigFailed": "Nem sikerült importálni az SSH-konfigurációt"
+  }
+}

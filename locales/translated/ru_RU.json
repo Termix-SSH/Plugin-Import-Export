@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Импорт и экспорт",
+    "description": "Импорт хостов из JSON-файла или файла конфигурации SSH и экспорт для обмена или резервного копирования."
+  },
+  "permissions": {
+    "use": {
+      "title": "Импорт и экспорт хостов",
+      "description": "Импорт хостов из файлов и их экспорт."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Скачать образец",
+    "importSkipExisting": "Импорт (пропустить существующие)",
+    "importSSHConfig": "Импорт из конфигурации SSH",
+    "importOverwrite": "Импорт (перезаписать)",
+    "importExportBtn": "Импорт / Экспорт",
+    "hostsExported": "Хосты успешно экспортированы",
+    "export": {
+      "menuItem": "Экспорт...",
+      "title": "Экспорт хостов",
+      "scope": "Область",
+      "scopeAll": "Все",
+      "scopeSelected": "Выбранные",
+      "searchHosts": "Поиск хостов...",
+      "include": "Включить",
+      "groupConnection": "Подключение",
+      "groupCredentials": "Учетные данные",
+      "groupNotes": "Заметки",
+      "groupTags": "Теги и закрепление",
+      "groupProxy": "Прокси",
+      "groupJumpHosts": "Промежуточные хосты",
+      "groupFeatureFlags": "Настройки плагинов",
+      "groupAdvanced": "Расширенная конфигурация",
+      "preview": "Предпросмотр",
+      "moreHosts_one": "... ещё {{count}} хост",
+      "moreHosts_few": "... ещё {{count}} хоста",
+      "moreHosts_many": "... ещё {{count}} хостов",
+      "moreHosts_other": "... ещё {{count}} хостов",
+      "summary": "{{selected}} из {{total}} хостов",
+      "credentialsIncluded": "учетные данные включены",
+      "credentialsExcluded": "учетные данные исключены",
+      "noneSelected": "Хосты не выбраны",
+      "cancel": "Отмена",
+      "confirm": "Экспорт",
+      "fetchFailed": "Не удалось загрузить хосты для экспорта",
+      "bulkButton": "Экспорт"
+    },
+    "importNoHosts": "В файле не найдено хостов",
+    "importTooMany": "Можно импортировать не более {{max}} хостов за раз",
+    "importSummary": "Импорт завершён: {{imported}} импортировано, {{updated}} обновлено, {{failed}} ошибок",
+    "importHostsFailed": "Не удалось импортировать хосты",
+    "importConfigFailed": "Не удалось импортировать конфигурацию SSH"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Import ja eksport",
+    "description": "Impordi peremeesmängijad JSON-failist või SSH-konfiguratsioonifailist ja ekspordi neid jagamiseks või varundamiseks."
+  },
+  "permissions": {
+    "use": {
+      "title": "Peremeesmängijate importimine ja eksportimine",
+      "description": "Impordi peremeesmängijaid failidest ja ekspordi need."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Laadi näidis alla",
+    "importSkipExisting": "Impordi (jätka olemasolevad vahele)",
+    "importSSHConfig": "Impordi SSH-konfiguratsioonist",
+    "importOverwrite": "Impordi (kirjuta üle)",
+    "importExportBtn": "Import / Eksport",
+    "hostsExported": "Peremeesmängijad eksporditi edukalt",
+    "export": {
+      "menuItem": "Ekspordi...",
+      "title": "Ekspordi hostid",
+      "scope": "Ulatus",
+      "scopeAll": "Kõik",
+      "scopeSelected": "Valitud",
+      "searchHosts": "Otsi hoste...",
+      "include": "Kaasa",
+      "groupConnection": "Ühendus",
+      "groupCredentials": "Sisselogimisandmed",
+      "groupNotes": "Märkmed",
+      "groupTags": "Sildid ja kinnitamine",
+      "groupProxy": "Proksy",
+      "groupJumpHosts": "Hüppemasinad",
+      "groupFeatureFlags": "Pärisseadistused",
+      "groupAdvanced": "Täpsemad seaded",
+      "preview": "Eelvaade",
+      "moreHosts_one": "... veel {{count}} masin",
+      "moreHosts_other": "... veel {{count}} masinat",
+      "summary": "{{selected}} / {{total}} masinat",
+      "credentialsIncluded": "sisaldab sisselogimistandeid",
+      "credentialsExcluded": "sisaldab sisselogimistandeid",
+      "noneSelected": "Ühtegi hosti ei ole valitud",
+      "cancel": "Tühista",
+      "confirm": "Ekspordi",
+      "fetchFailed": "Hostide laadimine eksportimiseks ebaõnnestus",
+      "bulkButton": "Ekspordi"
+    },
+    "importNoHosts": "Failist ühtegi hosti ei leitud",
+    "importTooMany": "Saad korraga importida kuni {{max}} hosti",
+    "importSummary": "Importimine lõpetatud: {{imported}} imporditud, {{updated}} uuendatud, {{failed}} ebaõnnestunud",
+    "importHostsFailed": "Hostide importimine ebaõnnestus",
+    "importConfigFailed": "SSH-konfiguratsiooni importimine ebaõnnestus"
+  }
+}

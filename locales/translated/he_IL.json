@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "ייבוא וייצוא",
+    "description": "ייבוא מארחים מקובץ JSON או מקובץ תצורת SSH וייצוא שלהם לשיתוף או לגיבוי."
+  },
+  "permissions": {
+    "use": {
+      "title": "ייבוא וייצוא מארחים",
+      "description": "ייבוא מארחים מקבצים וייצוא שלהם."
+    }
+  },
+  "hosts": {
+    "downloadSample": "הורדת דוגמה",
+    "importSkipExisting": "ייבוא (השבת קיימים)",
+    "importSSHConfig": "ייבוא מתצורת SSH",
+    "importOverwrite": "ייבוא (החלף)",
+    "importExportBtn": "ייבוא / ייצוא",
+    "hostsExported": "המארחים ייוצאו בהצלחה",
+    "export": {
+      "menuItem": "ייצוא...",
+      "title": "ייצוא מארחים",
+      "scope": "טווח",
+      "scopeAll": "הכל",
+      "scopeSelected": "נבחר",
+      "searchHosts": "חיפוש מארחים...",
+      "include": "כלול",
+      "groupConnection": "חיבור",
+      "groupCredentials": "פרטי כניסה",
+      "groupNotes": "הערות",
+      "groupTags": "תגיות וסימון",
+      "groupProxy": "פרוקסי",
+      "groupJumpHosts": "מארחי קפיצה",
+      "groupFeatureFlags": "הגדרות תוסף",
+      "groupAdvanced": "תצורה מתקדמת",
+      "preview": "תצוגה מקדימה",
+      "moreHosts_one": "... מארח אחד נוסף",
+      "moreHosts_two": "... {{count}} מארחים נוספים",
+      "moreHosts_other": "... {{count}} מארחים נוספים",
+      "summary": "{{selected}} מתוך {{total}} מארחים",
+      "credentialsIncluded": "פרטי כניסה כלולים",
+      "credentialsExcluded": "פרטי כניסה לא כלולים",
+      "noneSelected": "לא נבחרו מארחים",
+      "cancel": "ביטול",
+      "confirm": "ייצוא",
+      "fetchFailed": "טעינת המארחים לייצוא נכשלה",
+      "bulkButton": "ייצוא"
+    },
+    "importNoHosts": "לא נמצאו מארחים בקובץ",
+    "importTooMany": "ניתן לייבא עד {{max}} מארחים בבת אחת",
+    "importSummary": "הייבוא הושלם: {{imported}} יובאו, {{updated}} עודכנו, {{failed}} נכשלו",
+    "importHostsFailed": "ייבוא המארחים נכשל",
+    "importConfigFailed": "ייבוא תצורת SSH נכשל"
+  }
+}

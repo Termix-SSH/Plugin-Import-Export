@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "匯入與匯出",
+    "description": "從 JSON 檔案或 SSH 設定檔匯入主機，並匯出以分享或備份。"
+  },
+  "permissions": {
+    "use": {
+      "title": "匯入與匯出主機",
+      "description": "從檔案匯入主機並將其匯出。"
+    }
+  },
+  "hosts": {
+    "downloadSample": "下載範例",
+    "importSkipExisting": "匯入（跳過已存在）",
+    "importSSHConfig": "從 SSH 設定匯入",
+    "importOverwrite": "匯入（覆蓋）",
+    "importExportBtn": "匯入 / 匯出",
+    "hostsExported": "主機匯出成功",
+    "export": {
+      "menuItem": "匯出...",
+      "title": "匯出主機",
+      "scope": "範圍",
+      "scopeAll": "全部",
+      "scopeSelected": "已選取",
+      "searchHosts": "搜尋主機...",
+      "include": "包含",
+      "groupConnection": "連線",
+      "groupCredentials": "憑證",
+      "groupNotes": "備註",
+      "groupTags": "標籤與釘選",
+      "groupProxy": "代理",
+      "groupJumpHosts": "跳板主機",
+      "groupFeatureFlags": "外掛設定",
+      "groupAdvanced": "進階設定",
+      "preview": "預覽",
+      "moreHosts_other": "... 還有 {{count}} 個主機",
+      "summary": "已選取 {{selected}} / 共 {{total}} 個主機",
+      "credentialsIncluded": "包含憑證",
+      "credentialsExcluded": "排除憑證",
+      "noneSelected": "未選取任何主機",
+      "cancel": "取消",
+      "confirm": "匯出",
+      "fetchFailed": "無法載入要匯出的主機",
+      "bulkButton": "匯出"
+    },
+    "importNoHosts": "檔案中未找到任何主機",
+    "importTooMany": "一次最多可匯入 {{max}} 個主機",
+    "importSummary": "匯入完成：{{imported}} 個已匯入，{{updated}} 個已更新，{{failed}} 個失敗",
+    "importHostsFailed": "匯入主機失敗",
+    "importConfigFailed": "匯入 SSH 設定失敗"
+  }
+}

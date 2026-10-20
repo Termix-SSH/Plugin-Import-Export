@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Importar e Exportar",
+    "description": "Importe hosts de um arquivo JSON ou de um arquivo de configuração SSH e exporte-os para compartilhar ou fazer backup."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importar e exportar hosts",
+      "description": "Importar hosts de arquivos e exportá-los."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Baixar Exemplo",
+    "importSkipExisting": "Importar (ignorar existentes)",
+    "importSSHConfig": "Importar da configuração SSH",
+    "importOverwrite": "Importar (substituir)",
+    "importExportBtn": "Importar / Exportar",
+    "hostsExported": "Hosts exportados com sucesso",
+    "export": {
+      "menuItem": "Exportar...",
+      "title": "Exportar hosts",
+      "scope": "Escopo",
+      "scopeAll": "Todos",
+      "scopeSelected": "Selecionados",
+      "searchHosts": "Pesquisar hosts...",
+      "include": "Incluir",
+      "groupConnection": "Conexão",
+      "groupCredentials": "Credenciais",
+      "groupNotes": "Notas",
+      "groupTags": "Tags e fixar",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Configurações do plugin",
+      "groupAdvanced": "Configuração avançada",
+      "preview": "Visualização",
+      "moreHosts_one": "... mais {{count}} host",
+      "moreHosts_many": "... mais {{count}} hosts",
+      "moreHosts_other": "... mais {{count}} hosts",
+      "summary": "{{selected}} de {{total}} hosts",
+      "credentialsIncluded": "credenciais incluídas",
+      "credentialsExcluded": "credenciais excluídas",
+      "noneSelected": "Nenhum host selecionado",
+      "cancel": "Cancelar",
+      "confirm": "Exportar",
+      "fetchFailed": "Falha ao carregar hosts para exportação",
+      "bulkButton": "Exportar"
+    },
+    "importNoHosts": "Nenhum host encontrado no arquivo",
+    "importTooMany": "Você pode importar até {{max}} hosts de uma vez",
+    "importSummary": "Importação concluída: {{imported}} importados, {{updated}} atualizados, {{failed}} falharam",
+    "importHostsFailed": "Falha ao importar hosts",
+    "importConfigFailed": "Falha ao importar configuração SSH"
+  }
+}

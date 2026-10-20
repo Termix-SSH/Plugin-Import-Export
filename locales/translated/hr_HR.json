@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Uvoz i izvoz",
+    "description": "Uvozite hostove iz JSON datoteke ili SSH konfiguracijske datoteke te ih izvozite radi dijeljenja ili sigurnosnog kopiranja."
+  },
+  "permissions": {
+    "use": {
+      "title": "Uvoz i izvoz hostova",
+      "description": "Uvoz hostova iz datoteka i njihov izvoz."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Preuzmi primjer",
+    "importSkipExisting": "Uvoz (preskoči postojeće)",
+    "importSSHConfig": "Uvoz iz SSH konfiguracije",
+    "importOverwrite": "Uvoz (prepiši)",
+    "importExportBtn": "Uvoz / Izvoz",
+    "hostsExported": "Hostovi su uspješno izvezeni",
+    "export": {
+      "menuItem": "Izvoz...",
+      "title": "Izvoz hostova",
+      "scope": "Opseg",
+      "scopeAll": "Svi",
+      "scopeSelected": "Odabrani",
+      "searchHosts": "Pretraži hostove...",
+      "include": "Uključi",
+      "groupConnection": "Povezivanje",
+      "groupCredentials": "Prijavni podaci",
+      "groupNotes": "Bilješke",
+      "groupTags": "Oznake i pinanje",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Posrednički hostovi",
+      "groupFeatureFlags": "Postavke dodataka",
+      "groupAdvanced": "Napredna konfiguracija",
+      "preview": "Pregled",
+      "moreHosts_one": "... još {{count}} host",
+      "moreHosts_few": "... još {{count}} hosta",
+      "moreHosts_other": "... još {{count}} hostova",
+      "summary": "{{selected}} od {{total}} hostova",
+      "credentialsIncluded": "prijavni podaci uključeni",
+      "credentialsExcluded": "prijavni podaci isključeni",
+      "noneSelected": "Nijedan host nije odabran",
+      "cancel": "Odustani",
+      "confirm": "Izvoz",
+      "fetchFailed": "Neuspjelo učitavanje hostova za izvoz",
+      "bulkButton": "Izvoz"
+    },
+    "importNoHosts": "U datoteci nisu pronađeni hostovi",
+    "importTooMany": "Izjednom možete uvesti najviše {{max}} hostova",
+    "importSummary": "Uvoz završen: {{imported}} uvezeno, {{updated}} ažurirano, {{failed}} neuspješno",
+    "importHostsFailed": "Neuspješan uvoz hostova",
+    "importConfigFailed": "Neuspješan uvoz SSH konfiguracije"
+  }
+}

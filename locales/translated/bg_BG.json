@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Импорт и експорт",
+    "description": "Импортирайте хостове от JSON файл или SSH конфигурационен файл и ги експортирайте, за да ги споделите или архивирате."
+  },
+  "permissions": {
+    "use": {
+      "title": "Импортиране и експортиране на хостове",
+      "description": "Импортиране на хостове от файлове и експортиране на такива."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Изтегляне на пример",
+    "importSkipExisting": "Импортиране (пропускане на съществуващи)",
+    "importSSHConfig": "Импортиране от SSH конфигурация",
+    "importOverwrite": "Импортиране (записване)",
+    "importExportBtn": "Импорт / Експорт",
+    "hostsExported": "Хостите бяха експортирани успешно",
+    "export": {
+      "menuItem": "Експортиране...",
+      "title": "Експортиране на хостове",
+      "scope": "Обхват",
+      "scopeAll": "Всички",
+      "scopeSelected": "Избрани",
+      "searchHosts": "Търсене на хостове...",
+      "include": "Включване",
+      "groupConnection": "Връзка",
+      "groupCredentials": "Удостоверения",
+      "groupNotes": "Бележки",
+      "groupTags": "Етикети и закрепване",
+      "groupProxy": "Прокси",
+      "groupJumpHosts": "Междинни сървъри",
+      "groupFeatureFlags": "Настройки на плъгините",
+      "groupAdvanced": "Разширена конфигурация",
+      "preview": "Преглед",
+      "moreHosts_one": "... още {{count}} хост",
+      "moreHosts_other": "... още {{count}} хоста",
+      "summary": "{{selected}} от {{total}} хоста",
+      "credentialsIncluded": "включени идентификационни данни",
+      "credentialsExcluded": "изключени идентификационни данни",
+      "noneSelected": "Не са избрани хостове",
+      "cancel": "Отказ",
+      "confirm": "Експортиране",
+      "fetchFailed": "Грешка при зареждане на хостовете за експортиране",
+      "bulkButton": "Експортиране"
+    },
+    "importNoHosts": "В файла не са намерени хостове",
+    "importTooMany": "Можете да импортирате до {{max}} хоста наведнъж",
+    "importSummary": "Импортирането е приключено: {{imported}} импортирани, {{updated}} актуализирани, {{failed}} неуспешни",
+    "importHostsFailed": "Грешка при импортиране на хостовете",
+    "importConfigFailed": "Грешка при импортиране на SSH конфигурацията"
+  }
+}

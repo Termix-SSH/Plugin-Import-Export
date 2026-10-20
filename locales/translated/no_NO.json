@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Import og eksport",
+    "description": "Importer verter fra en JSON-fil eller en SSH-konfigurasjonsfil, og eksporter dem for deling eller sikkerhetskopiering."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importer og eksporter verter",
+      "description": "Importer verter fra filer og eksporter dem."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Last ned eksempel",
+    "importSkipExisting": "Importer (hopp over eksisterende)",
+    "importSSHConfig": "Importer fra SSH-konfigurasjon",
+    "importOverwrite": "Importer (overskriv)",
+    "importExportBtn": "Importer / Eksporter",
+    "hostsExported": "Verter ble eksportert",
+    "export": {
+      "menuItem": "Eksporter...",
+      "title": "Eksporter verter",
+      "scope": "Omfang",
+      "scopeAll": "Alle",
+      "scopeSelected": "Valgte",
+      "searchHosts": "Søk etter verter...",
+      "include": "Inkluder",
+      "groupConnection": "Tilkobling",
+      "groupCredentials": "Innloggingsdetaljer",
+      "groupNotes": "Notater",
+      "groupTags": "Tagger og fest",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Hopp-verter",
+      "groupFeatureFlags": "Tilleggsinnstillinger",
+      "groupAdvanced": "Avansert konfigurasjon",
+      "preview": "Forhåndsvisning",
+      "moreHosts_one": "... {{count}} til vert",
+      "moreHosts_other": "... {{count}} til verter",
+      "summary": "{{selected}} av {{total}} verter",
+      "credentialsIncluded": "innloggingsdetaljer inkludert",
+      "credentialsExcluded": "innloggingsdetaljer ekskludert",
+      "noneSelected": "Ingen verter valgt",
+      "cancel": "Avbryt",
+      "confirm": "Eksporter",
+      "fetchFailed": "Kunne ikke laste inn verter for eksport",
+      "bulkButton": "Eksporter"
+    },
+    "importNoHosts": "Ingen verter funnet i filen",
+    "importTooMany": "Du kan importere opptil {{max}} verter om gangen",
+    "importSummary": "Import fullført: {{imported}} importert, {{updated}} oppdatert, {{failed}} mislyktes",
+    "importHostsFailed": "Kunne ikke importere verter",
+    "importConfigFailed": "Kunne ikke importere SSH-konfigurasjon"
+  }
+}

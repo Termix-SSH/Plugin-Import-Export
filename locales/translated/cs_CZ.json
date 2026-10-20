@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Import a export",
+    "description": "Importujte hostitele z JSON souboru nebo SSH konfiguračního souboru a exportujte je pro sdílení nebo zálohu."
+  },
+  "permissions": {
+    "use": {
+      "title": "Import a export hostitelů",
+      "description": "Importujte hostitele ze souborů a exportujte je."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Stáhnout vzor",
+    "importSkipExisting": "Import (přeskočit existující)",
+    "importSSHConfig": "Import z SSH konfigurace",
+    "importOverwrite": "Import (přepsat)",
+    "importExportBtn": "Import / Export",
+    "hostsExported": "Hostitelé úspěšně exportováni",
+    "export": {
+      "menuItem": "Exportovat...",
+      "title": "Exportovat hosty",
+      "scope": "Rozsah",
+      "scopeAll": "Všechny",
+      "scopeSelected": "Vybrané",
+      "searchHosts": "Hledat hosty...",
+      "include": "Zahrnout",
+      "groupConnection": "Připojení",
+      "groupCredentials": "Přihlašovací údaje",
+      "groupNotes": "Poznámky",
+      "groupTags": "Štítky a připnutí",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosty",
+      "groupFeatureFlags": "Nastavení pluginů",
+      "groupAdvanced": "Rozšířená konfigurace",
+      "preview": "Náhled",
+      "moreHosts_one": "... {{count}} další host",
+      "moreHosts_few": "... {{count}} další hosté",
+      "moreHosts_many": "... {{count}} dalších hostů",
+      "moreHosts_other": "... {{count}} dalších hostů",
+      "summary": "{{selected}} z {{total}} hostů",
+      "credentialsIncluded": "přihlašovací údaje zahrnuty",
+      "credentialsExcluded": "přihlašovací údaje vyloučeny",
+      "noneSelected": "Nebyly vybrány žádné hosty",
+      "cancel": "Zrušit",
+      "confirm": "Exportovat",
+      "fetchFailed": "Nepodařilo se načíst hosty pro export",
+      "bulkButton": "Exportovat"
+    },
+    "importNoHosts": "V souboru nebyly nalezeny žádné hosty",
+    "importTooMany": "Najednou můžete importovat až {{max}} hostů",
+    "importSummary": "Import dokončen: {{imported}} importováno, {{updated}} aktualizováno, {{failed}} selhalo",
+    "importHostsFailed": "Nepodařilo se importovat hosty",
+    "importConfigFailed": "Nepodařilo se importovat SSH konfiguraci"
+  }
+}

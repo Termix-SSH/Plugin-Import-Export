@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Import und Export",
+    "description": "Importieren Sie Hosts aus einer JSON-Datei oder einer SSH-Konfigurationsdatei und exportieren Sie sie, um sie zu teilen oder zu sichern."
+  },
+  "permissions": {
+    "use": {
+      "title": "Hosts importieren und exportieren",
+      "description": "Hosts aus Dateien importieren und exportieren."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Beispiel herunterladen",
+    "importSkipExisting": "Importieren (vorhandene überspringen)",
+    "importSSHConfig": "Aus SSH-Konfiguration importieren",
+    "importOverwrite": "Importieren (überschreiben)",
+    "importExportBtn": "Import / Export",
+    "hostsExported": "Hosts erfolgreich exportiert",
+    "export": {
+      "menuItem": "Exportieren...",
+      "title": "Hosts exportieren",
+      "scope": "Umfang",
+      "scopeAll": "Alle",
+      "scopeSelected": "Ausgewählt",
+      "searchHosts": "Hosts suchen...",
+      "include": "Einschließen",
+      "groupConnection": "Verbindung",
+      "groupCredentials": "Anmeldeinformationen",
+      "groupNotes": "Notizen",
+      "groupTags": "Tags & Anheften",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump-Hosts",
+      "groupFeatureFlags": "Plugin-Einstellungen",
+      "groupAdvanced": "Erweiterte Konfiguration",
+      "preview": "Vorschau",
+      "moreHosts_one": "... {{count}} weiterer Host",
+      "moreHosts_other": "... {{count}} weitere Hosts",
+      "summary": "{{selected}} von {{total}} Hosts",
+      "credentialsIncluded": "Anmeldeinformationen enthalten",
+      "credentialsExcluded": "Anmeldeinformationen ausgeschlossen",
+      "noneSelected": "Keine Hosts ausgewählt",
+      "cancel": "Abbrechen",
+      "confirm": "Exportieren",
+      "fetchFailed": "Hosts konnten nicht für den Export geladen werden",
+      "bulkButton": "Exportieren"
+    },
+    "importNoHosts": "Keine Hosts in der Datei gefunden",
+    "importTooMany": "Sie können auf einmal bis zu {{max}} Hosts importieren",
+    "importSummary": "Import abgeschlossen: {{imported}} importiert, {{updated}} aktualisiert, {{failed}} fehlgeschlagen",
+    "importHostsFailed": "Import der Hosts fehlgeschlagen",
+    "importConfigFailed": "Import der SSH-Konfiguration fehlgeschlagen"
+  }
+}

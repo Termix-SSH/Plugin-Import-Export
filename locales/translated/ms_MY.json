@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "Import dan Eksport",
+    "description": "Import hos daripada fail JSON atau fail konfigurasi SSH dan eksportkannya untuk dikongsi atau sebagai sandaran."
+  },
+  "permissions": {
+    "use": {
+      "title": "Import dan eksport hos",
+      "description": "Import hos daripada fail dan eksportkannya."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Muat Turun Contoh",
+    "importSkipExisting": "Import (langkau yang sedia ada)",
+    "importSSHConfig": "Import daripada konfigurasi SSH",
+    "importOverwrite": "Import (timpa)",
+    "importExportBtn": "Import / Eksport",
+    "hostsExported": "Hos berjaya dieksport",
+    "export": {
+      "menuItem": "Eksport...",
+      "title": "Eksport hos",
+      "scope": "Skop",
+      "scopeAll": "Semua",
+      "scopeSelected": "Dipilih",
+      "searchHosts": "Cari hos...",
+      "include": "Sertakan",
+      "groupConnection": "Sambungan",
+      "groupCredentials": "Kelayakan",
+      "groupNotes": "Nota",
+      "groupTags": "Tag & pin",
+      "groupProxy": "Proksi",
+      "groupJumpHosts": "Hos lompat",
+      "groupFeatureFlags": "Tetapan plugin",
+      "groupAdvanced": "Konfigurasi lanjutan",
+      "preview": "Pratonton",
+      "moreHosts_other": "... {{count}} hos lagi",
+      "summary": "{{selected}} daripada {{total}} hos",
+      "credentialsIncluded": "kelayakan disertakan",
+      "credentialsExcluded": "kelayakan dikecualikan",
+      "noneSelected": "Tiada hos dipilih",
+      "cancel": "Batal",
+      "confirm": "Eksport",
+      "fetchFailed": "Gagal memuatkan hos untuk eksport",
+      "bulkButton": "Eksport"
+    },
+    "importNoHosts": "Tiada hos ditemui dalam fail",
+    "importTooMany": "Anda boleh import sehingga {{max}} hos sekaligus",
+    "importSummary": "Import selesai: {{imported}} diimport, {{updated}} dikemas kini, {{failed}} gagal",
+    "importHostsFailed": "Gagal mengimport hos",
+    "importConfigFailed": "Gagal mengimport konfigurasi SSH"
+  }
+}

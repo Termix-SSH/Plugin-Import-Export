@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Import i eksport",
+    "description": "Importuj hosty z pliku JSON lub pliku konfiguracyjnego SSH oraz eksportuj je, aby udostępnić lub utworzyć kopię zapasową."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importuj i eksportuj hosty",
+      "description": "Importuj hosty z plików i eksportuj je."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Pobierz przykładowy plik",
+    "importSkipExisting": "Importuj (pomiń istniejące)",
+    "importSSHConfig": "Importuj z konfiguracji SSH",
+    "importOverwrite": "Importuj (nadpisz)",
+    "importExportBtn": "Import / Eksport",
+    "hostsExported": "Hosty zostały pomyślnie wyeksportowane",
+    "export": {
+      "menuItem": "Eksportuj...",
+      "title": "Eksportuj hosty",
+      "scope": "Zakres",
+      "scopeAll": "Wszystkie",
+      "scopeSelected": "Zaznaczone",
+      "searchHosts": "Szukaj hostów...",
+      "include": "Uwzględnij",
+      "groupConnection": "Połączenie",
+      "groupCredentials": "Dane logowania",
+      "groupNotes": "Notatki",
+      "groupTags": "Tagi i przypięcie",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Hosty przeskokowe",
+      "groupFeatureFlags": "Ustawienia wtyczek",
+      "groupAdvanced": "Zaawansowana konfiguracja",
+      "preview": "Podgląd",
+      "moreHosts_one": "... {{count}} więcej hosta",
+      "moreHosts_few": "... {{count}} więcej hostów",
+      "moreHosts_many": "... {{count}} więcej hostów",
+      "moreHosts_other": "... {{count}} więcej hostów",
+      "summary": "{{selected}} z {{total}} hostów",
+      "credentialsIncluded": "uwzględniono dane logowania",
+      "credentialsExcluded": "pominięto dane logowania",
+      "noneSelected": "Nie zaznaczono żadnych hostów",
+      "cancel": "Anuluj",
+      "confirm": "Eksportuj",
+      "fetchFailed": "Nie udało się załadować hostów do eksportu",
+      "bulkButton": "Eksportuj"
+    },
+    "importNoHosts": "Nie znaleziono hostów w pliku",
+    "importTooMany": "Możesz zaimportować maksymalnie {{max}} hostów naraz",
+    "importSummary": "Import zakończony: {{imported}} zaimportowano, {{updated}} zaktualizowano, {{failed}} nieudanych",
+    "importHostsFailed": "Nie udało się zaimportować hostów",
+    "importConfigFailed": "Nie udało się zaimportować konfiguracji SSH"
+  }
+}

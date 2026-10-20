@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Importació i exportació",
+    "description": "Importa amfitrions des d'un fitxer JSON o un fitxer de configuració SSH i exporta'ls per compartir-los o fer-ne una còpia de seguretat."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importar i exportar amfitrions",
+      "description": "Importa amfitrions des de fitxers i exporta'ls."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Descarrega l'exemple",
+    "importSkipExisting": "Importa (omet els existents)",
+    "importSSHConfig": "Importa des de la configuració SSH",
+    "importOverwrite": "Importa (sobreescriu)",
+    "importExportBtn": "Importa / Exporta",
+    "hostsExported": "Amfitrions exportats correctament",
+    "export": {
+      "menuItem": "Exportar...",
+      "title": "Exportar amfitrions",
+      "scope": "Abast",
+      "scopeAll": "Tots",
+      "scopeSelected": "Seleccionats",
+      "searchHosts": "Cercar amfitrions...",
+      "include": "Incloure",
+      "groupConnection": "Connexió",
+      "groupCredentials": "Credencials",
+      "groupNotes": "Notes",
+      "groupTags": "Etiquetes i fixar",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Hosts de salt",
+      "groupFeatureFlags": "Configuració del complement",
+      "groupAdvanced": "Configuració avançada",
+      "preview": "Vista prèvia",
+      "moreHosts_one": "... {{count}} host més",
+      "moreHosts_many": "... {{count}} hosts més",
+      "moreHosts_other": "... {{count}} hosts més",
+      "summary": "{{selected}} de {{total}} amfitrions",
+      "credentialsIncluded": "credencials incloses",
+      "credentialsExcluded": "credencials excloses",
+      "noneSelected": "Cap amfitrió seleccionat",
+      "cancel": "Cancel·la",
+      "confirm": "Exporta",
+      "fetchFailed": "No s'han pogut carregar els amfitrions per a l'exportació",
+      "bulkButton": "Exportar"
+    },
+    "importNoHosts": "No s'han trobat amfitrions al fitxer",
+    "importTooMany": "Pots importar fins a {{max}} servidors alhora",
+    "importSummary": "Importació completada: {{imported}} importats, {{updated}} actualitzats, {{failed}} fallits",
+    "importHostsFailed": "No s'han pogut importar els amfitrions",
+    "importConfigFailed": "No s'ha pogut importar la configuració SSH"
+  }
+}

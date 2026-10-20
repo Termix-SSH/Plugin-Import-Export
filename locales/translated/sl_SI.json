@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Uvoz in izvoz",
+    "description": "Uvoz gostiteljev iz JSON datoteke ali SSH konfiguracijske datoteke ter izvoz za deljenje ali varnostno kopiranje."
+  },
+  "permissions": {
+    "use": {
+      "title": "Uvoz in izvoz gostiteljev",
+      "description": "Uvoz gostiteljev iz datotek in njihov izvoz."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Prenesi vzorec",
+    "importSkipExisting": "Uvozi (preskoži obstoječe)",
+    "importSSHConfig": "Uvozi iz SSH konfiguracije",
+    "importOverwrite": "Uvozi (zamenjaj obstoječe)",
+    "importExportBtn": "Uvoz / Izvoz",
+    "hostsExported": "Gostitelji so bili uspešno izvoženi",
+    "export": {
+      "menuItem": "Izvoz...",
+      "title": "Izvoz gostiteljev",
+      "scope": "Obseg",
+      "scopeAll": "Vsi",
+      "scopeSelected": "Izbrani",
+      "searchHosts": "Išči gostitelje...",
+      "include": "Vključi",
+      "groupConnection": "Povezava",
+      "groupCredentials": "Poverilnice",
+      "groupNotes": "Opombe",
+      "groupTags": "Oznake in sponke",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Vmesni gostitelji",
+      "groupFeatureFlags": "Nastavitve vtičnika",
+      "groupAdvanced": "Napredna konfiguracija",
+      "preview": "Predogled",
+      "moreHosts_one": "... še {{count}} gostitelj",
+      "moreHosts_two": "... še {{count}} gostitelja",
+      "moreHosts_few": "... še {{count}} gostitelji",
+      "moreHosts_other": "... še {{count}} gostiteljev",
+      "summary": "{{selected}} od {{total}} gostiteljev",
+      "credentialsIncluded": "poverilnice vključene",
+      "credentialsExcluded": "poverilnice izključene",
+      "noneSelected": "Ni izbranih gostiteljev",
+      "cancel": "Prekliči",
+      "confirm": "Izvozi",
+      "fetchFailed": "Nalaganje gostiteljev za izvoz ni uspelo",
+      "bulkButton": "Izvozi"
+    },
+    "importNoHosts": "V datoteki ni bilo najdenih gostiteljev",
+    "importTooMany": "Hkrati lahko uvozite največ {{max}} gostiteljev",
+    "importSummary": "Uvoz končan: {{imported}} uvoženih, {{updated}} posodobljenih, {{failed}} neuspešnih",
+    "importHostsFailed": "Uvoz gostiteljev ni uspel",
+    "importConfigFailed": "Uvoz SSH konfiguracije ni uspel"
+  }
+}

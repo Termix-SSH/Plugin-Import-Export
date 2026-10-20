@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "インポートとエクスポート",
+    "description": "JSON ファイルまたは SSH 設定ファイルからホストをインポートし、共有やバックアップ用にエクスポートします。"
+  },
+  "permissions": {
+    "use": {
+      "title": "ホストのインポートとエクスポート",
+      "description": "ファイルからホストをインポートし、エクスポートします。"
+    }
+  },
+  "hosts": {
+    "downloadSample": "サンプルをダウンロード",
+    "importSkipExisting": "インポート（既存のホストをスキップ）",
+    "importSSHConfig": "SSH 設定からインポート",
+    "importOverwrite": "インポート（上書き）",
+    "importExportBtn": "インポート / エクスポート",
+    "hostsExported": "ホストのエクスポートに成功しました",
+    "export": {
+      "menuItem": "エクスポート...",
+      "title": "ホストのエクスポート",
+      "scope": "範囲",
+      "scopeAll": "すべて",
+      "scopeSelected": "選択済み",
+      "searchHosts": "ホストを検索...",
+      "include": "含める項目",
+      "groupConnection": "接続",
+      "groupCredentials": "認証情報",
+      "groupNotes": "メモ",
+      "groupTags": "タグとピン留め",
+      "groupProxy": "プロキシ",
+      "groupJumpHosts": "ジャンプホスト",
+      "groupFeatureFlags": "プラグイン設定",
+      "groupAdvanced": "高度な設定",
+      "preview": "プレビュー",
+      "moreHosts_other": "... さらに {{count}} 件のホスト",
+      "summary": "{{total}} 件中 {{selected}} 件のホスト",
+      "credentialsIncluded": "認証情報を含む",
+      "credentialsExcluded": "認証情報を除く",
+      "noneSelected": "ホストが選択されていません",
+      "cancel": "キャンセル",
+      "confirm": "エクスポート",
+      "fetchFailed": "エクスポート用のホストの読み込みに失敗しました",
+      "bulkButton": "エクスポート"
+    },
+    "importNoHosts": "ファイルにホストが見つかりませんでした",
+    "importTooMany": "一度にインポートできるホストは {{max}} 件までです",
+    "importSummary": "インポート完了: {{imported}} 件インポート、{{updated}} 件更新、{{failed}} 件失敗",
+    "importHostsFailed": "ホストのインポートに失敗しました",
+    "importConfigFailed": "SSH 設定のインポートに失敗しました"
+  }
+}

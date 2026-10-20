@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "นำเข้าและส่งออก",
+    "description": "นำเข้าโฮสต์จากไฟล์ JSON หรือไฟล์กำหนดค่า SSH และส่งออกเพื่อแชร์หรือสำรองข้อมูล"
+  },
+  "permissions": {
+    "use": {
+      "title": "นำเข้าและส่งออกโฮสต์",
+      "description": "นำเข้าโฮสต์จากไฟล์และส่งออกโฮสต์"
+    }
+  },
+  "hosts": {
+    "downloadSample": "ดาวน์โหลดตัวอย่าง",
+    "importSkipExisting": "นำเข้า (ข้ามที่มีอยู่แล้ว)",
+    "importSSHConfig": "นำเข้าจากไฟล์กำหนดค่า SSH",
+    "importOverwrite": "นำเข้า (เขียนทับ)",
+    "importExportBtn": "นำเข้า / ส่งออก",
+    "hostsExported": "ส่งออกโฮสต์สำเร็จ",
+    "export": {
+      "menuItem": "ส่งออก...",
+      "title": "ส่งออกโฮสต์",
+      "scope": "ขอบเขต",
+      "scopeAll": "ทั้งหมด",
+      "scopeSelected": "ที่เลือก",
+      "searchHosts": "ค้นหาโฮสต์...",
+      "include": "รวม",
+      "groupConnection": "การเชื่อมต่อ",
+      "groupCredentials": "ข้อมูลรับรอง",
+      "groupNotes": "บันทึกย่อ",
+      "groupTags": "แท็กและปักหมุด",
+      "groupProxy": "พร็อกซี",
+      "groupJumpHosts": "โฮสต์ข้าม",
+      "groupFeatureFlags": "การตั้งค่าปลั๊กอิน",
+      "groupAdvanced": "การกำหนดค่าขั้นสูง",
+      "preview": "ตัวอย่าง",
+      "moreHosts_other": "... และอีก {{count}} โฮสต์",
+      "summary": "{{selected}} จาก {{total}} โฮสต์",
+      "credentialsIncluded": "รวมข้อมูลรับรอง",
+      "credentialsExcluded": "ไม่รวมข้อมูลรับรอง",
+      "noneSelected": "ไม่ได้เลือกโฮสต์ใด",
+      "cancel": "ยกเลิก",
+      "confirm": "ส่งออก",
+      "fetchFailed": "ไม่สามารถโหลดโฮสต์เพื่อส่งออกได้",
+      "bulkButton": "ส่งออก"
+    },
+    "importNoHosts": "ไม่พบโฮสต์ในไฟล์",
+    "importTooMany": "คุณสามารถนำเข้าโฮสต์ได้สูงสุด {{max}} โฮสต์ในครั้งเดียว",
+    "importSummary": "การนำเข้าเสร็จสิ้น: นำเข้า {{imported}} อัปเดต {{updated}} ล้มเหลว {{failed}}",
+    "importHostsFailed": "ไม่สามารถนำเข้าโฮสต์ได้",
+    "importConfigFailed": "ไม่สามารถนำเข้าไฟล์กำหนดค่า SSH ได้"
+  }
+}

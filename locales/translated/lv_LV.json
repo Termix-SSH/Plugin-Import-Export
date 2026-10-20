@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Importēt un eksportēt",
+    "description": "Importējiet hostus no JSON faila vai SSH konfigurācijas faila un eksportējiet tos, lai kopīgotu vai veidotu rezerves kopiju."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importēt un eksportēt hostus",
+      "description": "Importēt hostus no failiem un tos eksportēt."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Lejupielādēt paraugu",
+    "importSkipExisting": "Importēt (izlaist esošos)",
+    "importSSHConfig": "Importēt no SSH konfigurācijas",
+    "importOverwrite": "Importēt (pārrakstīt)",
+    "importExportBtn": "Importēt / Eksportēt",
+    "hostsExported": "Hosti veiksmīgi eksportēti",
+    "export": {
+      "menuItem": "Eksportēt...",
+      "title": "Eksportēt hostus",
+      "scope": "Aplie",
+      "scopeAll": "Visi",
+      "scopeSelected": "Atlasītie",
+      "searchHosts": "Meklēt hostus...",
+      "include": "Iekļaut",
+      "groupConnection": "Savienojums",
+      "groupCredentials": "Pieteikšanās dati",
+      "groupNotes": "Piezīmes",
+      "groupTags": "Birkas un piesprausts",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Starpposma hosti",
+      "groupFeatureFlags": "Spraudņu iestatījumi",
+      "groupAdvanced": "Paplašinātā konfigurācija",
+      "preview": "Priekšskatījums",
+      "moreHosts_zero": "... {{count}} papildu hosti",
+      "moreHosts_one": "... {{count}} papildu hosts",
+      "moreHosts_other": "... {{count}} papildu hosti",
+      "summary": "{{selected}} no {{total}} hostiem",
+      "credentialsIncluded": "iekļauti pieteikšanās dati",
+      "credentialsExcluded": "izslēgti pieteikšanās dati",
+      "noneSelected": "Nav atlasītu hostu",
+      "cancel": "Atcelt",
+      "confirm": "Eksportēt",
+      "fetchFailed": "Neizdevās ielādēt hostus eksportēšanai",
+      "bulkButton": "Eksportēt"
+    },
+    "importNoHosts": "Failā nav atrasts neviens hosts",
+    "importTooMany": "Varat vienlaikus importēt līdz {{max}} hostiem",
+    "importSummary": "Importēšana pabeigta: {{imported}} importēti, {{updated}} atjaunināti, {{failed}} neizdevās",
+    "importHostsFailed": "Neizdevās importēt hostus",
+    "importConfigFailed": "Neizdevās importēt SSH konfigurāciju"
+  }
+}

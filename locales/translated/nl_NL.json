@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Importeren en exporteren",
+    "description": "Importeer hosts uit een JSON-bestand of een SSH-configuratiebestand en exporteer ze om te delen of te back-uppen."
+  },
+  "permissions": {
+    "use": {
+      "title": "Hosts importeren en exporteren",
+      "description": "Importeer hosts uit bestanden en exporteer ze."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Voorbeeld downloaden",
+    "importSkipExisting": "Importeren (bestaande overslaan)",
+    "importSSHConfig": "Importeren uit SSH-configuratie",
+    "importOverwrite": "Importeren (overschrijven)",
+    "importExportBtn": "Importeren / Exporteren",
+    "hostsExported": "Hosts succesvol geëxporteerd",
+    "export": {
+      "menuItem": "Exporteren...",
+      "title": "Hosts exporteren",
+      "scope": "Bereik",
+      "scopeAll": "Alles",
+      "scopeSelected": "Geselecteerd",
+      "searchHosts": "Hosts zoeken...",
+      "include": "Inbegrepen",
+      "groupConnection": "Verbinding",
+      "groupCredentials": "Inloggegevens",
+      "groupNotes": "Notities",
+      "groupTags": "Labels & vastmaken",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Plugin-instellingen",
+      "groupAdvanced": "Geavanceerde configuratie",
+      "preview": "Voorbeeld",
+      "moreHosts_one": "... {{count}} extra host",
+      "moreHosts_other": "... {{count}} extra hosts",
+      "summary": "{{selected}} van {{total}} hosts",
+      "credentialsIncluded": "inloggegevens inbegrepen",
+      "credentialsExcluded": "inloggegevens uitgesloten",
+      "noneSelected": "Geen hosts geselecteerd",
+      "cancel": "Annuleren",
+      "confirm": "Exporteren",
+      "fetchFailed": "Kan hosts voor export niet laden",
+      "bulkButton": "Exporteren"
+    },
+    "importNoHosts": "Geen hosts gevonden in het bestand",
+    "importTooMany": "Je kunt maximaal {{max}} hosts tegelijk importeren",
+    "importSummary": "Importeren voltooid: {{imported}} geïmporteerd, {{updated}} bijgewerkt, {{failed}} mislukt",
+    "importHostsFailed": "Kan hosts niet importeren",
+    "importConfigFailed": "Kan SSH-configuratie niet importeren"
+  }
+}

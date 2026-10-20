@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Tuo ja vie",
+    "description": "Tuo isäntiä JSON-tiedostosta tai SSH-asetustiedostosta ja vie niitä jaettavaksi tai varmuuskopioidaksesi."
+  },
+  "permissions": {
+    "use": {
+      "title": "Isäntien tuonti ja vienti",
+      "description": "Tuo isäntiä tiedostoista ja vie niitä."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Lataa esimerkki",
+    "importSkipExisting": "Tuo (ohita olemassa olevat)",
+    "importSSHConfig": "Tuo SSH-asetuksista",
+    "importOverwrite": "Tuo (korvaa)",
+    "importExportBtn": "Tuo / Vie",
+    "hostsExported": "Isännät viety onnistuneesti",
+    "export": {
+      "menuItem": "Vie...",
+      "title": "Vie isäntäpalvelimet",
+      "scope": "Kohde",
+      "scopeAll": "Kaikki",
+      "scopeSelected": "Valitut",
+      "searchHosts": "Hae isäntäpalvelimia...",
+      "include": "Sisällytä",
+      "groupConnection": "Yhteys",
+      "groupCredentials": "Kirjautumistiedot",
+      "groupNotes": "Muistiinpanot",
+      "groupTags": "Tunnisteet ja kiinnitys",
+      "groupProxy": "Välityspalvelin",
+      "groupJumpHosts": "Välityspalvelimet",
+      "groupFeatureFlags": "Liitännäisasennukset",
+      "groupAdvanced": "Edistynyt konfiguraatio",
+      "preview": "Esikatselu",
+      "moreHosts_one": "... {{count}} muu isäntä",
+      "moreHosts_other": "... {{count}} muuta isäntää",
+      "summary": "{{selected}} / {{total}} isäntää",
+      "credentialsIncluded": "tunnukset sisällytetty",
+      "credentialsExcluded": "tunnukset jätetty pois",
+      "noneSelected": "Yhtään isäntää ei ole valittu",
+      "cancel": "Peruuta",
+      "confirm": "Vie",
+      "fetchFailed": "Isäntien lataus vientiä varten epäonnistui",
+      "bulkButton": "Vie"
+    },
+    "importNoHosts": "Tiedostosta ei löytynyt yhtään isäntää",
+    "importTooMany": "Voit tuoda kerralla enintään {{max}} isäntää",
+    "importSummary": "Tuonti valmis: {{imported}} tuotu, {{updated}} päivitetty, {{failed}} epäonnistui",
+    "importHostsFailed": "Isäntien tuonti epäonnistui",
+    "importConfigFailed": "SSH-asetusten tuonti epäonnistui"
+  }
+}

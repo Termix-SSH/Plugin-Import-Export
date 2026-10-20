@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Import și export",
+    "description": "Importă gazde dintr-un fișier JSON sau un fișier de configurare SSH și exportă-le pentru a le partaja sau pentru backup."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importă și exportă gazde",
+      "description": "Importă gazde din fișiere și exportă-le."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Descarcă exemplul",
+    "importSkipExisting": "Importă (omite existentele)",
+    "importSSHConfig": "Importă din configurarea SSH",
+    "importOverwrite": "Importă (suprascrie)",
+    "importExportBtn": "Importă / Exportă",
+    "hostsExported": "Gazdele au fost exportate cu succes",
+    "export": {
+      "menuItem": "Exportă...",
+      "title": "Exportă gazde",
+      "scope": "Domeniu",
+      "scopeAll": "Toate",
+      "scopeSelected": "Selectate",
+      "searchHosts": "Caută gazde...",
+      "include": "Include",
+      "groupConnection": "Conexiune",
+      "groupCredentials": "Credențiale",
+      "groupNotes": "Note",
+      "groupTags": "Etichete și fixare",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Gazde intermediare",
+      "groupFeatureFlags": "Setări plugin",
+      "groupAdvanced": "Configurare avansată",
+      "preview": "Previzualizare",
+      "moreHosts_one": "... încă {{count}} gazdă",
+      "moreHosts_few": "... încă {{count}} gazde",
+      "moreHosts_other": "... încă {{count}} gazde",
+      "summary": "{{selected}} din {{total}} gazde",
+      "credentialsIncluded": "credințiale incluse",
+      "credentialsExcluded": "credințiale excluse",
+      "noneSelected": "Nicio gazdă selectată",
+      "cancel": "Anulează",
+      "confirm": "Exportă",
+      "fetchFailed": "Nu s-au putut încărca gazdele pentru export",
+      "bulkButton": "Exportă"
+    },
+    "importNoHosts": "Nu s-au găsit gazde în fișier",
+    "importTooMany": "Poți importa până la {{max}} gazde simultan",
+    "importSummary": "Import finalizat: {{imported}} importate, {{updated}} actualizate, {{failed}} eșuate",
+    "importHostsFailed": "Nu s-au putut importa gazdele",
+    "importConfigFailed": "Nu s-a putut importa configurarea SSH"
+  }
+}

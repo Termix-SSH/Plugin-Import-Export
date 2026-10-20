@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Εισαγωγή και Εξαγωγή",
+    "description": "Εισαγωγή hosts από αρχείο JSON ή αρχείο ρυθμίσεων SSH και εξαγωγή τους για κοινοποίηση ή δημιουργία αντιγράφου ασφαλείας."
+  },
+  "permissions": {
+    "use": {
+      "title": "Εισαγωγή και εξαγωγή hosts",
+      "description": "Εισαγωγή hosts από αρχεία και εξαγωγή τους."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Λήψη Παραδείγματος",
+    "importSkipExisting": "Εισαγωγή (παράλειψη υπαρχόντων)",
+    "importSSHConfig": "Εισαγωγή από ρυθμίσεις SSH",
+    "importOverwrite": "Εισαγωγή (αντικατάσταση)",
+    "importExportBtn": "Εισαγωγή / Εξαγωγή",
+    "hostsExported": "Οι hosts εξήχθησαν με επιτυχία",
+    "export": {
+      "menuItem": "Εξαγωγή...",
+      "title": "Εξαγωγή hosts",
+      "scope": "Εύρος",
+      "scopeAll": "Όλα",
+      "scopeSelected": "Επιλεγμένα",
+      "searchHosts": "Αναζήτηση hosts...",
+      "include": "Συμπερίληψη",
+      "groupConnection": "Σύνδεση",
+      "groupCredentials": "Στοιχεία σύνδεσης",
+      "groupNotes": "Σημειώσεις",
+      "groupTags": "Ετικέτες & στήριξη",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Ρυθμίσεις plugins",
+      "groupAdvanced": "Προχωρημένη ρύθμιση",
+      "preview": "Προεπισκόπηση",
+      "moreHosts_one": "... {{count}} ακόμη host",
+      "moreHosts_other": "... {{count}} ακόμη hosts",
+      "summary": "{{selected}} από {{total}} hosts",
+      "credentialsIncluded": "περιλαμβάνονται διαπιστευτήρια",
+      "credentialsExcluded": "αποκλείονται διαπιστευτήρια",
+      "noneSelected": "Δεν έχουν επιλεγεί hosts",
+      "cancel": "Ακύρωση",
+      "confirm": "Εξαγωγή",
+      "fetchFailed": "Αποτυχία φόρτωσης hosts για εξαγωγή",
+      "bulkButton": "Εξαγωγή"
+    },
+    "importNoHosts": "Δεν βρέθηκαν hosts στο αρχείο",
+    "importTooMany": "Μπορείτε να εισάγετε έως {{max}} hosts ταυτόχρονα",
+    "importSummary": "Η εισαγωγή ολοκληρώθηκε: {{imported}} εισήχθησαν, {{updated}} ενημερώθηκαν, {{failed}} απέτυχαν",
+    "importHostsFailed": "Αποτυχία εισαγωγής hosts",
+    "importConfigFailed": "Αποτυχία εισαγωγής SSH config"
+  }
+}

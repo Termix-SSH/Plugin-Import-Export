@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "导入和导出",
+    "description": "从 JSON 文件或 SSH 配置文件导入主机，并导出主机以进行分享或备份。"
+  },
+  "permissions": {
+    "use": {
+      "title": "导入和导出主机",
+      "description": "从文件导入主机并导出主机。"
+    }
+  },
+  "hosts": {
+    "downloadSample": "下载示例",
+    "importSkipExisting": "导入（跳过已存在）",
+    "importSSHConfig": "从 SSH 配置导入",
+    "importOverwrite": "导入（覆盖）",
+    "importExportBtn": "导入 / 导出",
+    "hostsExported": "主机导出成功",
+    "export": {
+      "menuItem": "导出...",
+      "title": "导出主机",
+      "scope": "范围",
+      "scopeAll": "全部",
+      "scopeSelected": "已选",
+      "searchHosts": "搜索主机...",
+      "include": "包含",
+      "groupConnection": "连接",
+      "groupCredentials": "凭据",
+      "groupNotes": "备注",
+      "groupTags": "标签与置顶",
+      "groupProxy": "代理",
+      "groupJumpHosts": "跳板机",
+      "groupFeatureFlags": "插件设置",
+      "groupAdvanced": "高级配置",
+      "preview": "预览",
+      "moreHosts_other": "... 还有 {{count}} 台主机",
+      "summary": "{{selected}} / {{total}} 台主机",
+      "credentialsIncluded": "包含凭据",
+      "credentialsExcluded": "排除凭据",
+      "noneSelected": "未选择任何主机",
+      "cancel": "取消",
+      "confirm": "导出",
+      "fetchFailed": "加载用于导出的主机失败",
+      "bulkButton": "导出"
+    },
+    "importNoHosts": "文件中未找到任何主机",
+    "importTooMany": "一次最多可导入 {{max}} 个主机",
+    "importSummary": "导入完成：{{imported}} 个已导入，{{updated}} 个已更新，{{failed}} 个失败",
+    "importHostsFailed": "导入主机失败",
+    "importConfigFailed": "导入 SSH 配置失败"
+  }
+}

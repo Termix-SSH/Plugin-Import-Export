@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "Impor dan Ekspor",
+    "description": "Impor host dari file JSON atau file konfigurasi SSH, dan ekspor untuk dibagikan atau dicadangkan."
+  },
+  "permissions": {
+    "use": {
+      "title": "Impor dan ekspor host",
+      "description": "Impor host dari file dan ekspor host tersebut."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Unduh Contoh",
+    "importSkipExisting": "Impor (lewatkan yang sudah ada)",
+    "importSSHConfig": "Impor dari konfigurasi SSH",
+    "importOverwrite": "Impor (timpa)",
+    "importExportBtn": "Impor / Ekspor",
+    "hostsExported": "Host berhasil diekspor",
+    "export": {
+      "menuItem": "Ekspor...",
+      "title": "Ekspor host",
+      "scope": "Lingkup",
+      "scopeAll": "Semua",
+      "scopeSelected": "Dipilih",
+      "searchHosts": "Cari host...",
+      "include": "Sertakan",
+      "groupConnection": "Koneksi",
+      "groupCredentials": "Kredensial",
+      "groupNotes": "Catatan",
+      "groupTags": "Tag & pin",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Host lompat",
+      "groupFeatureFlags": "Pengaturan plugin",
+      "groupAdvanced": "Konfigurasi lanjutan",
+      "preview": "Pratinjau",
+      "moreHosts_other": "... {{count}} host lainnya",
+      "summary": "{{selected}} dari {{total}} host",
+      "credentialsIncluded": "kredensial disertakan",
+      "credentialsExcluded": "kredensial tidak disertakan",
+      "noneSelected": "Tidak ada host yang dipilih",
+      "cancel": "Batal",
+      "confirm": "Ekspor",
+      "fetchFailed": "Gagal memuat host untuk diekspor",
+      "bulkButton": "Ekspor"
+    },
+    "importNoHosts": "Tidak ada host yang ditemukan di file",
+    "importTooMany": "Anda dapat mengimpor hingga {{max}} host sekaligus",
+    "importSummary": "Impor selesai: {{imported}} diimpor, {{updated}} diperbarui, {{failed}} gagal",
+    "importHostsFailed": "Gagal mengimpor host",
+    "importConfigFailed": "Gagal mengimpor konfigurasi SSH"
+  }
+}

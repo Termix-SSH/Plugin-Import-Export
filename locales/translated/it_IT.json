@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Importa ed esporta",
+    "description": "Importa host da un file JSON o da un file di configurazione SSH ed esportali per condividerli o crearne un backup."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importa ed esporta host",
+      "description": "Importa host da file ed esportali."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Scarica esempio",
+    "importSkipExisting": "Importa (salta esistenti)",
+    "importSSHConfig": "Importa da configurazione SSH",
+    "importOverwrite": "Importa (sovrascrivi)",
+    "importExportBtn": "Importa / Esporta",
+    "hostsExported": "Host esportati con successo",
+    "export": {
+      "menuItem": "Esporta...",
+      "title": "Esporta host",
+      "scope": "Ambito",
+      "scopeAll": "Tutti",
+      "scopeSelected": "Selezionati",
+      "searchHosts": "Cerca host...",
+      "include": "Includi",
+      "groupConnection": "Connessione",
+      "groupCredentials": "Credenziali",
+      "groupNotes": "Note",
+      "groupTags": "Tag e fissaggio",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump host",
+      "groupFeatureFlags": "Impostazioni plugin",
+      "groupAdvanced": "Configurazione avanzata",
+      "preview": "Anteprima",
+      "moreHosts_one": "... {{count}} altro host",
+      "moreHosts_many": "... {{count}} altri host",
+      "moreHosts_other": "... {{count}} altri host",
+      "summary": "{{selected}} di {{total}} host",
+      "credentialsIncluded": "credenziali incluse",
+      "credentialsExcluded": "credenziali escluse",
+      "noneSelected": "Nessun host selezionato",
+      "cancel": "Annulla",
+      "confirm": "Esporta",
+      "fetchFailed": "Impossibile caricare gli host per l'esportazione",
+      "bulkButton": "Esporta"
+    },
+    "importNoHosts": "Nessun host trovato nel file",
+    "importTooMany": "Puoi importare fino a {{max}} host alla volta",
+    "importSummary": "Importazione completata: {{imported}} importati, {{updated}} aggiornati, {{failed}} non riusciti",
+    "importHostsFailed": "Impossibile importare gli host",
+    "importConfigFailed": "Impossibile importare la configurazione SSH"
+  }
+}

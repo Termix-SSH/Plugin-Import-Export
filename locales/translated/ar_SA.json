@@ -1,0 +1,57 @@
+{
+  "plugin": {
+    "name": "استيراد وتصدير",
+    "description": "استيراد المضيفين من ملف JSON أو ملف تكوين SSH وتصديرهم لمشاركتهم أو إنشاء نسخة احتياطية."
+  },
+  "permissions": {
+    "use": {
+      "title": "استيراد وتصدير المضيفين",
+      "description": "استيراد المضيفين من الملفات وتصديرهم."
+    }
+  },
+  "hosts": {
+    "downloadSample": "تحميل نموذج",
+    "importSkipExisting": "استيراد (تخطي الموجود)",
+    "importSSHConfig": "استيراد من تكوين SSH",
+    "importOverwrite": "استيراد (استبدال)",
+    "importExportBtn": "استيراد / تصدير",
+    "hostsExported": "تم تصدير المضيفين بنجاح",
+    "export": {
+      "menuItem": "تصدير...",
+      "title": "تصدير الأجهزة",
+      "scope": "النطاق",
+      "scopeAll": "الكل",
+      "scopeSelected": "المحددة",
+      "searchHosts": "البحث عن الأجهزة...",
+      "include": "تضمين",
+      "groupConnection": "الاتصال",
+      "groupCredentials": "بيانات الاعتماد",
+      "groupNotes": "الملاحظات",
+      "groupTags": "العلامات والتثبيت",
+      "groupProxy": "الوكيل",
+      "groupJumpHosts": "مضيفي القفز",
+      "groupFeatureFlags": "إعدادات الإضافات",
+      "groupAdvanced": "إعدادات متقدمة",
+      "preview": "معاينة",
+      "moreHosts_zero": "... {{count}} مضيف آخر",
+      "moreHosts_one": "... مضيف آخر واحد",
+      "moreHosts_two": "... مضيفان آخران",
+      "moreHosts_few": "... {{count}} مضيفات أخرى",
+      "moreHosts_many": "... {{count}} مضيفاً آخر",
+      "moreHosts_other": "... {{count}} مضيف آخر",
+      "summary": "{{selected}} من أصل {{total}} مضيف",
+      "credentialsIncluded": "تمت إضافة بيانات الاعتماد",
+      "credentialsExcluded": "تم استبعاد بيانات الاعتماد",
+      "noneSelected": "لم يتم تحديد أي مضيفين",
+      "cancel": "إلغاء",
+      "confirm": "تصدير",
+      "fetchFailed": "فشل في تحميل المضيفين للتصدير",
+      "bulkButton": "تصدير"
+    },
+    "importNoHosts": "لم يتم العثور على مضيفين في الملف",
+    "importTooMany": "يمكنك استيراد ما يصل إلى {{max}} مضيف في وقت واحد",
+    "importSummary": "اكتمل الاستيراد: {{imported}} تم استيرادها، {{updated}} تم تحديثها، {{failed}} فشلت",
+    "importHostsFailed": "فشل في استيراد المضيفين",
+    "importConfigFailed": "فشل في استيراد إعدادات SSH"
+  }
+}

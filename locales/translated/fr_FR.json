@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Importation et exportation",
+    "description": "Importez des hôtes depuis un fichier JSON ou un fichier de configuration SSH, et exportez-les pour les partager ou les sauvegarder."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importer et exporter des hôtes",
+      "description": "Importer des hôtes depuis des fichiers et les exporter."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Télécharger l'exemple",
+    "importSkipExisting": "Importer (ignorer les existants)",
+    "importSSHConfig": "Importer depuis la configuration SSH",
+    "importOverwrite": "Importer (écraser)",
+    "importExportBtn": "Importer / Exporter",
+    "hostsExported": "Hôtes exportés avec succès",
+    "export": {
+      "menuItem": "Exporter...",
+      "title": "Exporter les hôtes",
+      "scope": "Portée",
+      "scopeAll": "Tous",
+      "scopeSelected": "Sélectionnés",
+      "searchHosts": "Rechercher des hôtes...",
+      "include": "Inclure",
+      "groupConnection": "Connexion",
+      "groupCredentials": "Identifiants",
+      "groupNotes": "Notes",
+      "groupTags": "Étiquettes et épinglage",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Hôtes intermédiaires",
+      "groupFeatureFlags": "Paramètres des plugins",
+      "groupAdvanced": "Configuration avancée",
+      "preview": "Aperçu",
+      "moreHosts_one": "... {{count}} hôte de plus",
+      "moreHosts_many": "... {{count}} hôtes de plus",
+      "moreHosts_other": "... {{count}} hôtes de plus",
+      "summary": "{{selected}} sur {{total}} hôtes",
+      "credentialsIncluded": "identifiants inclus",
+      "credentialsExcluded": "identifiants exclus",
+      "noneSelected": "Aucun hôte sélectionné",
+      "cancel": "Annuler",
+      "confirm": "Exporter",
+      "fetchFailed": "Échec du chargement des hôtes pour l'exportation",
+      "bulkButton": "Exporter"
+    },
+    "importNoHosts": "Aucun hôte trouvé dans le fichier",
+    "importTooMany": "Vous pouvez importer jusqu'à {{max}} hôtes à la fois",
+    "importSummary": "Importation terminée : {{imported}} importés, {{updated}} mis à jour, {{failed}} échoués",
+    "importHostsFailed": "Échec de l'importation des hôtes",
+    "importConfigFailed": "Échec de l'importation de la configuration SSH"
+  }
+}

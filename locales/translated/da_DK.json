@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Importér og eksportér",
+    "description": "Importér værter fra en JSON-fil eller en SSH-konfigurationsfil, og eksportér dem til deling eller backup."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importér og eksportér værter",
+      "description": "Importér værter fra filer og eksportér dem."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Download eksempel",
+    "importSkipExisting": "Importér (spring eksisterende over)",
+    "importSSHConfig": "Importér fra SSH-konfiguration",
+    "importOverwrite": "Importér (overskriv)",
+    "importExportBtn": "Importér / Eksportér",
+    "hostsExported": "Værter eksporteret",
+    "export": {
+      "menuItem": "Eksportér...",
+      "title": "Eksportér værter",
+      "scope": "Omfang",
+      "scopeAll": "Alle",
+      "scopeSelected": "Valgte",
+      "searchHosts": "Søg i værter...",
+      "include": "Inkluder",
+      "groupConnection": "Forbindelse",
+      "groupCredentials": "Logindetaljer",
+      "groupNotes": "Noter",
+      "groupTags": "Tags og fastgørelse",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Jump hosts",
+      "groupFeatureFlags": "Plugin-indstillinger",
+      "groupAdvanced": "Avanceret konfiguration",
+      "preview": "Forhåndsvisning",
+      "moreHosts_one": "... {{count}} mere vært",
+      "moreHosts_other": "... {{count}} flere værter",
+      "summary": "{{selected}} af {{total}} værter",
+      "credentialsIncluded": "logindetaljer inkluderet",
+      "credentialsExcluded": "logindetaljer ekskluderet",
+      "noneSelected": "Ingen værter valgt",
+      "cancel": "Annullér",
+      "confirm": "Eksportér",
+      "fetchFailed": "Kunne ikke indlæse værter til eksport",
+      "bulkButton": "Eksportér"
+    },
+    "importNoHosts": "Ingen værter fundet i filen",
+    "importTooMany": "Du kan importere op til {{max}} værter ad gangen",
+    "importSummary": "Import færdig: {{imported}} importeret, {{updated}} opdateret, {{failed}} mislykket",
+    "importHostsFailed": "Kunne ikke importere værter",
+    "importConfigFailed": "Kunne ikke importere SSH-konfiguration"
+  }
+}

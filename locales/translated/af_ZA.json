@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "Invoer en uitvoer",
+    "description": "Voer gasheer in vanaf 'n JSON-lêer of 'n SSH-konfigurasielêer, en voer dit uit om te deel of te gelykstawig."
+  },
+  "permissions": {
+    "use": {
+      "title": "Voer gasheer in en uit",
+      "description": "Voer gasheer in vanaf lêers en voer dit uit."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Laai voorbeeld af",
+    "importSkipExisting": "Voer in (slaag bestaande oor)",
+    "importSSHConfig": "Voer in vanaf SSH-konfigurasie",
+    "importOverwrite": "Voer in (skryf oor)",
+    "importExportBtn": "Invoer / uitvoer",
+    "hostsExported": "Gasheer suksesvol uitgevoer",
+    "export": {
+      "menuItem": "Eksporteer...",
+      "title": "Eksporteer gasheërs",
+      "scope": "Reikwydte",
+      "scopeAll": "Alles",
+      "scopeSelected": "Geselekteer",
+      "searchHosts": "Soek gasheërs...",
+      "include": "Sluit in",
+      "groupConnection": "Verbinding",
+      "groupCredentials": "Aanmeldingsbesonderhede",
+      "groupNotes": "Notas",
+      "groupTags": "Etikette & vassteek",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Oorsprongshoste",
+      "groupFeatureFlags": "Inpropinstellings",
+      "groupAdvanced": "Gevorderde konfigurasie",
+      "preview": "Voorskou",
+      "moreHosts_one": "... {{count}} meer host",
+      "moreHosts_other": "... {{count}} meer hoste",
+      "summary": "{{selected}} van {{total}} hoste",
+      "credentialsIncluded": "geloofsbriewe ingesluit",
+      "credentialsExcluded": "geloofsbriewe uitgesluit",
+      "noneSelected": "Geen gasheerbedienings gekies nie",
+      "cancel": "Kanselleer",
+      "confirm": "Voer uit",
+      "fetchFailed": "Kon nie gasheerbedienings laai vir uitvoer nie",
+      "bulkButton": "Voer uit"
+    },
+    "importNoHosts": "Geen gasheerbedienings in die lêer gevind nie",
+    "importTooMany": "Jy kan tot {{max}} gasheerbedienings op een keer invoer",
+    "importSummary": "Invoer gedoen: {{imported}} ingevoer, {{updated}} opgedateer, {{failed}} misluk",
+    "importHostsFailed": "Kon nie gasheerbedienings invoer nie",
+    "importConfigFailed": "Kon nie SSH-konfigurasie invoer nie"
+  }
+}

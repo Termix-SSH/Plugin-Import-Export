@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "Nhập và Xuất",
+    "description": "Nhập máy chủ từ tệp JSON hoặc tệp cấu hình SSH và xuất chúng để chia sẻ hoặc sao lưu."
+  },
+  "permissions": {
+    "use": {
+      "title": "Nhập và xuất máy chủ",
+      "description": "Nhập máy chủ từ tệp và xuất chúng."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Tải mẫu xuống",
+    "importSkipExisting": "Nhập (bỏ qua mục có sẵn)",
+    "importSSHConfig": "Nhập từ cấu hình SSH",
+    "importOverwrite": "Nhập (ghi đè)",
+    "importExportBtn": "Nhập / Xuất",
+    "hostsExported": "Đã xuất máy chủ thành công",
+    "export": {
+      "menuItem": "Xuất...",
+      "title": "Xuất máy chủ",
+      "scope": "Phạm vi",
+      "scopeAll": "Tất cả",
+      "scopeSelected": "Đã chọn",
+      "searchHosts": "Tìm kiếm máy chủ...",
+      "include": "Bao gồm",
+      "groupConnection": "Kết nối",
+      "groupCredentials": "Thông tin đăng nhập",
+      "groupNotes": "Ghi chú",
+      "groupTags": "Thẻ & ghim",
+      "groupProxy": "Proxy",
+      "groupJumpHosts": "Máy chủ nhảy",
+      "groupFeatureFlags": "Cài đặt plugin",
+      "groupAdvanced": "Cấu hình nâng cao",
+      "preview": "Xem trước",
+      "moreHosts_other": "... và {{count}} máy chủ khác",
+      "summary": "{{selected}} trong số {{total}} máy chủ",
+      "credentialsIncluded": "bao gồm thông tin đăng nhập",
+      "credentialsExcluded": "không bao gồm thông tin đăng nhập",
+      "noneSelected": "Chưa chọn máy chủ nào",
+      "cancel": "Hủy",
+      "confirm": "Xuất",
+      "fetchFailed": "Không thể tải máy chủ để xuất",
+      "bulkButton": "Xuất"
+    },
+    "importNoHosts": "Không tìm thấy máy chủ nào trong tệp",
+    "importTooMany": "Bạn có thể nhập tối đa {{max}} máy chủ cùng lúc",
+    "importSummary": "Hoàn tất nhập: {{imported}} đã nhập, {{updated}} đã cập nhật, {{failed}} thất bại",
+    "importHostsFailed": "Không thể nhập máy chủ",
+    "importConfigFailed": "Không thể nhập cấu hình SSH"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "plugin": {
+    "name": "Увоз и извоз",
+    "description": "Увезите хостове из JSON или SSH config датотеке, или их извезите ради дељења или резервне копије."
+  },
+  "permissions": {
+    "use": {
+      "title": "Увоз и извоз хостова",
+      "description": "Увоз хостова из датотека и њихов извоз."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Преузми пример",
+    "importSkipExisting": "Увези (заобиђи постојеће)",
+    "importSSHConfig": "Увези из SSH config-а",
+    "importOverwrite": "Увези (препиши)",
+    "importExportBtn": "Увоз / Извоз",
+    "hostsExported": "Хостови су успешно извезени",
+    "export": {
+      "menuItem": "Извоз...",
+      "title": "Извоз хостова",
+      "scope": "Обухват",
+      "scopeAll": "Сви",
+      "scopeSelected": "Изабрани",
+      "searchHosts": "Претражи хостове...",
+      "include": "Укључи",
+      "groupConnection": "Веза",
+      "groupCredentials": "Повлашћења",
+      "groupNotes": "Напомене",
+      "groupTags": "Ознаке и закачи",
+      "groupProxy": "Прокси",
+      "groupJumpHosts": "Прелазни хостови",
+      "groupFeatureFlags": "Подешавања додатака",
+      "groupAdvanced": "Напредна конфигурација",
+      "preview": "Преглед",
+      "moreHosts_one": "... још {{count}} хост",
+      "moreHosts_few": "... још {{count}} хоста",
+      "moreHosts_other": "... још {{count}} хостова",
+      "summary": "{{selected}} од {{total}} хостова",
+      "credentialsIncluded": "повлашћења су укључена",
+      "credentialsExcluded": "повлашћења су искључена",
+      "noneSelected": "Ниједан хост није изабран",
+      "cancel": "Откажи",
+      "confirm": "Извези",
+      "fetchFailed": "Неуспешно учитавање хостова за извоз",
+      "bulkButton": "Извези"
+    },
+    "importNoHosts": "Ниједан хост није пронађен у датотеци",
+    "importTooMany": "Можете увезети највише {{max}} хостова одједном",
+    "importSummary": "Увоз завршен: {{imported}} увезено, {{updated}} ажурирано, {{failed}} неуспешно",
+    "importHostsFailed": "Неуспешан увоз хостова",
+    "importConfigFailed": "Неуспешан увоз SSH config-а"
+  }
+}

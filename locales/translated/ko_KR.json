@@ -1,0 +1,52 @@
+{
+  "plugin": {
+    "name": "가져오기 및 내보내기",
+    "description": "JSON 파일 또는 SSH 구성 파일에서 호스트를 가져와 공유하거나 백업할 수 있도록 내보냅니다."
+  },
+  "permissions": {
+    "use": {
+      "title": "호스트 가져오기 및 내보내기",
+      "description": "파일에서 호스트를 가져오고 내보냅니다."
+    }
+  },
+  "hosts": {
+    "downloadSample": "샘플 다운로드",
+    "importSkipExisting": "가져오기 (기존 항목 건너뛰기)",
+    "importSSHConfig": "SSH 구성에서 가져오기",
+    "importOverwrite": "가져오기 (덮어쓰기)",
+    "importExportBtn": "가져오기 / 내보내기",
+    "hostsExported": "호스트가 성공적으로 내보내졌습니다",
+    "export": {
+      "menuItem": "내보내기...",
+      "title": "호스트 내보내기",
+      "scope": "범위",
+      "scopeAll": "전체",
+      "scopeSelected": "선택됨",
+      "searchHosts": "호스트 검색...",
+      "include": "포함",
+      "groupConnection": "연결",
+      "groupCredentials": "인증 정보",
+      "groupNotes": "메모",
+      "groupTags": "태그 및 고정",
+      "groupProxy": "프록시",
+      "groupJumpHosts": "점프 호스트",
+      "groupFeatureFlags": "플러그인 설정",
+      "groupAdvanced": "고급 구성",
+      "preview": "미리보기",
+      "moreHosts_other": "... {{count}}개 더 많은 호스트",
+      "summary": "{{total}}개 중 {{selected}}개 호스트",
+      "credentialsIncluded": "인증 정보 포함",
+      "credentialsExcluded": "인증 정보 제외",
+      "noneSelected": "선택된 호스트가 없습니다",
+      "cancel": "취소",
+      "confirm": "내보내기",
+      "fetchFailed": "내보낼 호스트를 로드하지 못했습니다",
+      "bulkButton": "내보내기"
+    },
+    "importNoHosts": "파일에서 호스트를 찾지 못했습니다",
+    "importTooMany": "한 번에 최대 {{max}}개의 호스트만 가져올 수 있습니다",
+    "importSummary": "가져오기 완료: {{imported}}개 가져오기, {{updated}}개 업데이트, {{failed}}개 실패",
+    "importHostsFailed": "호스트 가져오기에 실패했습니다",
+    "importConfigFailed": "SSH 구성 가져오기에 실패했습니다"
+  }
+}

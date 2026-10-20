@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Імпорт та експорт",
+    "description": "Імпортувати хости з JSON-файлу або файлу конфігурації SSH, а також експортувати їх для обміну або резервного копіювання."
+  },
+  "permissions": {
+    "use": {
+      "title": "Імпорт та експорт хостів",
+      "description": "Імпортувати хости з файлів та експортувати їх."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Завантажити зразок",
+    "importSkipExisting": "Імпортувати (пропустити наявні)",
+    "importSSHConfig": "Імпортувати з конфігурації SSH",
+    "importOverwrite": "Імпортувати (перезаписати)",
+    "importExportBtn": "Імпорт / Експорт",
+    "hostsExported": "Хости успішно експортовано",
+    "export": {
+      "menuItem": "Експорт...",
+      "title": "Експорт хостів",
+      "scope": "Діапазон",
+      "scopeAll": "Усі",
+      "scopeSelected": "Вибрані",
+      "searchHosts": "Пошук хостів...",
+      "include": "Включити",
+      "groupConnection": "Підключення",
+      "groupCredentials": "Облікові дані",
+      "groupNotes": "Нотатки",
+      "groupTags": "Теги та закріплення",
+      "groupProxy": "Проксі",
+      "groupJumpHosts": "Проміжні хости",
+      "groupFeatureFlags": "Налаштування плагінів",
+      "groupAdvanced": "Розширена конфігурація",
+      "preview": "Попередній перегляд",
+      "moreHosts_one": "... ще {{count}} хост",
+      "moreHosts_few": "... ще {{count}} хости",
+      "moreHosts_many": "... ще {{count}} хостів",
+      "moreHosts_other": "... ще {{count}} хостів",
+      "summary": "{{selected}} з {{total}} хостів",
+      "credentialsIncluded": "включено облікові дані",
+      "credentialsExcluded": "виключено облікові дані",
+      "noneSelected": "Хости не вибрано",
+      "cancel": "Скасувати",
+      "confirm": "Експорт",
+      "fetchFailed": "Не вдалося завантажити хости для експорту",
+      "bulkButton": "Експорт"
+    },
+    "importNoHosts": "У файлі не знайдено хостів",
+    "importTooMany": "Можна імпортувати не більше {{max}} хостів одночасно",
+    "importSummary": "Імпорт завершено: {{imported}} імпортовано, {{updated}} оновлено, {{failed}} не вдалося",
+    "importHostsFailed": "Не вдалося імпортувати хости",
+    "importConfigFailed": "Не вдалося імпортувати конфігурацію SSH"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "name": "Importas ir eksportas",
+    "description": "Importuokite hostus iš JSON failo arba SSH konfigūracijos failo ir eksportuokite juos, kad dalintumėtės ar sukurtumėte atsarginę kopiją."
+  },
+  "permissions": {
+    "use": {
+      "title": "Importuoti ir eksportuoti hostus",
+      "description": "Importuoti hostus iš failų ir eksportuoti juos."
+    }
+  },
+  "hosts": {
+    "downloadSample": "Atsisiųsti pavyzdį",
+    "importSkipExisting": "Importuoti (praleisti esamus)",
+    "importSSHConfig": "Importuoti iš SSH konfigūracijos",
+    "importOverwrite": "Importuoti (perrašyti)",
+    "importExportBtn": "Importuoti / Eksportuoti",
+    "hostsExported": "Hostai sėkmingai eksportuoti",
+    "export": {
+      "menuItem": "Eksportuoti...",
+      "title": "Eksportuoti hostus",
+      "scope": "Apimtis",
+      "scopeAll": "Visi",
+      "scopeSelected": "Pasirinkti",
+      "searchHosts": "Ieškoti hostų...",
+      "include": "Įtraukti",
+      "groupConnection": "Jungtis",
+      "groupCredentials": "Prijungimo duomenys",
+      "groupNotes": "Pastabos",
+      "groupTags": "Žymos ir prisegimas",
+      "groupProxy": "Tarpinis serveris",
+      "groupJumpHosts": "Tarpiniai hostai",
+      "groupFeatureFlags": "Priedo nustatymai",
+      "groupAdvanced": "Išplėstinė konfigūracija",
+      "preview": "Peržiūra",
+      "moreHosts_one": "... dar {{count}} hostas",
+      "moreHosts_few": "... dar {{count}} hostai",
+      "moreHosts_many": "... dar {{count}} hostų",
+      "moreHosts_other": "... dar {{count}} hostų",
+      "summary": "{{selected}} iš {{total}} hostų",
+      "credentialsIncluded": "įtraukti prijungimo duomenys",
+      "credentialsExcluded": "neįtraukti prijungimo duomenys",
+      "noneSelected": "Nepasirinkti hostai",
+      "cancel": "Atšaukti",
+      "confirm": "Eksportuoti",
+      "fetchFailed": "Nepavyko įkelti hostų eksportui",
+      "bulkButton": "Eksportuoti"
+    },
+    "importNoHosts": "Faile nerasta hostų",
+    "importTooMany": "Gali importuoti ne daugiau kaip {{max}} hostų vienu metu",
+    "importSummary": "Importas baigtas: {{imported}} importuota, {{updated}} atnaujinta, {{failed}} nepavyko",
+    "importHostsFailed": "Nepavyko importuoti hostų",
+    "importConfigFailed": "Nepavyko importuoti SSH konfigūracijos"
+  }
+}

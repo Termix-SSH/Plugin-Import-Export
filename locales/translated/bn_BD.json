@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "আমপোর্ট এবং এক্সপোর্ট",
+    "description": "JSON ফাইল বা SSH কনফিগ ফাইল থেকে হোস্ট আমপোর্ট করুন এবং শেয়ার বা ব্যাকআপের জন্য এক্সপোর্ট করুন।"
+  },
+  "permissions": {
+    "use": {
+      "title": "হোস্ট আমপোর্ট এবং এক্সপোর্ট করুন",
+      "description": "ফাইল থেকে হোস্ট আমপোর্ট এবং এক্সপোর্ট করুন।"
+    }
+  },
+  "hosts": {
+    "downloadSample": "নমুনা ডাউনলোড করুন",
+    "importSkipExisting": "আমপোর্ট (বিদ্যমান উপেক্ষা করুন)",
+    "importSSHConfig": "SSH কনফিগ থেকে আমপোর্ট করুন",
+    "importOverwrite": "আমপোর্ট (প্রতিস্থাপন করুন)",
+    "importExportBtn": "আমপোর্ট / এক্সপোর্ট",
+    "hostsExported": "হোস্ট সফলভাবে এক্সপোর্ট করা হয়েছে",
+    "export": {
+      "menuItem": "রপ্তানি...",
+      "title": "হোস্ট রপ্তানি করুন",
+      "scope": "পরিসর",
+      "scopeAll": "সব",
+      "scopeSelected": "নির্বাচিত",
+      "searchHosts": "হোস্ট খুঁজুন...",
+      "include": "সহ অন্তর্ভুক্ত করুন",
+      "groupConnection": "সংযোগ",
+      "groupCredentials": "ক্রেডেনশিয়াল",
+      "groupNotes": "নোট",
+      "groupTags": "ট্যাগ এবং পিন",
+      "groupProxy": "প্রক্সি",
+      "groupJumpHosts": "জাম্প হোস্ট",
+      "groupFeatureFlags": "প্লাগইন সেটিংস",
+      "groupAdvanced": "অ্যাডভান্সড কনফিগ",
+      "preview": "পূর্বরূপ",
+      "moreHosts_one": "... আরও {{count}}টি হোস্ট",
+      "moreHosts_other": "... আরও {{count}}টি হোস্ট",
+      "summary": "{{total}} হোস্টের মধ্যে {{selected}}টি",
+      "credentialsIncluded": "ক্রেডেনশিয়াল অন্তর্ভুক্ত",
+      "credentialsExcluded": "ক্রেডেনশিয়াল বাদ দেওয়া হয়েছে",
+      "noneSelected": "কোনো হোস্ট নির্বাচন করা হয়নি",
+      "cancel": "বাতিল",
+      "confirm": "রপ্তানি",
+      "fetchFailed": "রপ্তানির জন্য হোস্ট লোড করতে ব্যর্থ হয়েছে",
+      "bulkButton": "রপ্তানি"
+    },
+    "importNoHosts": "ফাইলে কোনো হোস্ট পাওয়া যায়নি",
+    "importTooMany": "আপনি একসাথে সর্বোচ্চ {{max}} হোস্ট আমদানি করতে পারেন",
+    "importSummary": "আমদানি সম্পন্ন: {{imported}} আমদানি করা হয়েছে, {{updated}} আপডেট করা হয়েছে, {{failed}} ব্যর্থ হয়েছে",
+    "importHostsFailed": "হোস্ট আমদানি করতে ব্যর্থ হয়েছে",
+    "importConfigFailed": "SSH কনফিগ আমদানি করতে ব্যর্থ হয়েছে"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "plugin": {
+    "name": "आयात और निर्यात",
+    "description": "JSON फ़ाइल या SSH कॉन्फ़िगरेशन फ़ाइल से होस्ट आयात करें और उन्हें साझा करने या बैकअप लेने के लिए निर्यात करें।"
+  },
+  "permissions": {
+    "use": {
+      "title": "होस्ट आयात और निर्यात करें",
+      "description": "फ़ाइलों से होस्ट आयात करें और उन्हें निर्यात करें।"
+    }
+  },
+  "hosts": {
+    "downloadSample": "नमूना डाउनलोड करें",
+    "importSkipExisting": "आयात करें (मौजूदा को छोड़ें)",
+    "importSSHConfig": "SSH कॉन्फ़िगरेशन से आयात करें",
+    "importOverwrite": "आयात करें (ओवरराइट करें)",
+    "importExportBtn": "आयात / निर्यात",
+    "hostsExported": "होस्ट सफलतापूर्वक निर्यात किए गए",
+    "export": {
+      "menuItem": "निर्यात...",
+      "title": "होस्ट निर्यात करें",
+      "scope": "क्षेत्र",
+      "scopeAll": "सभी",
+      "scopeSelected": "चयनित",
+      "searchHosts": "होस्ट खोजें...",
+      "include": "शामिल करें",
+      "groupConnection": "कनेक्शन",
+      "groupCredentials": "प्रमाणपत्र",
+      "groupNotes": "नोट्स",
+      "groupTags": "टैग और पिन",
+      "groupProxy": "प्रॉक्सी",
+      "groupJumpHosts": "जंप होस्ट",
+      "groupFeatureFlags": "प्लगइन सेटिंग्स",
+      "groupAdvanced": "उन्नत कॉन्फ़िगरेशन",
+      "preview": "पूर्वावलोकन",
+      "moreHosts_one": "... {{count}} और होस्ट",
+      "moreHosts_other": "... {{count}} और होस्ट",
+      "summary": "{{total}} में से {{selected}} होस्ट",
+      "credentialsIncluded": "प्रमाणपत्र शामिल हैं",
+      "credentialsExcluded": "प्रमाणपत्र बाहर हैं",
+      "noneSelected": "कोई होस्ट चयनित नहीं",
+      "cancel": "रद्द करें",
+      "confirm": "निर्यात करें",
+      "fetchFailed": "निर्यात के लिए होस्ट लोड करने में विफल",
+      "bulkButton": "निर्यात करें"
+    },
+    "importNoHosts": "फ़ाइल में कोई होस्ट नहीं मिला",
+    "importTooMany": "आप एक साथ अधिकतम {{max}} होस्ट आयात कर सकते हैं",
+    "importSummary": "आयात पूर्ण: {{imported}} आयातित, {{updated}} अपडेट किए गए, {{failed}} विफल",
+    "importHostsFailed": "होस्ट आयात करने में विफल",
+    "importConfigFailed": "SSH कॉन्फ़िगरेशन आयात करने में विफल"
+  }
+}
