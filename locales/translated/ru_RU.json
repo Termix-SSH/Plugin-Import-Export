@@ -27,7 +27,7 @@
       "groupConnection": "Подключение",
       "groupCredentials": "Учетные данные",
       "groupNotes": "Заметки",
-      "groupTags": "Теги и закрепление",
+      "groupTags": "Метки, закрепление, цвет и значок",
       "groupProxy": "Прокси",
       "groupJumpHosts": "Промежуточные хосты",
       "groupFeatureFlags": "Настройки плагинов",

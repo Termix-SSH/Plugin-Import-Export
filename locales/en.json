@@ -27,7 +27,7 @@
       "groupConnection": "Connection",
       "groupCredentials": "Credentials",
       "groupNotes": "Notes",
-      "groupTags": "Tags & pin",
+      "groupTags": "Tags, pin, color & icon",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Jump hosts",
       "groupFeatureFlags": "Plugin settings",

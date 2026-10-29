@@ -27,7 +27,7 @@
       "groupConnection": "Jungtis",
       "groupCredentials": "Prijungimo duomenys",
       "groupNotes": "Pastabos",
-      "groupTags": "Žymos ir prisegimas",
+      "groupTags": "Žymos, prisegimas, spalva ir piktograma",
       "groupProxy": "Tarpinis serveris",
       "groupJumpHosts": "Tarpiniai hostai",
       "groupFeatureFlags": "Priedo nustatymai",

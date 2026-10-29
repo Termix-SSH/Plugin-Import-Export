@@ -45,6 +45,8 @@ function shareRaw(): ExportPayload {
         notes: "primary",
         tags: ["a"],
         pin: true,
+        color: "#22c55e",
+        icon: "server",
         jumpHosts: [{ hostId: 3 }],
         credentialAlias: "prod-admin",
         authType: "credential",
@@ -319,5 +321,28 @@ describe("pluginSecretKeys", () => {
         { id: "docker", contributes: null },
       ]),
     ).toEqual(RDP_SECRETS);
+  });
+});
+
+describe("color and icon", () => {
+  it("go with the tags group", () => {
+    const withTags = buildExportPayload(
+      shareRaw(),
+      null,
+      new Set<FieldGroup>(["tags"]),
+      false,
+    );
+    expect(withTags.hosts[0]).toMatchObject({
+      color: "#22c55e",
+      icon: "server",
+    });
+    const without = buildExportPayload(
+      shareRaw(),
+      null,
+      new Set<FieldGroup>(["notes"]),
+      false,
+    );
+    expect(without.hosts[0].color).toBeUndefined();
+    expect(without.hosts[0].icon).toBeUndefined();
   });
 });

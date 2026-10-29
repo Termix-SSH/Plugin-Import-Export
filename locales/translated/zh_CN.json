@@ -27,7 +27,7 @@
       "groupConnection": "连接",
       "groupCredentials": "凭据",
       "groupNotes": "备注",
-      "groupTags": "标签与置顶",
+      "groupTags": "标签、置顶、颜色与图标",
       "groupProxy": "代理",
       "groupJumpHosts": "跳板机",
       "groupFeatureFlags": "插件设置",

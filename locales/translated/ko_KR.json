@@ -27,7 +27,7 @@
       "groupConnection": "연결",
       "groupCredentials": "인증 정보",
       "groupNotes": "메모",
-      "groupTags": "태그 및 고정",
+      "groupTags": "태그, 고정, 색상 및 아이콘",
       "groupProxy": "프록시",
       "groupJumpHosts": "점프 호스트",
       "groupFeatureFlags": "플러그인 설정",

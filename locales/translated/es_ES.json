@@ -27,7 +27,7 @@
       "groupConnection": "Conexión",
       "groupCredentials": "Credenciales",
       "groupNotes": "Notas",
-      "groupTags": "Etiquetas y fijar",
+      "groupTags": "Etiquetas, fijar, color e icono",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Hosts de salto",
       "groupFeatureFlags": "Configuración de complementos",

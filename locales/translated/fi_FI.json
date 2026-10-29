@@ -27,7 +27,7 @@
       "groupConnection": "Yhteys",
       "groupCredentials": "Kirjautumistiedot",
       "groupNotes": "Muistiinpanot",
-      "groupTags": "Tunnisteet ja kiinnitys",
+      "groupTags": "Tunnisteet, kiinnitys, väri ja kuvake",
       "groupProxy": "Välityspalvelin",
       "groupJumpHosts": "Välityspalvelimet",
       "groupFeatureFlags": "Liitännäisasennukset",

@@ -27,7 +27,7 @@ const FIELD_GROUP_KEYS: Record<FieldGroup, string[]> = {
     "ignoreCert",
   ],
   notes: ["notes"],
-  tags: ["tags", "pin"],
+  tags: ["tags", "pin", "color", "icon"],
   proxy: [
     "useSocks5",
     "socks5Host",

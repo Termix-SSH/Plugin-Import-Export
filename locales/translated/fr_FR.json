@@ -27,7 +27,7 @@
       "groupConnection": "Connexion",
       "groupCredentials": "Identifiants",
       "groupNotes": "Notes",
-      "groupTags": "Étiquettes et épinglage",
+      "groupTags": "Étiquettes, épinglage, couleur et icône",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Hôtes intermédiaires",
       "groupFeatureFlags": "Paramètres des plugins",

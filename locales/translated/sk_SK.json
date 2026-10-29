@@ -27,7 +27,7 @@
       "groupConnection": "Pripojenie",
       "groupCredentials": "Prihlasovacie údaje",
       "groupNotes": "Poznámky",
-      "groupTags": "Štítky a pripnutie",
+      "groupTags": "Štítky, pripnutie, farba a ikona",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Preskakovacie hosty",
       "groupFeatureFlags": "Nastavenia pluginov",

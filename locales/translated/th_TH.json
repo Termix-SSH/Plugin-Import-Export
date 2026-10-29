@@ -27,7 +27,7 @@
       "groupConnection": "การเชื่อมต่อ",
       "groupCredentials": "ข้อมูลรับรอง",
       "groupNotes": "บันทึกย่อ",
-      "groupTags": "แท็กและปักหมุด",
+      "groupTags": "ป้ายกำกับ, การปักหมุด, สี และไอคอน",
       "groupProxy": "พร็อกซี",
       "groupJumpHosts": "โฮสต์ข้าม",
       "groupFeatureFlags": "การตั้งค่าปลั๊กอิน",

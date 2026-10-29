@@ -27,7 +27,7 @@
       "groupConnection": "Bağlantı",
       "groupCredentials": "Kimlik Bilgileri",
       "groupNotes": "Notlar",
-      "groupTags": "Etiketler ve sabitleme",
+      "groupTags": "Etiketler, sabitleme, renk ve simge",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Atlayıcı ana bilgisayarlar",
       "groupFeatureFlags": "Eklenti ayarları",

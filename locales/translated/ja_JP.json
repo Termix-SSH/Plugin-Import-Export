@@ -27,7 +27,7 @@
       "groupConnection": "接続",
       "groupCredentials": "認証情報",
       "groupNotes": "メモ",
-      "groupTags": "タグとピン留め",
+      "groupTags": "タグ、ピン留め、色とアイコン",
       "groupProxy": "プロキシ",
       "groupJumpHosts": "ジャンプホスト",
       "groupFeatureFlags": "プラグイン設定",

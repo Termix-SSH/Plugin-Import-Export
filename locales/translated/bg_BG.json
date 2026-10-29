@@ -27,7 +27,7 @@
       "groupConnection": "Връзка",
       "groupCredentials": "Удостоверения",
       "groupNotes": "Бележки",
-      "groupTags": "Етикети и закрепване",
+      "groupTags": "Етикети, закрепване, цвят и икона",
       "groupProxy": "Прокси",
       "groupJumpHosts": "Междинни сървъри",
       "groupFeatureFlags": "Настройки на плъгините",

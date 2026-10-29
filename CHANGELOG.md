@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Added
+
+- Exports keep each host's color and icon with the tags
+
 ## 1.0.0
 
 ### Added

@@ -27,7 +27,7 @@
       "groupConnection": "連線",
       "groupCredentials": "憑證",
       "groupNotes": "備註",
-      "groupTags": "標籤與釘選",
+      "groupTags": "標籤、置頂、顏色與圖示",
       "groupProxy": "代理",
       "groupJumpHosts": "跳板主機",
       "groupFeatureFlags": "外掛設定",

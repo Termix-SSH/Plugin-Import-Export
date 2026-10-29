@@ -27,7 +27,7 @@
       "groupConnection": "Ühendus",
       "groupCredentials": "Sisselogimisandmed",
       "groupNotes": "Märkmed",
-      "groupTags": "Sildid ja kinnitamine",
+      "groupTags": "Sildid, kinnitamine, värv ja ikoon",
       "groupProxy": "Proksy",
       "groupJumpHosts": "Hüppemasinad",
       "groupFeatureFlags": "Pärisseadistused",

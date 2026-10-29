@@ -27,7 +27,7 @@
       "groupConnection": "Conexão",
       "groupCredentials": "Credenciais",
       "groupNotes": "Notas",
-      "groupTags": "Etiquetas e fixar",
+      "groupTags": "Etiquetas, fixar, cor e ícone",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Jump hosts",
       "groupFeatureFlags": "Definições do plugin",

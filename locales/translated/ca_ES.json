@@ -27,7 +27,7 @@
       "groupConnection": "Connexió",
       "groupCredentials": "Credencials",
       "groupNotes": "Notes",
-      "groupTags": "Etiquetes i fixar",
+      "groupTags": "Etiquetes, fixar, color i icona",
       "groupProxy": "Proxy",
       "groupJumpHosts": "Hosts de salt",
       "groupFeatureFlags": "Configuració del complement",
