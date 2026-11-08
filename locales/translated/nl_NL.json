@@ -49,5 +49,15 @@
     "importSummary": "Importeren voltooid: {{imported}} geïmporteerd, {{updated}} bijgewerkt, {{failed}} mislukt",
     "importHostsFailed": "Kan hosts niet importeren",
     "importConfigFailed": "Kan SSH-configuratie niet importeren"
+  },
+  "operations": {
+    "export": {
+      "title": "Hosts exporteren zonder geheimen"
+    },
+    "sshImport": {
+      "title": "Hosts importeren uit SSH-configuratie"
+    },
+    "content": "SSH-configuratietekst",
+    "overwrite": "Hosts die al bestaan bijwerken"
   }
 }

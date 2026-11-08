@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Added
+
+- Export hosts without secrets and import an SSH config as operations
+
 ## 1.0.1
 
 ### Added

@@ -49,5 +49,15 @@
     "importSummary": "Invoer gedoen: {{imported}} ingevoer, {{updated}} opgedateer, {{failed}} misluk",
     "importHostsFailed": "Kon nie gasheerbedienings invoer nie",
     "importConfigFailed": "Kon nie SSH-konfigurasie invoer nie"
+  },
+  "operations": {
+    "export": {
+      "title": "Voer gasheers uit sonder geheime"
+    },
+    "sshImport": {
+      "title": "Voer gasheers in vanaf SSH-konfigurasie"
+    },
+    "content": "SSH-konfigurasieteks",
+    "overwrite": "Dateer gasheers op wat reeds bestaan"
   }
 }

@@ -49,5 +49,15 @@
     "importSummary": "Tuonti valmis: {{imported}} tuotu, {{updated}} päivitetty, {{failed}} epäonnistui",
     "importHostsFailed": "Isäntien tuonti epäonnistui",
     "importConfigFailed": "SSH-asetusten tuonti epäonnistui"
+  },
+  "operations": {
+    "export": {
+      "title": "Vie isäntäluettelo ilman salaisuuksia"
+    },
+    "sshImport": {
+      "title": "Tuo isäntiä SSH-asetustiedostosta"
+    },
+    "content": "SSH-asetusteksti",
+    "overwrite": "Päivitä jo olemassa olevat isännät"
   }
 }

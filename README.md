@@ -31,6 +31,7 @@ Read the [docs](https://docs.termix.site/plugins/import-export) to set it up and
 - Skip or overwrite hosts that already exist
 - Export all or some hosts and pick which fields to include
 - Share an export without any passwords or keys
+- Export and import through Termix actions
 
 <br />
 

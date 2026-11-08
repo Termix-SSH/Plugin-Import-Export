@@ -50,5 +50,15 @@
     "importSummary": "Uvoz završen: {{imported}} uvezeno, {{updated}} ažurirano, {{failed}} neuspješno",
     "importHostsFailed": "Neuspješan uvoz hostova",
     "importConfigFailed": "Neuspješan uvoz SSH konfiguracije"
+  },
+  "operations": {
+    "export": {
+      "title": "Izvoz domaćina bez tajni"
+    },
+    "sshImport": {
+      "title": "Uvoz domaćina iz SSH konfiguracije"
+    },
+    "content": "Tekst SSH konfiguracije",
+    "overwrite": "Ažuriraj domaćine koji već postoje"
   }
 }

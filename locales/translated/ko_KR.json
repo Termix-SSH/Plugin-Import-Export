@@ -48,5 +48,15 @@
     "importSummary": "가져오기 완료: {{imported}}개 가져오기, {{updated}}개 업데이트, {{failed}}개 실패",
     "importHostsFailed": "호스트 가져오기에 실패했습니다",
     "importConfigFailed": "SSH 구성 가져오기에 실패했습니다"
+  },
+  "operations": {
+    "export": {
+      "title": "비밀 정보 없이 호스트 내보내기"
+    },
+    "sshImport": {
+      "title": "SSH 구성에서 호스트 가져오기"
+    },
+    "content": "SSH 구성 텍스트",
+    "overwrite": "이미 존재하는 호스트 업데이트"
   }
 }

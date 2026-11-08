@@ -49,5 +49,15 @@
     "importSummary": "आयात पूर्ण: {{imported}} आयातित, {{updated}} अपडेट किए गए, {{failed}} विफल",
     "importHostsFailed": "होस्ट आयात करने में विफल",
     "importConfigFailed": "SSH कॉन्फ़िगरेशन आयात करने में विफल"
+  },
+  "operations": {
+    "export": {
+      "title": "रहस्यों के बिना होस्ट निर्यात करें"
+    },
+    "sshImport": {
+      "title": "SSH कॉन्फ़िगरेशन से होस्ट आयात करें"
+    },
+    "content": "SSH कॉन्फ़िगरेशन पाठ",
+    "overwrite": "पहले से मौजूद होस्ट अपडेट करें"
   }
 }

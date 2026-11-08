@@ -49,5 +49,15 @@
     "importSummary": "Import fullført: {{imported}} importert, {{updated}} oppdatert, {{failed}} mislyktes",
     "importHostsFailed": "Kunne ikke importere verter",
     "importConfigFailed": "Kunne ikke importere SSH-konfigurasjon"
+  },
+  "operations": {
+    "export": {
+      "title": "Eksporter vertsmaskiner uten hemmeligheter"
+    },
+    "sshImport": {
+      "title": "Importer vertsmaskiner fra SSH-konfigurasjon"
+    },
+    "content": "SSH-konfigurasjonstekst",
+    "overwrite": "Oppdater vertsmaskiner som allerede finnes"
   }
 }

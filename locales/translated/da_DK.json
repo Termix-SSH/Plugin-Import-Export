@@ -49,5 +49,15 @@
     "importSummary": "Import færdig: {{imported}} importeret, {{updated}} opdateret, {{failed}} mislykket",
     "importHostsFailed": "Kunne ikke importere værter",
     "importConfigFailed": "Kunne ikke importere SSH-konfiguration"
+  },
+  "operations": {
+    "export": {
+      "title": "Eksportér værter uden hemmeligheder"
+    },
+    "sshImport": {
+      "title": "Importer værter fra SSH-konfiguration"
+    },
+    "content": "SSH-konfigurationstekst",
+    "overwrite": "Opdater værter, der allerede findes"
   }
 }

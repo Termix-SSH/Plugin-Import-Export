@@ -50,5 +50,15 @@
     "importSummary": "הייבוא הושלם: {{imported}} יובאו, {{updated}} עודכנו, {{failed}} נכשלו",
     "importHostsFailed": "ייבוא המארחים נכשל",
     "importConfigFailed": "ייבוא תצורת SSH נכשל"
+  },
+  "operations": {
+    "export": {
+      "title": "ייצוא מארחים ללא סודות"
+    },
+    "sshImport": {
+      "title": "ייבוא מארחים מקובץ תצורת SSH"
+    },
+    "content": "טקסט תצורת SSH",
+    "overwrite": "עדכון מארחים שכבר קיימים"
   }
 }

@@ -53,5 +53,15 @@
     "importSummary": "اكتمل الاستيراد: {{imported}} تم استيرادها، {{updated}} تم تحديثها، {{failed}} فشلت",
     "importHostsFailed": "فشل في استيراد المضيفين",
     "importConfigFailed": "فشل في استيراد إعدادات SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "تصدير المضيفين دون أسرار"
+    },
+    "sshImport": {
+      "title": "استيراد المضيفين من إعدادات SSH"
+    },
+    "content": "نص إعدادات SSH",
+    "overwrite": "تحديث المضيفين الموجودين مسبقاً"
   }
 }

@@ -50,5 +50,15 @@
     "importSummary": "Увоз завршен: {{imported}} увезено, {{updated}} ажурирано, {{failed}} неуспешно",
     "importHostsFailed": "Неуспешан увоз хостова",
     "importConfigFailed": "Неуспешан увоз SSH config-а"
+  },
+  "operations": {
+    "export": {
+      "title": "Извези хостове без тајни"
+    },
+    "sshImport": {
+      "title": "Увези хостове из SSH конфигурације"
+    },
+    "content": "Текст SSH конфигурације",
+    "overwrite": "Ажурирај хостове који већ постоје"
   }
 }

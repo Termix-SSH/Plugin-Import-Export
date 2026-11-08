@@ -48,5 +48,15 @@
     "importSummary": "匯入完成：{{imported}} 個已匯入，{{updated}} 個已更新，{{failed}} 個失敗",
     "importHostsFailed": "匯入主機失敗",
     "importConfigFailed": "匯入 SSH 設定失敗"
+  },
+  "operations": {
+    "export": {
+      "title": "匯出不含機密的主機"
+    },
+    "sshImport": {
+      "title": "從 SSH 設定匯入主機"
+    },
+    "content": "SSH 設定文字",
+    "overwrite": "更新已存在的主機"
   }
 }

@@ -49,5 +49,15 @@
     "importSummary": "Importimine lõpetatud: {{imported}} imporditud, {{updated}} uuendatud, {{failed}} ebaõnnestunud",
     "importHostsFailed": "Hostide importimine ebaõnnestus",
     "importConfigFailed": "SSH-konfiguratsiooni importimine ebaõnnestus"
+  },
+  "operations": {
+    "export": {
+      "title": "Ekspordi hostid ilma saladusteta"
+    },
+    "sshImport": {
+      "title": "Impordi hostid SSH-konfiguratsioonist"
+    },
+    "content": "SSH-konfiguratsiooni tekst",
+    "overwrite": "Uuenda juba olemasolevaid hoste"
   }
 }

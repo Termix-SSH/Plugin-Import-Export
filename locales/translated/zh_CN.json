@@ -48,5 +48,15 @@
     "importSummary": "导入完成：{{imported}} 个已导入，{{updated}} 个已更新，{{failed}} 个失败",
     "importHostsFailed": "导入主机失败",
     "importConfigFailed": "导入 SSH 配置失败"
+  },
+  "operations": {
+    "export": {
+      "title": "导出主机（不含密钥）"
+    },
+    "sshImport": {
+      "title": "从 SSH 配置导入主机"
+    },
+    "content": "SSH 配置文本",
+    "overwrite": "更新已存在的主机"
   }
 }

@@ -50,5 +50,15 @@
     "importSummary": "Importació completada: {{imported}} importats, {{updated}} actualitzats, {{failed}} fallits",
     "importHostsFailed": "No s'han pogut importar els amfitrions",
     "importConfigFailed": "No s'ha pogut importar la configuració SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Exporta els amfitrions sense secrets"
+    },
+    "sshImport": {
+      "title": "Importa amfitrions des de la configuració d'SSH"
+    },
+    "content": "Text de la configuració d'SSH",
+    "overwrite": "Actualitza els amfitrions que ja existeixen"
   }
 }

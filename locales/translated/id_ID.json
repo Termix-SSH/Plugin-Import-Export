@@ -48,5 +48,15 @@
     "importSummary": "Impor selesai: {{imported}} diimpor, {{updated}} diperbarui, {{failed}} gagal",
     "importHostsFailed": "Gagal mengimpor host",
     "importConfigFailed": "Gagal mengimpor konfigurasi SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Ekspor host tanpa rahasia"
+    },
+    "sshImport": {
+      "title": "Impor host dari konfigurasi SSH"
+    },
+    "content": "Teks konfigurasi SSH",
+    "overwrite": "Perbarui host yang sudah ada"
   }
 }

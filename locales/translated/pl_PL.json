@@ -51,5 +51,15 @@
     "importSummary": "Import zakończony: {{imported}} zaimportowano, {{updated}} zaktualizowano, {{failed}} nieudanych",
     "importHostsFailed": "Nie udało się zaimportować hostów",
     "importConfigFailed": "Nie udało się zaimportować konfiguracji SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Eksportuj hosty bez poufnych danych"
+    },
+    "sshImport": {
+      "title": "Importuj hosty z konfiguracji SSH"
+    },
+    "content": "Tekst konfiguracji SSH",
+    "overwrite": "Aktualizuj istniejące już hosty"
   }
 }

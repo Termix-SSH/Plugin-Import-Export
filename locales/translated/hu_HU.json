@@ -49,5 +49,15 @@
     "importSummary": "Importálás kész: {{imported}} importálva, {{updated}} frissítve, {{failed}} sikertelen",
     "importHostsFailed": "Nem sikerült importálni a hostokat",
     "importConfigFailed": "Nem sikerült importálni az SSH-konfigurációt"
+  },
+  "operations": {
+    "export": {
+      "title": "Hostok exportálása titkos adatok nélkül"
+    },
+    "sshImport": {
+      "title": "Hostok importálása SSH-konfigurációból"
+    },
+    "content": "SSH-konfiguráció szövege",
+    "overwrite": "Már meglévő hostok frissítése"
   }
 }

@@ -49,5 +49,15 @@
     "importSummary": "Η εισαγωγή ολοκληρώθηκε: {{imported}} εισήχθησαν, {{updated}} ενημερώθηκαν, {{failed}} απέτυχαν",
     "importHostsFailed": "Αποτυχία εισαγωγής hosts",
     "importConfigFailed": "Αποτυχία εισαγωγής SSH config"
+  },
+  "operations": {
+    "export": {
+      "title": "Εξαγωγή hosts χωρίς μυστικά"
+    },
+    "sshImport": {
+      "title": "Εισαγωγή hosts από SSH config"
+    },
+    "content": "Κείμενο SSH config",
+    "overwrite": "Ενημέρωση hosts που ήδη υπάρχουν"
   }
 }

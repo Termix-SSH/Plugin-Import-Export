@@ -50,5 +50,15 @@
     "importSummary": "Import finalizat: {{imported}} importate, {{updated}} actualizate, {{failed}} eșuate",
     "importHostsFailed": "Nu s-au putut importa gazdele",
     "importConfigFailed": "Nu s-a putut importa configurarea SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Exportă gazdele fără date sensibile"
+    },
+    "sshImport": {
+      "title": "Importă gazde din configurația SSH"
+    },
+    "content": "Textul configurației SSH",
+    "overwrite": "Actualizează gazdele care există deja"
   }
 }

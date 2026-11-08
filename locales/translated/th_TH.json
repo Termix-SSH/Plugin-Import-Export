@@ -48,5 +48,15 @@
     "importSummary": "การนำเข้าเสร็จสิ้น: นำเข้า {{imported}} อัปเดต {{updated}} ล้มเหลว {{failed}}",
     "importHostsFailed": "ไม่สามารถนำเข้าโฮสต์ได้",
     "importConfigFailed": "ไม่สามารถนำเข้าไฟล์กำหนดค่า SSH ได้"
+  },
+  "operations": {
+    "export": {
+      "title": "ส่งออกโฮสต์โดยไม่รวมข้อมูลลับ"
+    },
+    "sshImport": {
+      "title": "นำเข้าโฮสต์จากไฟล์กำหนดค่า SSH"
+    },
+    "content": "ข้อความกำหนดค่า SSH",
+    "overwrite": "อัปเดตโฮสต์ที่มีอยู่แล้ว"
   }
 }

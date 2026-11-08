@@ -48,5 +48,15 @@
     "importSummary": "インポート完了: {{imported}} 件インポート、{{updated}} 件更新、{{failed}} 件失敗",
     "importHostsFailed": "ホストのインポートに失敗しました",
     "importConfigFailed": "SSH 設定のインポートに失敗しました"
+  },
+  "operations": {
+    "export": {
+      "title": "シークレットなしでホストをエクスポート"
+    },
+    "sshImport": {
+      "title": "SSH 設定からホストをインポート"
+    },
+    "content": "SSH 設定テキスト",
+    "overwrite": "既存のホストを更新"
   }
 }

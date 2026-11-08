@@ -51,5 +51,15 @@
     "importSummary": "Импорт завершён: {{imported}} импортировано, {{updated}} обновлено, {{failed}} ошибок",
     "importHostsFailed": "Не удалось импортировать хосты",
     "importConfigFailed": "Не удалось импортировать конфигурацию SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Экспорт хостов без секретов"
+    },
+    "sshImport": {
+      "title": "Импорт хостов из конфигурации SSH"
+    },
+    "content": "Текст конфигурации SSH",
+    "overwrite": "Обновить существующие хосты"
   }
 }

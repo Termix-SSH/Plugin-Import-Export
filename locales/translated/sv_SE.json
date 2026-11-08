@@ -49,5 +49,15 @@
     "importSummary": "Import klar: {{imported}} importerade, {{updated}} uppdaterade, {{failed}} misslyckade",
     "importHostsFailed": "Kunde inte importera värdar",
     "importConfigFailed": "Kunde inte importera SSH-konfiguration"
+  },
+  "operations": {
+    "export": {
+      "title": "Exportera värdar utan hemligheter"
+    },
+    "sshImport": {
+      "title": "Importera värdar från SSH-konfiguration"
+    },
+    "content": "Text för SSH-konfiguration",
+    "overwrite": "Uppdatera värdar som redan finns"
   }
 }

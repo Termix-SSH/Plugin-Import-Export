@@ -51,5 +51,15 @@
     "importSummary": "Import dokončen: {{imported}} importováno, {{updated}} aktualizováno, {{failed}} selhalo",
     "importHostsFailed": "Nepodařilo se importovat hosty",
     "importConfigFailed": "Nepodařilo se importovat SSH konfiguraci"
+  },
+  "operations": {
+    "export": {
+      "title": "Exportovat hostitele bez tajných údajů"
+    },
+    "sshImport": {
+      "title": "Importovat hostitele ze SSH konfigurace"
+    },
+    "content": "Text SSH konfigurace",
+    "overwrite": "Aktualizovat již existující hostitele"
   }
 }

@@ -51,5 +51,15 @@
     "importSummary": "Uvoz končan: {{imported}} uvoženih, {{updated}} posodobljenih, {{failed}} neuspešnih",
     "importHostsFailed": "Uvoz gostiteljev ni uspel",
     "importConfigFailed": "Uvoz SSH konfiguracije ni uspel"
+  },
+  "operations": {
+    "export": {
+      "title": "Izvozi gostitelje brez skrivnosti"
+    },
+    "sshImport": {
+      "title": "Uvozi gostitelje iz SSH konfiguracije"
+    },
+    "content": "Besedilo SSH konfiguracije",
+    "overwrite": "Posodobi gostitelje, ki že obstajajo"
   }
 }

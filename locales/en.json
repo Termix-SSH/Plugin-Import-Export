@@ -49,5 +49,15 @@
     "importSummary": "Import done: {{imported}} imported, {{updated}} updated, {{failed}} failed",
     "importHostsFailed": "Failed to import hosts",
     "importConfigFailed": "Failed to import SSH config"
+  },
+  "operations": {
+    "export": {
+      "title": "Export hosts without secrets"
+    },
+    "sshImport": {
+      "title": "Import hosts from SSH config"
+    },
+    "content": "SSH config text",
+    "overwrite": "Update hosts that already exist"
   }
 }

@@ -38,5 +38,9 @@
   "hosts.importTooMany": "b2ad2fe22c6d",
   "hosts.importSummary": "1033ca25dba1",
   "hosts.importHostsFailed": "72e0d6f1ebac",
-  "hosts.importConfigFailed": "5f51bbcd9bb9"
+  "hosts.importConfigFailed": "5f51bbcd9bb9",
+  "operations.export.title": "c0a95ca7885a",
+  "operations.sshImport.title": "ea3a2da33629",
+  "operations.content": "f87ff9f41ee2",
+  "operations.overwrite": "938d020016c5"
 }

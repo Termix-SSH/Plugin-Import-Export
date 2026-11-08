@@ -50,5 +50,15 @@
     "importSummary": "Importēšana pabeigta: {{imported}} importēti, {{updated}} atjaunināti, {{failed}} neizdevās",
     "importHostsFailed": "Neizdevās importēt hostus",
     "importConfigFailed": "Neizdevās importēt SSH konfigurāciju"
+  },
+  "operations": {
+    "export": {
+      "title": "Ezportēt resursdatorus bez noslēpumiem"
+    },
+    "sshImport": {
+      "title": "Importēt resursdatorus no SSH konfigurācijas"
+    },
+    "content": "SSH konfigurācijas teksts",
+    "overwrite": "Atjaunināt jau esošos resursdatorus"
   }
 }

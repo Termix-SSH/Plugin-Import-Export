@@ -1,7 +1,7 @@
 {
   "id": "import-export",
   "name": "Import and Export",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Import hosts from a JSON file or an SSH config file and export them to share or back up.",
   "author": {
     "name": "Termix"
@@ -21,8 +21,8 @@
   ],
   "env": [],
   "engine": {
-    "termix": ">=26.10.3",
-    "api": "^1.5"
+    "termix": ">=26.11.1-0",
+    "api": "^1.15"
   },
   "capabilities": [
     "network:serve",
@@ -30,7 +30,8 @@
     "hosts:write",
     "hosts:export",
     "credentials:write",
-    "ui:surface"
+    "ui:surface",
+    "operations:provide"
   ],
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"],
@@ -60,6 +61,48 @@
         {
           "from": "/host/db/host",
           "to": "/db/host"
+        }
+      ]
+    },
+    "operations": {
+      "actions": [
+        {
+          "id": "import-export.export",
+          "titleKey": "operations.export.title",
+          "scope": "server",
+          "risk": "read",
+          "permission": "use",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true,
+            "palette": false
+          }
+        },
+        {
+          "id": "import-export.ssh-config-import",
+          "titleKey": "operations.sshImport.title",
+          "icon": "FileInput",
+          "scope": "server",
+          "risk": "change",
+          "permission": "use",
+          "inputs": [
+            {
+              "key": "content",
+              "type": "string",
+              "labelKey": "operations.content",
+              "required": true
+            },
+            {
+              "key": "overwrite",
+              "type": "boolean",
+              "labelKey": "operations.overwrite"
+            }
+          ],
+          "surfaces": {
+            "assistant": false,
+            "mcp": false,
+            "palette": false
+          }
         }
       ]
     }

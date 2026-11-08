@@ -48,5 +48,15 @@
     "importSummary": "Hoàn tất nhập: {{imported}} đã nhập, {{updated}} đã cập nhật, {{failed}} thất bại",
     "importHostsFailed": "Không thể nhập máy chủ",
     "importConfigFailed": "Không thể nhập cấu hình SSH"
+  },
+  "operations": {
+    "export": {
+      "title": "Xuất danh sách máy chủ mà không bao gồm thông tin bảo mật"
+    },
+    "sshImport": {
+      "title": "Nhập máy chủ từ cấu hình SSH"
+    },
+    "content": "Nội dung cấu hình SSH",
+    "overwrite": "Cập nhật các máy chủ đã tồn tại"
   }
 }
