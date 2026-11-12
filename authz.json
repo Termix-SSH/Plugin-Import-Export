@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [],
+  "routes": {
+    "POST /plugin-api/import-export/bulk-import": {
+      "access": "user",
+      "permission": "import-export.use"
+    },
+    "GET /plugin-api/import-export/db/host/:id/export": {
+      "access": "user",
+      "permission": "import-export.use",
+      "resource": {
+        "kind": "own",
+        "fixture": "host"
+      },
+      "params": {
+        "id": "host"
+      },
+      "note": "Exports carry secrets, so only the owner may export"
+    },
+    "GET /plugin-api/import-export/export": {
+      "access": "user",
+      "permission": "import-export.use"
+    },
+    "GET /plugin-api/import-export/export/:id": {
+      "access": "user",
+      "permission": "import-export.use",
+      "resource": {
+        "kind": "own",
+        "fixture": "host"
+      },
+      "params": {
+        "id": "host"
+      },
+      "note": "Exports carry secrets, so only the owner may export"
+    },
+    "POST /plugin-api/import-export/ssh-config-import": {
+      "access": "user",
+      "permission": "import-export.use"
+    }
+  }
+}
