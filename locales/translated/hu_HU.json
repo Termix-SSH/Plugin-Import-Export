@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Importálás és exportálás",
-    "description": "Hostok importálása JSON- vagy SSH-konfigurációs fájlból, valamint exportálása megosztáshoz vagy biztonsági mentéshez."
+    "description": "Importáljon hostokat a Termixből, SSH-konfigurációból, Termiusból, MobaXterm-ből, PuTTY-ból, SecureCRT-ből vagy mRemoteNG-ből, és exportálja őket megosztáshoz vagy biztonsági mentéshez."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-konfiguráció szövege",
     "overwrite": "Már meglévő hostok frissítése"
+  },
+  "backup": {
+    "menuItem": "Biztonsági mentés objektumtárolóba",
+    "title": "Hostok biztonsági mentése objektumtárolóba",
+    "loadFailed": "Nem sikerült betölteni a biztonsági mentés beállításait",
+    "needsStorage": "Telepítse és engedélyezze az Objektumtároló bővítményt, majd adjon hozzá egy belépést ott, hogy biztonsági mentést készítsen a hostjairól egy tartályba.",
+    "noAccounts": "Először adjon hozzá egy S3 vagy más objektumtároló belépést az Objektumtároló bővítményben.",
+    "where": "Hová",
+    "account": "Tároló belépés",
+    "bucket": "Tartály",
+    "pickBucket": "Válasszon egy tartályt",
+    "folder": "Mappa",
+    "when": "Mikor",
+    "schedule": "Ütemezés",
+    "scheduleOff": "Csak akkor, ha megnyomom a Most mentés gombot",
+    "scheduleDaily": "Minden nap",
+    "scheduleWeekly": "Minden vasárnap",
+    "hour": "Óra (UTC)",
+    "hourHint": "0 és 23 között, UTC szerint",
+    "keep": "Megőrzendő biztonsági mentések száma",
+    "passphrase": "Jelszó",
+    "passphraseKept": "Mentve. Írjon be egy újat a módosításhoz",
+    "passphraseHint": "A biztonsági mentések a hostjait tartalmazzák a jelszavaikkal és kulcsaikkal, amelyet ez a jelszó védi. Őrizze biztonságos helyen: nélküle a biztonsági mentés nem nyitható meg. Legalább 8 karakter.",
+    "save": "Mentés",
+    "close": "Bezárás",
+    "saved": "Biztonsági mentés beállításai mentve",
+    "saveFailed": "Nem sikerült menteni a biztonsági mentés beállításait",
+    "files": "Biztonsági mentések",
+    "runNow": "Most mentés",
+    "running": "Biztonsági mentés folyamatban",
+    "done_one": "{{count}} host mentve",
+    "done_other": "{{count}} host mentve",
+    "runFailed": "A biztonsági mentés sikertelen volt",
+    "noFiles": "Még nincsenek biztonsági mentések.",
+    "overwrite": "Már meglévő hostok felülírása",
+    "overwriteHint": "Ha ki van kapcsolva, a ugyanazzal a névvel és címmel rendelkező hostok kihagyásra kerülnek.",
+    "restore": "Visszaállítás",
+    "restoreTitle": "Hostok visszaállítása ebből a biztonsági mentésből?",
+    "restoreDesc": "A {{when}} időpontbeli biztonsági mentésből származó hostok hozzáadásra kerülnek. A már meglévő hostok változatlanok maradnak.",
+    "restoreDescOverwrite": "A {{when}} időpontbeli biztonsági mentésből származó hostok hozzáadásra kerülnek, és a már meglévő hostok felülírásra kerülnek a biztonsági mentés másolatával.",
+    "restored": "Visszaállítva: {{added}} hozzáadva, {{updated}} frissítve, {{failed}} sikertelen",
+    "restoreFailed": "Nem sikerült visszaállítani a biztonsági mentést",
+    "lastGood": "Utolsó biztonsági mentés: {{when}}",
+    "lastFailed": "Utolsó biztonsági mentés sikertelen: {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Importálás másik alkalmazásból...",
+    "title": "Importálás másik alkalmazásból",
+    "source": "Forrás",
+    "app": "Alkalmazás",
+    "apps": {
+      "auto": "Megállapítás a fájlból",
+      "termius": "Termius vagy CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Válassza ki az exportfájlt, és a Termix megállapítja, melyik alkalmazásból származik.",
+      "termius": "A Termiusnak nincs saját export funkciója. Válasszon egy CSV fájlt, amelyet az import sablonból vagy egy Termius export eszközzel készített. A Label, Hostname/IP, Port, Username, Password, Groups és Tags oszlopok kiolvasásra kerülnek.",
+      "mobaxterm": "A MobaXterm-ben jobb klikk a User sessions elemre, majd Export all sessions to file választása, vagy válassza ki a MobaXterm.ini fájlt.",
+      "putty": "Exportálja a munkameneteket a regisztrációs adatbázisból a reg export HKCU\\Software\\SimonTatham putty.reg paranccsal, majd válassza ki a putty.reg fájlt.",
+      "securecrt": "A SecureCRT-ben használja a Tools, Export Settings menüpontot, és válassza ki az XML fájlt, vagy válassza ki a Config/Sessions mappát.",
+      "mremoteng": "Válassza ki a confCons.xml fájlt az AppData mappában található mRemoteNG mappából. A mentett jelszavak is átjönnek."
+    },
+    "pickFiles": "Fájlok kiválasztása",
+    "pickFolder": "Mappa kiválasztása",
+    "filesPicked_one": "{{count}} fájl",
+    "filesPicked_other": "{{count}} fájl",
+    "masterPassword": "Mesterjelszó",
+    "masterPasswordHint": "Ezt a fájlt mesterjelszó védi. Csak a fájl olvasásához használjuk.",
+    "unlock": "Megnyitás",
+    "readFailed": "A fájl nem olvasható",
+    "found_one": "{{count}} gazdagép található a(z) {{app}} alkalmazásban",
+    "found_other": "{{count}} gazdagép található a(z) {{app}} alkalmazásban",
+    "defaultUsername": "Felhasználónév azoknak a gazdagépeknek, amelyeknek nincs",
+    "defaultUsernameHint_one": "{{count}} SSH-gazdagépnek nincs felhasználóneve, pedig az SSH-gazdagépeknek kell.",
+    "defaultUsernameHint_other": "{{count}} SSH-gazdagépnek nincs felhasználóneve, pedig az SSH-gazdagépeknek kell.",
+    "overwrite": "Meglévő gazdagépek frissítése",
+    "overwriteHint": "Ha egy gazdagép címe, portja és felhasználóneve megegyezik, akkor frissül, nem kerül kihagyásra.",
+    "withPassword": "jelszó",
+    "notImported_one": "{{count}} bejegyzés kihagyva",
+    "notImported_other": "{{count}} bejegyzés kihagyva",
+    "skip": {
+      "noHost": "Nincs cím",
+      "protocol": "A(z) {{detail}} kapcsolatok nem támogatottak",
+      "password": "Jelszó nélkül importálva, nem olvasható",
+      "invalid": "Nem olvasható"
+    },
+    "errors_one": "{{count}} gazdagép sikertelen",
+    "errors_other": "{{count}} gazdagép sikertelen",
+    "import": "Importálás",
+    "importCount_one": "{{count}} gazdagép importálása",
+    "importCount_other": "{{count}} gazdagép importálása"
+  },
+  "fileImport": {
+    "file": "Fájl",
+    "pick": "Fájl kiválasztása",
+    "importing": "Importálás...",
+    "jsonHint": "Válasszon egy Termix JSON-fájlt. A már meglévő gazdagépek, amelyeknek ugyanaz a címe, portja és felhasználóneve, kihagyásra kerülnek. Egyszerre legfeljebb 100 gazdagép.",
+    "jsonOverwriteHint": "Válasszon egy Termix JSON-fájlt. A már meglévő gazdagépek, amelyeknek ugyanaz a címe, portja és felhasználóneve, frissítésre kerülnek. Egyszerre legfeljebb 100 gazdagép.",
+    "sshHint": "Válasszon egy OpenSSH-konfigurációs fájlt. Minden Host bejegyzés gazdagéppé válik."
   }
 }

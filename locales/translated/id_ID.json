@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Impor dan Ekspor",
-    "description": "Impor host dari file JSON atau file konfigurasi SSH, dan ekspor untuk dibagikan atau dicadangkan."
+    "description": "Impor host dari Termix, konfigurasi SSH, Termius, MobaXterm, PuTTY, SecureCRT, atau mRemoteNG, dan ekspor untuk dibagikan atau dicadangkan."
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "Teks konfigurasi SSH",
     "overwrite": "Perbarui host yang sudah ada"
+  },
+  "backup": {
+    "menuItem": "Cadangkan ke penyimpanan objek",
+    "title": "Cadangkan host ke penyimpanan objek",
+    "loadFailed": "Tidak dapat memuat pengaturan cadangan",
+    "needsStorage": "Instal dan aktifkan plugin Penyimpanan Objek, lalu tambahkan login di sana untuk mencadangkan host Anda ke bucket.",
+    "noAccounts": "Tambahkan login S3 atau penyimpanan objek lainnya di plugin Penyimpanan Objek terlebih dahulu.",
+    "where": "Lokasi",
+    "account": "Login penyimpanan",
+    "bucket": "Bucket",
+    "pickBucket": "Pilih bucket",
+    "folder": "Folder",
+    "when": "Waktu",
+    "schedule": "Jadwal",
+    "scheduleOff": "Hanya saat saya menekan Cadangkan sekarang",
+    "scheduleDaily": "Setiap hari",
+    "scheduleWeekly": "Setiap hari Minggu",
+    "hour": "Jam (UTC)",
+    "hourHint": "0 hingga 23, dalam UTC",
+    "keep": "Jumlah cadangan yang disimpan",
+    "passphrase": "Passphrase",
+    "passphraseKept": "Disimpan. Ketik yang baru untuk mengubahnya",
+    "passphraseHint": "Cadangan menyimpan host Anda beserta kata sandi dan kuncinya, dikunci dengan passphrase ini. Simpan di tempat yang aman: tanpa ini, cadangan tidak dapat dibuka. Minimal 8 karakter.",
+    "save": "Simpan",
+    "close": "Tutup",
+    "saved": "Pengaturan cadangan disimpan",
+    "saveFailed": "Tidak dapat menyimpan pengaturan cadangan",
+    "files": "Cadangan",
+    "runNow": "Cadangkan sekarang",
+    "running": "Sedang mencadangkan",
+    "done_other": "{{count}} host dicadangkan",
+    "runFailed": "Cadangan gagal",
+    "noFiles": "Belum ada cadangan.",
+    "overwrite": "Timpa host yang sudah ada",
+    "overwriteHint": "Nonaktif akan melewatkan host dengan nama dan alamat yang sama.",
+    "restore": "Pulihkan",
+    "restoreTitle": "Pulihkan host dari cadangan ini?",
+    "restoreDesc": "Host dari cadangan {{when}} akan ditambahkan. Host yang sudah Anda miliki akan tetap seperti semula.",
+    "restoreDescOverwrite": "Host dari cadangan {{when}} akan ditambahkan, dan host yang sudah Anda miliki akan ditimpa dengan salinan dari cadangan.",
+    "restored": "Dipulihkan: {{added}} ditambahkan, {{updated}} diperbarui, {{failed}} gagal",
+    "restoreFailed": "Tidak dapat memulihkan cadangan",
+    "lastGood": "Cadangan terakhir {{when}}",
+    "lastFailed": "Cadangan terakhir gagal {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Impor dari aplikasi lain...",
+    "title": "Impor dari aplikasi lain",
+    "source": "Sumber",
+    "app": "Aplikasi",
+    "apps": {
+      "auto": "Deteksi dari file",
+      "termius": "Termius atau CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Pilih file ekspor dan Termix akan mendeteksi dari aplikasi mana file tersebut berasal.",
+      "termius": "Termius tidak memiliki fitur ekspor bawaan. Pilih CSV yang dibuat dari template impornya atau oleh alat ekspor Termius. Kolom seperti Label, Hostname/IP, Port, Username, Password, Groups, dan Tags akan dibaca.",
+      "mobaxterm": "Di MobaXterm, klik kanan User sessions dan pilih Export all sessions to file, atau pilih file MobaXterm.ini Anda.",
+      "putty": "Ekspor sesi dari registry dengan reg export HKCU\\Software\\SimonTatham putty.reg dan pilih putty.reg.",
+      "securecrt": "Di SecureCRT, gunakan Tools, Export Settings dan pilih file XML, atau pilih folder Config/Sessions Anda.",
+      "mremoteng": "Pilih confCons.xml dari folder mRemoteNG di AppData. Kata sandi yang tersimpan akan ikut diimpor."
+    },
+    "pickFiles": "Pilih file",
+    "pickFolder": "Pilih folder",
+    "filesPicked_other": "{{count}} file dipilih",
+    "masterPassword": "Kata sandi utama",
+    "masterPasswordHint": "File ini dilindungi dengan kata sandi utama. Kata sandi ini hanya digunakan untuk membaca file.",
+    "unlock": "Buka",
+    "readFailed": "Tidak dapat membaca file",
+    "found_other": "{{count}} host ditemukan di {{app}}",
+    "defaultUsername": "Nama pengguna untuk host yang tidak memilikinya",
+    "defaultUsernameHint_other": "{{count}} host SSH tidak memiliki nama pengguna, dan host SSH memerlukan nama pengguna.",
+    "overwrite": "Perbarui host yang sudah ada",
+    "overwriteHint": "Host dengan alamat, port, dan nama pengguna yang sama akan diperbarui, bukan dilewati.",
+    "withPassword": "kata sandi",
+    "notImported_other": "{{count}} entri dilewati",
+    "skip": {
+      "noHost": "Tidak ada alamat",
+      "protocol": "Koneksi {{detail}} tidak didukung",
+      "password": "Diimpor tanpa kata sandi, tidak dapat dibaca",
+      "invalid": "Tidak dapat dibaca"
+    },
+    "errors_other": "{{count}} host gagal",
+    "import": "Impor",
+    "importCount_other": "Impor {{count}} host"
+  },
+  "fileImport": {
+    "file": "File",
+    "pick": "Pilih file",
+    "importing": "Mengimpor...",
+    "jsonHint": "Pilih file JSON Termix. Host yang sudah Anda miliki dengan alamat, port, dan nama pengguna yang sama akan dilewati. Maksimal 100 host sekaligus.",
+    "jsonOverwriteHint": "Pilih file JSON Termix. Host yang sudah Anda miliki dengan alamat, port, dan nama pengguna yang sama akan diperbarui. Maksimal 100 host sekaligus.",
+    "sshHint": "Pilih file konfigurasi OpenSSH. Setiap entri Host akan menjadi sebuah host."
   }
 }

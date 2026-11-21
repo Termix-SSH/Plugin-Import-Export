@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Import og eksport",
-    "description": "Importer verter fra en JSON-fil eller en SSH-konfigurasjonsfil, og eksporter dem for deling eller sikkerhetskopiering."
+    "description": "Importer verter fra Termix, SSH-konfigurasjon, Termius, MobaXterm, PuTTY, SecureCRT eller mRemoteNG, og eksporter dem for å dele eller sikkerhetskopiere."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-konfigurasjonstekst",
     "overwrite": "Oppdater vertsmaskiner som allerede finnes"
+  },
+  "backup": {
+    "menuItem": "Sikkerhetskopier til objektlagring",
+    "title": "Sikkerhetskopier verter til objektlagring",
+    "loadFailed": "Kunne ikke laste inn sikkerhetskopikonfigurasjonen",
+    "needsStorage": "Installer og aktiver objektlagringsprogramtillegget, og legg til en pålogging der for å sikkerhetskopiere vertene dine til en beholder.",
+    "noAccounts": "Legg først til en S3- eller annen objektlagringspålogging i objektlagringsprogramtillegget.",
+    "where": "Hvor",
+    "account": "Lagringspålogging",
+    "bucket": "Beholder",
+    "pickBucket": "Velg en beholder",
+    "folder": "Mappe",
+    "when": "Når",
+    "schedule": "Tidsplan",
+    "scheduleOff": "Kun når jeg trykker på Sikkerhetskopier nå",
+    "scheduleDaily": "Hver dag",
+    "scheduleWeekly": "Hver søndag",
+    "hour": "Time (UTC)",
+    "hourHint": "0 til 23, i UTC",
+    "keep": "Antall sikkerhetskopier å beholde",
+    "passphrase": "Passfrase",
+    "passphraseKept": "Lagret. Skriv inn en ny for å endre den",
+    "passphraseHint": "Sikkerhetskopier inneholder vertene dine med passord og nøkler, låst med denne passfrasen. Oppbevar den et trygt sted: uten den kan ikke en sikkerhetskopi åpnes. Minst 8 tegn.",
+    "save": "Lagre",
+    "close": "Lukk",
+    "saved": "Sikkerhetskopieringsinnstillinger lagret",
+    "saveFailed": "Kunne ikke lagre sikkerhetskopieringsinnstillingene",
+    "files": "Sikkerhetskopier",
+    "runNow": "Sikkerhetskopier nå",
+    "running": "Sikkerhetskopierer",
+    "done_one": "Sikkerhetskopierte {{count}} vert",
+    "done_other": "Sikkerhetskopierte {{count}} verter",
+    "runFailed": "Sikkerhetskopieringen mislyktes",
+    "noFiles": "Ingen sikkerhetskopier ennå.",
+    "overwrite": "Skriv over verter som allerede finnes",
+    "overwriteHint": "Av hopper over verter med samme navn og adresse.",
+    "restore": "Gjenopprett",
+    "restoreTitle": "Vil du gjenopprette verter fra denne sikkerhetskopien?",
+    "restoreDesc": "Verter fra sikkerhetskopien fra {{when}} blir lagt til. Verter du allerede har, blir stående som de er.",
+    "restoreDescOverwrite": "Verter fra sikkerhetskopien fra {{when}} blir lagt til, og verter du allerede har, blir skrevet over med kopiene fra sikkerhetskopien.",
+    "restored": "Gjenopprettet: {{added}} lagt til, {{updated}} oppdatert, {{failed}} mislyktes",
+    "restoreFailed": "Kunne ikke gjenopprette sikkerhetskopien",
+    "lastGood": "Sist sikkerhetskopiert {{when}}",
+    "lastFailed": "Sist sikkerhetskopiering mislyktes {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Importer fra en annen app...",
+    "title": "Importer fra en annen app",
+    "source": "Kilde",
+    "app": "App",
+    "apps": {
+      "auto": "Avgjør fra filen",
+      "termius": "Termius eller CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Velg eksportfilen, så finner Termix ut hvilken app den kommer fra.",
+      "termius": "Termius har ingen egen eksport. Velg en CSV laget fra importmalen deres eller av et Termius-eksportverktøy. Kolonner som Label, Hostname/IP, Port, Username, Password, Groups og Tags blir lest.",
+      "mobaxterm": "I MobaXterm, høyreklikk på Brukersesjoner og velg Eksporter alle sesjoner til fil, eller velg MobaXterm.ini-filen din.",
+      "putty": "Eksporter sesjonene fra registeret med reg export HKCU\\Software\\SimonTatham putty.reg og velg putty.reg.",
+      "securecrt": "I SecureCRT, bruk Verktøy, Eksporter innstillinger og velg XML-filen, eller velg mappen Config/Sessions.",
+      "mremoteng": "Velg confCons.xml fra mRemoteNG-mappen i AppData. Lagrede passord følger med."
+    },
+    "pickFiles": "Velg filer",
+    "pickFolder": "Velg mappe",
+    "filesPicked_one": "{{count}} fil",
+    "filesPicked_other": "{{count}} filer",
+    "masterPassword": "Hovedpassord",
+    "masterPasswordHint": "Denne filen er beskyttet med et hovedpassord. Det brukes kun til å lese filen.",
+    "unlock": "Åpne",
+    "readFailed": "Kunne ikke lese filen",
+    "found_one": "{{count}} vert funnet i {{app}}",
+    "found_other": "{{count}} verter funnet i {{app}}",
+    "defaultUsername": "Brukernavn for verter uten ett",
+    "defaultUsernameHint_one": "{{count}} SSH-vert har ikke brukernavn, og SSH-verter trenger ett.",
+    "defaultUsernameHint_other": "{{count}} SSH-verter har ikke brukernavn, og SSH-verter trenger ett.",
+    "overwrite": "Oppdater eksisterende verter",
+    "overwriteHint": "En vert med samme adresse, port og brukernavn blir oppdatert i stedet for hoppet over.",
+    "withPassword": "passord",
+    "notImported_one": "{{count}} oppføring utelatt",
+    "notImported_other": "{{count}} oppføringer utelatt",
+    "skip": {
+      "noHost": "Ingen adresse",
+      "protocol": "{{detail}}-tilkoblinger støttes ikke",
+      "password": "Importert uten passord, kunne ikke leses",
+      "invalid": "Kunne ikke leses"
+    },
+    "errors_one": "{{count}} vert mislyktes",
+    "errors_other": "{{count}} verter mislyktes",
+    "import": "Importer",
+    "importCount_one": "Importer {{count}} vert",
+    "importCount_other": "Importer {{count}} verter"
+  },
+  "fileImport": {
+    "file": "Fil",
+    "pick": "Velg fil",
+    "importing": "Importerer...",
+    "jsonHint": "Velg en Termix JSON-fil. Verter du allerede har, med samme adresse, port og brukernavn, blir hoppet over. Opptil 100 verter om gangen.",
+    "jsonOverwriteHint": "Velg en Termix JSON-fil. Verter du allerede har, med samme adresse, port og brukernavn, blir oppdatert. Opptil 100 verter om gangen.",
+    "sshHint": "Velg en OpenSSH-konfigurasjonsfil. Hvert Host-inngangspunkt blir en vert."
   }
 }

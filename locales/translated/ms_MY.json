@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Import dan Eksport",
-    "description": "Import hos daripada fail JSON atau fail konfigurasi SSH dan eksportkannya untuk dikongsi atau sebagai sandaran."
+    "description": "Import hos dari Termix, konfigurasi SSH, Termius, MobaXterm, PuTTY, SecureCRT atau mRemoteNG dan eksport untuk dikongsi atau sebagai sandaran."
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "Teks konfigurasi SSH",
     "overwrite": "Kemas kini hos yang sudah wujud"
+  },
+  "backup": {
+    "menuItem": "Sandarkan ke storan objek",
+    "title": "Sandarkan hos ke storan objek",
+    "loadFailed": "Tidak dapat memuatkan tetapan sandaran",
+    "needsStorage": "Pasang dan hidupkan plugin Storan Objek, kemudian tambah log masuk di sana untuk menyandarkan hos anda ke baldi.",
+    "noAccounts": "Tambah log masuk S3 atau storan objek lain dalam plugin Storan Objek terlebih dahulu.",
+    "where": "Di mana",
+    "account": "Log masuk storan",
+    "bucket": "Baldi",
+    "pickBucket": "Pilih baldi",
+    "folder": "Folder",
+    "when": "Bila",
+    "schedule": "Jadual",
+    "scheduleOff": "Hanya apabila saya menekan Sandar sekarang",
+    "scheduleDaily": "Setiap hari",
+    "scheduleWeekly": "Setiap hari Ahad",
+    "hour": "Jam (UTC)",
+    "hourHint": "0 hingga 23, dalam UTC",
+    "keep": "Sandaran untuk dikekalkan",
+    "passphrase": "Frasa laluan",
+    "passphraseKept": "Disimpan. Taip yang baru untuk mengubahnya",
+    "passphraseHint": "Sandaran mengandungi hos anda dengan kata laluan dan kunci mereka, dikunci dengan frasa laluan ini. Simpan di tempat selamat: tanpa ini, sandaran tidak boleh dibuka. Sekurang-kurangnya 8 aksara.",
+    "save": "Simpan",
+    "close": "Tutup",
+    "saved": "Tetapan sandaran disimpan",
+    "saveFailed": "Tidak dapat menyimpan tetapan sandaran",
+    "files": "Sandaran",
+    "runNow": "Sandar sekarang",
+    "running": "Sedang menyandar",
+    "done_other": "{{count}} hos disandar",
+    "runFailed": "Sandaran gagal",
+    "noFiles": "Tiada sandaran lagi.",
+    "overwrite": "Tindih hos yang sudah wujud",
+    "overwriteHint": "Mati akan skip hos dengan nama dan alamat yang sama.",
+    "restore": "Pulihkan",
+    "restoreTitle": "Pulihkan hos dari sandaran ini?",
+    "restoreDesc": "Hos dari sandaran {{when}} akan ditambah. Hos yang sudah anda ada akan dibiarkan seperti sedia ada.",
+    "restoreDescOverwrite": "Hos dari sandaran {{when}} akan ditambah, dan hos yang sudah anda ada akan ditindih dengan salinan dari sandaran.",
+    "restored": "Dipulihkan: {{added}} ditambah, {{updated}} dikemas kini, {{failed}} gagal",
+    "restoreFailed": "Tidak dapat memulihkan sandaran",
+    "lastGood": "Sandaran terakhir {{when}}",
+    "lastFailed": "Sandaran terakhir gagal {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Import dari aplikasi lain...",
+    "title": "Import dari aplikasi lain",
+    "source": "Sumber",
+    "app": "Aplikasi",
+    "apps": {
+      "auto": "Cari dari fail",
+      "termius": "Termius atau CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Pilih fail eksport dan Termix akan menentukan aplikasi asalnya.",
+      "termius": "Termius tiada eksport sendiri. Pilih CSV yang dibuat dari templat importnya atau oleh alat eksport Termius. Lajur seperti Label, Hostname/IP, Port, Username, Password, Groups dan Tags akan dibaca.",
+      "mobaxterm": "Dalam MobaXterm, klik kanan User sessions dan pilih Export all sessions to file, atau pilih MobaXterm.ini anda.",
+      "putty": "Eksport sesi dari registry dengan reg export HKCU\\Software\\SimonTatham putty.reg dan pilih putty.reg.",
+      "securecrt": "Dalam SecureCRT, gunakan Tools, Export Settings dan pilih fail XML, atau pilih folder Config/Sessions anda.",
+      "mremoteng": "Pilih confCons.xml dari folder mRemoteNG dalam AppData. Kata laluan yang disimpan akan disertakan."
+    },
+    "pickFiles": "Pilih fail",
+    "pickFolder": "Pilih folder",
+    "filesPicked_other": "{{count}} fail",
+    "masterPassword": "Kata laluan utama",
+    "masterPasswordHint": "Fail ini dilindungi dengan kata laluan utama. Ia hanya digunakan untuk membaca fail.",
+    "unlock": "Buka",
+    "readFailed": "Tidak dapat membaca fail",
+    "found_other": "{{count}} hos ditemui dalam {{app}}",
+    "defaultUsername": "Nama pengguna untuk hos tanpa nama pengguna",
+    "defaultUsernameHint_other": "{{count}} hos SSH tiada nama pengguna, dan hos SSH memerlukan nama pengguna.",
+    "overwrite": "Kemas kini hos sedia ada",
+    "overwriteHint": "Hos dengan alamat, port dan nama pengguna yang sama akan dikemas kini, bukan dilangkau.",
+    "withPassword": "kata laluan",
+    "notImported_other": "{{count}} entri ditinggalkan",
+    "skip": {
+      "noHost": "Tiada alamat",
+      "protocol": "Sambungan {{detail}} tidak disokong",
+      "password": "Diimport tanpa kata laluan, tidak dapat dibaca",
+      "invalid": "Tidak dapat dibaca"
+    },
+    "errors_other": "{{count}} hos gagal",
+    "import": "Import",
+    "importCount_other": "Import {{count}} hos"
+  },
+  "fileImport": {
+    "file": "Fail",
+    "pick": "Pilih fail",
+    "importing": "Mengimport...",
+    "jsonHint": "Pilih fail JSON Termix. Hos yang sudah anda miliki, dengan alamat, port dan nama pengguna yang sama, akan dilangkau. Sehingga 100 hos pada satu masa.",
+    "jsonOverwriteHint": "Pilih fail JSON Termix. Hos yang sudah anda miliki, dengan alamat, port dan nama pengguna yang sama, akan dikemas kini. Sehingga 100 hos pada satu masa.",
+    "sshHint": "Pilih fail konfigurasi OpenSSH. Setiap entri Host menjadi satu hos."
   }
 }

@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Importér og eksportér",
-    "description": "Importér værter fra en JSON-fil eller en SSH-konfigurationsfil, og eksportér dem til deling eller backup."
+    "description": "Importer værter fra Termix, SSH-konfiguration, Termius, MobaXterm, PuTTY, SecureCRT eller mRemoteNG, og eksporter dem for at dele eller sikkerhedskopiere."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-konfigurationstekst",
     "overwrite": "Opdater værter, der allerede findes"
+  },
+  "backup": {
+    "menuItem": "Sikkerhedskopiér til objekt-lagring",
+    "title": "Sikkerhedskopiér værter til objekt-lagring",
+    "loadFailed": "Kunne ikke indlæse sikkerhedskopikonfigurationen",
+    "needsStorage": "Installer og aktiver plugin'et til objekt-lagring, og tilføj en login der for at sikkerhedskopiere dine værter til en bucket.",
+    "noAccounts": "Tilføj først en S3- eller anden objekt-lagringslogin i plugin'et til objekt-lagring.",
+    "where": "Hvor",
+    "account": "Lagringslogin",
+    "bucket": "Bucket",
+    "pickBucket": "Vælg en bucket",
+    "folder": "Mappe",
+    "when": "Hvornår",
+    "schedule": "Planlægning",
+    "scheduleOff": "Kun når jeg trykker på Sikkerhedskopiér nu",
+    "scheduleDaily": "Hver dag",
+    "scheduleWeekly": "Hver søndag",
+    "hour": "Time (UTC)",
+    "hourHint": "0 til 23, i UTC",
+    "keep": "Antal sikkerhedskopier at beholde",
+    "passphrase": "Adgangskode",
+    "passphraseKept": "Gemt. Indtast en ny for at ændre den",
+    "passphraseHint": "Sikkerhedskopier indeholder dine værter med deres adgangskoder og nøgler, låst med denne adgangskode. Gem den et sikkert sted: uden den kan en sikkerhedskopi ikke åbnes. Mindst 8 tegn.",
+    "save": "Gem",
+    "close": "Luk",
+    "saved": "Sikkerhedskopieringsindstillinger gemt",
+    "saveFailed": "Kunne ikke gemme sikkerhedskopieringsindstillingerne",
+    "files": "Sikkerhedskopier",
+    "runNow": "Sikkerhedskopiér nu",
+    "running": "Sikkerhedskopierer",
+    "done_one": "Sikkerhedskopierede {{count}} vært",
+    "done_other": "Sikkerhedskopierede {{count}} værter",
+    "runFailed": "Sikkerhedskopieringen mislykkedes",
+    "noFiles": "Ingen sikkerhedskopier endnu.",
+    "overwrite": "Overskriv værter, der allerede findes",
+    "overwriteHint": "Slået fra springer værter med samme navn og adresse over.",
+    "restore": "Gendan",
+    "restoreTitle": "Vil du gendanne værter fra denne sikkerhedskopi?",
+    "restoreDesc": "Værter fra sikkerhedskopien fra {{when}} tilføjes. Værter, du allerede har, beholdes som de er.",
+    "restoreDescOverwrite": "Værter fra sikkerhedskopien fra {{when}} tilføjes, og værter, du allerede har, overskrives med sikkerhedskopiens version.",
+    "restored": "Gendannet: {{added}} tilføjet, {{updated}} opdateret, {{failed}} mislykket",
+    "restoreFailed": "Kunne ikke gendanne sikkerhedskopien",
+    "lastGood": "Seneste sikkerhedskopi {{when}}",
+    "lastFailed": "Seneste sikkerhedskopi mislykkedes {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Importer fra en anden app...",
+    "title": "Importer fra en anden app",
+    "source": "Kilde",
+    "app": "App",
+    "apps": {
+      "auto": "Find ud af det fra filen",
+      "termius": "Termius eller CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Vælg eksportfilen, og Termix finder ud af, hvilken app den stammer fra.",
+      "termius": "Termius har ingen egen eksport. Vælg en CSV lavet fra dens importskabelon eller af et Termius-eksportværktøj. Kolonner som Label, Hostname/IP, Port, Username, Password, Groups og Tags læses.",
+      "mobaxterm": "I MobaXterm højreklikker du på User sessions og vælger Export all sessions to file, eller vælger din MobaXterm.ini.",
+      "putty": "Eksporter sessionerne fra registreringsdatabasen med reg export HKCU\\Software\\SimonTatham putty.reg og vælg putty.reg.",
+      "securecrt": "I SecureCRT bruger du Tools, Export Settings og vælger XML-filen, eller vælger din Config/Sessions-mappe.",
+      "mremoteng": "Vælg confCons.xml fra mRemoteNG-mappen i AppData. Gemte adgangskoder følger med."
+    },
+    "pickFiles": "Vælg filer",
+    "pickFolder": "Vælg mappe",
+    "filesPicked_one": "{{count}} fil",
+    "filesPicked_other": "{{count}} filer",
+    "masterPassword": "Master password",
+    "masterPasswordHint": "Denne fil er beskyttet med et master password. Det bruges kun til at læse filen.",
+    "unlock": "Åbn",
+    "readFailed": "Kunne ikke læse filen",
+    "found_one": "{{count}} vært fundet i {{app}}",
+    "found_other": "{{count}} værter fundet i {{app}}",
+    "defaultUsername": "Brugernavn til værter uden et",
+    "defaultUsernameHint_one": "{{count}} SSH-vært mangler brugernavn, og SSH-værter skal have et.",
+    "defaultUsernameHint_other": "{{count}} SSH-værter mangler brugernavn, og SSH-værter skal have et.",
+    "overwrite": "Opdater eksisterende værter",
+    "overwriteHint": "En vært med samme adresse, port og brugernavn opdateres i stedet for at blive sprunget over.",
+    "withPassword": "adgangskode",
+    "notImported_one": "{{count}} post udeladt",
+    "notImported_other": "{{count}} poster udeladt",
+    "skip": {
+      "noHost": "Ingen adresse",
+      "protocol": "{{detail}}-forbindelser understøttes ikke",
+      "password": "Importeret uden adgangskode, den kunne ikke læses",
+      "invalid": "Kunne ikke læses"
+    },
+    "errors_one": "{{count}} vært fejlede",
+    "errors_other": "{{count}} værter fejlede",
+    "import": "Importer",
+    "importCount_one": "Importer {{count}} vært",
+    "importCount_other": "Importer {{count}} værter"
+  },
+  "fileImport": {
+    "file": "Fil",
+    "pick": "Vælg fil",
+    "importing": "Importerer...",
+    "jsonHint": "Vælg en Termix JSON-fil. Værter, du allerede har med samme adresse, port og brugernavn, springes over. Op til 100 værter ad gangen.",
+    "jsonOverwriteHint": "Vælg en Termix JSON-fil. Værter, du allerede har med samme adresse, port og brugernavn, opdateres. Op til 100 værter ad gangen.",
+    "sshHint": "Vælg en OpenSSH-konfigurationsfil. Hver Host-post bliver til en vært."
   }
 }

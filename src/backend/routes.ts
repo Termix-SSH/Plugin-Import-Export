@@ -4,8 +4,18 @@ import {
   type PluginContext,
   type PluginHostImportResult,
 } from "@termix-ssh/plugin-sdk/backend";
+import {
+  ImportFormatError,
+  isAppFormat,
+  parseAuto,
+  toTermixRow,
+  type ImportFile,
+} from "./importers/index.js";
 
 const MAX_IMPORT_HOSTS = 100;
+const MAX_APP_HOSTS = 2000;
+const MAX_APP_FILES = 200;
+const MAX_APP_FILE_CHARS = 10 * 1024 * 1024;
 
 function summary(result: PluginHostImportResult): string {
   return `Import completed: ${result.success} created, ${result.updated} updated, ${result.skipped} skipped, ${result.failed} failed`;
@@ -136,6 +146,147 @@ export function registerRoutes(router: Router, ctx: PluginContext): void {
         overwrite: overwrite === true,
       });
       res.json(importResponse(result));
+    } catch (error) {
+      fail(res, error, 400);
+    }
+  });
+
+  /**
+   * @openapi
+   * /plugin-api/import-export/app-import:
+   *   post:
+   *     summary: Import hosts from another app
+   *     description: Reads hosts from Termius or another CSV, MobaXterm, PuTTY, SecureCRT or mRemoteNG files. With preview set it only returns what it found. Otherwise the hosts are imported in batches of 100 with the same rules as bulk-import. The user needs the host create and edit permissions.
+   *     tags:
+   *       - Import and Export
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           schema:
+   *             type: object
+   *             required:
+   *               - files
+   *             properties:
+   *               files:
+   *                 type: array
+   *                 items:
+   *                   type: object
+   *                   properties:
+   *                     name:
+   *                       type: string
+   *                     content:
+   *                       type: string
+   *               format:
+   *                 type: string
+   *                 enum: [auto, termius, mobaxterm, putty, securecrt, mremoteng]
+   *               password:
+   *                 type: string
+   *                 description: The mRemoteNG master password, when the file has one.
+   *               defaultUsername:
+   *                 type: string
+   *                 description: Used for SSH hosts the file has no username for.
+   *               overwrite:
+   *                 type: boolean
+   *               preview:
+   *                 type: boolean
+   *     responses:
+   *       200:
+   *         description: What was found, or the import result. needsPassword is set when the file needs a master password.
+   *       400:
+   *         description: The files could not be read.
+   *       403:
+   *         description: Not allowed to import hosts.
+   */
+  router.post("/app-import", async (req: Request, res: Response) => {
+    const { files, format, password, defaultUsername, overwrite, preview } =
+      req.body ?? {};
+    if (
+      !Array.isArray(files) ||
+      files.length === 0 ||
+      files.length > MAX_APP_FILES ||
+      !files.every(
+        (file) =>
+          file &&
+          typeof file.name === "string" &&
+          typeof file.content === "string" &&
+          file.content.length <= MAX_APP_FILE_CHARS,
+      )
+    ) {
+      return res.status(400).json({ error: "Files are required" });
+    }
+    if (format !== undefined && format !== "auto" && !isAppFormat(format)) {
+      return res.status(400).json({ error: "Unknown format" });
+    }
+    let parsed: ReturnType<typeof parseAuto>;
+    try {
+      parsed = parseAuto(
+        files as ImportFile[],
+        isAppFormat(format) ? format : null,
+        typeof password === "string" && password ? password : undefined,
+      );
+    } catch (error) {
+      if (error instanceof ImportFormatError) {
+        if (error.code === "needsPassword") {
+          return res.json({ needsPassword: true });
+        }
+        return res.status(400).json({ error: error.message, code: error.code });
+      }
+      return fail(res, error, 400);
+    }
+    if (parsed.hosts.length > MAX_APP_HOSTS) {
+      return res.status(400).json({
+        error: `Maximum ${MAX_APP_HOSTS} hosts allowed per import`,
+        code: "tooMany",
+      });
+    }
+    const fallbackUser =
+      typeof defaultUsername === "string" ? defaultUsername.trim() : "";
+    if (preview === true) {
+      return res.json({
+        format: parsed.format,
+        hosts: parsed.hosts.map(({ password: secret, ...host }) => ({
+          ...host,
+          hasPassword: !!secret,
+        })),
+        skipped: parsed.skipped,
+      });
+    }
+    const rows = parsed.hosts.map((host) => toTermixRow(host, fallbackUser));
+    const total: PluginHostImportResult = {
+      success: 0,
+      updated: 0,
+      skipped: 0,
+      failed: 0,
+      errors: [],
+      createdHostIds: [],
+    };
+    try {
+      for (let start = 0; start < rows.length; start += MAX_IMPORT_HOSTS) {
+        const result = await ctx.hosts.importMany(
+          rows.slice(start, start + MAX_IMPORT_HOSTS),
+          { overwrite: overwrite === true },
+        );
+        total.success += result.success;
+        total.updated += result.updated;
+        total.skipped += result.skipped;
+        total.failed += result.failed;
+        // Row numbers in core's errors count from each batch.
+        total.errors.push(
+          ...result.errors.map((message) =>
+            message.replace(
+              /^Host (\d+):/,
+              (_m, n) =>
+                `${rows[start + Number(n) - 1]?.name ?? `Host ${start + Number(n)}`}:`,
+            ),
+          ),
+        );
+      }
+      res.json({
+        format: parsed.format,
+        ...importResponse(total),
+        notImported: parsed.skipped,
+      });
     } catch (error) {
       fail(res, error, 400);
     }

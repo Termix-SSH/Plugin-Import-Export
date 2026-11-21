@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Importeren en exporteren",
-    "description": "Importeer hosts uit een JSON-bestand of een SSH-configuratiebestand en exporteer ze om te delen of te back-uppen."
+    "description": "Importeer hosts uit Termix, SSH-configuratie, Termius, MobaXterm, PuTTY, SecureCRT of mRemoteNG en exporteer ze om te delen of te back-uppen."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-configuratietekst",
     "overwrite": "Hosts die al bestaan bijwerken"
+  },
+  "backup": {
+    "menuItem": "Back-uppen naar objectopslag",
+    "title": "Back-up hosts naar objectopslag",
+    "loadFailed": "Kon de back-upconfiguratie niet laden",
+    "needsStorage": "Installeer en schakel de Objectopslag-plugin in en voeg daar een inloggegevens toe om je hosts naar een bucket te back-uppen.",
+    "noAccounts": "Voeg eerst een S3- of andere objectopslag-inloggegevens toe in de Objectopslag-plugin.",
+    "where": "Waar",
+    "account": "Opslaginloggegevens",
+    "bucket": "Bucket",
+    "pickBucket": "Kies een bucket",
+    "folder": "Map",
+    "when": "Wanneer",
+    "schedule": "Schema",
+    "scheduleOff": "Alleen als ik op Nu back-uppen druk",
+    "scheduleDaily": "Elke dag",
+    "scheduleWeekly": "Elke zondag",
+    "hour": "Uur (UTC)",
+    "hourHint": "0 tot 23, in UTC",
+    "keep": "Te bewaren back-ups",
+    "passphrase": "Wachtwoordzin",
+    "passphraseKept": "Opgeslagen. Typ een nieuwe om het te wijzigen",
+    "passphraseHint": "Back-ups bevatten je hosts met hun wachtwoorden en sleutels, versleuteld met deze wachtwoordzin. Bewaar deze op een veilige plek: zonder deze wachtwoordzin kan een back-up niet worden geopend. Minimaal 8 tekens.",
+    "save": "Opslaan",
+    "close": "Sluiten",
+    "saved": "Back-upinstellingen opgeslagen",
+    "saveFailed": "Kon de back-upinstellingen niet opslaan",
+    "files": "Back-ups",
+    "runNow": "Nu back-uppen",
+    "running": "Aan het back-uppen",
+    "done_one": "{{count}} host geback-upt",
+    "done_other": "{{count}} hosts geback-upt",
+    "runFailed": "De back-up is mislukt",
+    "noFiles": "Nog geen back-ups.",
+    "overwrite": "Overschrijf hosts die al bestaan",
+    "overwriteHint": "Uit slaat hosts over met dezelfde naam en adres.",
+    "restore": "Herstellen",
+    "restoreTitle": "Hosts uit deze back-up herstellen?",
+    "restoreDesc": "Hosts uit de back-up van {{when}} worden toegevoegd. Hosts die je al hebt, blijven zoals ze zijn.",
+    "restoreDescOverwrite": "Hosts uit de back-up van {{when}} worden toegevoegd en hosts die je al hebt, worden overschreven met de kopie uit de back-up.",
+    "restored": "Hersteld: {{added}} toegevoegd, {{updated}} bijgewerkt, {{failed}} mislukt",
+    "restoreFailed": "Kon de back-up niet herstellen",
+    "lastGood": "Laatste back-up {{when}}",
+    "lastFailed": "Laatste back-up mislukt {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Importeren uit een andere app...",
+    "title": "Importeren uit een andere app",
+    "source": "Bron",
+    "app": "App",
+    "apps": {
+      "auto": "Bepalen uit het bestand",
+      "termius": "Termius of CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Kies het exportbestand en Termix bepaalt uit welke app het komt.",
+      "termius": "Termius heeft geen eigen exportfunctie. Kies een CSV gemaakt vanuit het importtemplate of door een Termius-exporttool. Kolommen zoals Label, Hostname/IP, Port, Username, Password, Groups en Tags worden gelezen.",
+      "mobaxterm": "In MobaXterm, klik met de rechtermuisknop op Gebruikerssessies en kies Alle sessies exporteren naar bestand, of kies je MobaXterm.ini.",
+      "putty": "Exporteer de sessies uit het register met reg export HKCU\\Software\\SimonTatham putty.reg en kies putty.reg.",
+      "securecrt": "In SecureCRT, gebruik Hulpmiddelen, Instellingen exporteren en kies het XML-bestand, of kies je Config/Sessions-map.",
+      "mremoteng": "Kies confCons.xml uit de mRemoteNG-map in AppData. Opgeslagen wachtwoorden worden meegeleverd."
+    },
+    "pickFiles": "Bestanden kiezen",
+    "pickFolder": "Map kiezen",
+    "filesPicked_one": "{{count}} bestand",
+    "filesPicked_other": "{{count}} bestanden",
+    "masterPassword": "Hoofdwachtwoord",
+    "masterPasswordHint": "Dit bestand is beveiligd met een hoofdwachtwoord. Dit wordt alleen gebruikt om het bestand te lezen.",
+    "unlock": "Openen",
+    "readFailed": "Het bestand kon niet worden gelezen",
+    "found_one": "{{count}} host gevonden in {{app}}",
+    "found_other": "{{count}} hosts gevonden in {{app}}",
+    "defaultUsername": "Gebruikersnaam voor hosts zonder gebruikersnaam",
+    "defaultUsernameHint_one": "{{count}} SSH-host heeft geen gebruikersnaam, maar SSH-hosts hebben er een nodig.",
+    "defaultUsernameHint_other": "{{count}} SSH-hosts hebben geen gebruikersnaam, maar SSH-hosts hebben er een nodig.",
+    "overwrite": "Bestaande hosts bijwerken",
+    "overwriteHint": "Een host met hetzelfde adres, poort en gebruikersnaam wordt bijgewerkt in plaats van overgeslagen.",
+    "withPassword": "wachtwoord",
+    "notImported_one": "{{count}} item overgeslagen",
+    "notImported_other": "{{count}} items overgeslagen",
+    "skip": {
+      "noHost": "Geen adres",
+      "protocol": "{{detail}}-verbindingen worden niet ondersteund",
+      "password": "Geïmporteerd zonder wachtwoord; het kon niet worden gelezen",
+      "invalid": "Kon niet worden gelezen"
+    },
+    "errors_one": "{{count}} host mislukt",
+    "errors_other": "{{count}} hosts mislukt",
+    "import": "Importeren",
+    "importCount_one": "Importeer {{count}} host",
+    "importCount_other": "Importeer {{count}} hosts"
+  },
+  "fileImport": {
+    "file": "Bestand",
+    "pick": "Bestand kiezen",
+    "importing": "Aan het importeren...",
+    "jsonHint": "Kies een Termix JSON-bestand. Hosts die je al hebt met hetzelfde adres, poort en gebruikersnaam worden overgeslagen. Maximaal 100 hosts tegelijk.",
+    "jsonOverwriteHint": "Kies een Termix JSON-bestand. Hosts die je al hebt met hetzelfde adres, poort en gebruikersnaam worden bijgewerkt. Maximaal 100 hosts tegelijk.",
+    "sshHint": "Kies een OpenSSH-configuratiebestand. Elke Host-regel wordt een host."
   }
 }

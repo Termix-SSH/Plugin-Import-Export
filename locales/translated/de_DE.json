@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Import und Export",
-    "description": "Importieren Sie Hosts aus einer JSON-Datei oder einer SSH-Konfigurationsdatei und exportieren Sie sie, um sie zu teilen oder zu sichern."
+    "description": "Importiere Hosts aus Termix, SSH-Konfiguration, Termius, MobaXterm, PuTTY, SecureCRT oder mRemoteNG und exportiere sie, um sie zu teilen oder zu sichern."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-Konfigurationstext",
     "overwrite": "Vorhandene Hosts aktualisieren"
+  },
+  "backup": {
+    "menuItem": "In Objektspeicher sichern",
+    "title": "Hosts in Objektspeicher sichern",
+    "loadFailed": "Die Sicherungskonfiguration konnte nicht geladen werden",
+    "needsStorage": "Installiere und aktiviere das Objektspeicher-Plugin und füge dort eine Anmeldung hinzu, um deine Hosts in einen Bucket zu sichern.",
+    "noAccounts": "Füge zuerst eine S3- oder andere Objektspeicher-Anmeldung im Objektspeicher-Plugin hinzu.",
+    "where": "Wo",
+    "account": "Speicher-Anmeldung",
+    "bucket": "Bucket",
+    "pickBucket": "Bucket auswählen",
+    "folder": "Ordner",
+    "when": "Wann",
+    "schedule": "Zeitplan",
+    "scheduleOff": "Nur, wenn ich „Jetzt sichern“ drücke",
+    "scheduleDaily": "Jeden Tag",
+    "scheduleWeekly": "Jeden Sonntag",
+    "hour": "Stunde (UTC)",
+    "hourHint": "0 bis 23, in UTC",
+    "keep": "Zu behaltende Sicherungen",
+    "passphrase": "Passphrase",
+    "passphraseKept": "Gespeichert. Gib eine neue ein, um sie zu ändern",
+    "passphraseHint": "Sicherungen enthalten deine Hosts mit ihren Passwörtern und Schlüsseln, die mit dieser Passphrase verschlüsselt sind. Bewahre sie an einem sicheren Ort auf: Ohne sie kann eine Sicherung nicht geöffnet werden. Mindestens 8 Zeichen.",
+    "save": "Speichern",
+    "close": "Schließen",
+    "saved": "Sicherungseinstellungen gespeichert",
+    "saveFailed": "Die Sicherungseinstellungen konnten nicht gespeichert werden",
+    "files": "Sicherungen",
+    "runNow": "Jetzt sichern",
+    "running": "Wird gesichert",
+    "done_one": "{{count}} Host gesichert",
+    "done_other": "{{count}} Hosts gesichert",
+    "runFailed": "Die Sicherung ist fehlgeschlagen",
+    "noFiles": "Noch keine Sicherungen vorhanden.",
+    "overwrite": "Vorhandene Hosts überschreiben",
+    "overwriteHint": "Deaktiviert überspringt Hosts mit demselben Namen und derselben Adresse.",
+    "restore": "Wiederherstellen",
+    "restoreTitle": "Hosts aus dieser Sicherung wiederherstellen?",
+    "restoreDesc": "Hosts aus der Sicherung von {{when}} werden hinzugefügt. Bereits vorhandene Hosts bleiben unverändert.",
+    "restoreDescOverwrite": "Hosts aus der Sicherung von {{when}} werden hinzugefügt, und bereits vorhandene Hosts werden durch die Version aus der Sicherung überschrieben.",
+    "restored": "Wiederhergestellt: {{added}} hinzugefügt, {{updated}} aktualisiert, {{failed}} fehlgeschlagen",
+    "restoreFailed": "Die Sicherung konnte nicht wiederhergestellt werden",
+    "lastGood": "Letzte Sicherung {{when}}",
+    "lastFailed": "Letzte Sicherung fehlgeschlagen {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Aus einer anderen App importieren...",
+    "title": "Aus einer anderen App importieren",
+    "source": "Quelle",
+    "app": "App",
+    "apps": {
+      "auto": "Aus der Datei ermitteln",
+      "termius": "Termius oder CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Wähle die Exportdatei aus, und Termix ermittelt, aus welcher App sie stammt.",
+      "termius": "Termius hat keinen eigenen Export. Wähle eine CSV aus, die aus seinem Import-Vorlage oder einem Termius-Export-Tool erstellt wurde. Spalten wie Label, Hostname/IP, Port, Benutzername, Passwort, Gruppen und Tags werden gelesen.",
+      "mobaxterm": "Klicke in MobaXterm mit der rechten Maustaste auf „User sessions“ und wähle „Export all sessions to file“, oder wähle deine MobaXterm.ini.",
+      "putty": "Exportiere die Sitzungen aus der Registrierung mit „reg export HKCU\\Software\\SimonTatham putty.reg“ und wähle putty.reg.",
+      "securecrt": "Verwende in SecureCRT „Tools, Export Settings“ und wähle die XML-Datei, oder wähle deinen Config/Sessions-Ordner.",
+      "mremoteng": "Wähle confCons.xml aus dem mRemoteNG-Ordner in AppData. Gespeicherte Passwörter werden mit übernommen."
+    },
+    "pickFiles": "Dateien auswählen",
+    "pickFolder": "Ordner auswählen",
+    "filesPicked_one": "{{count}} Datei",
+    "filesPicked_other": "{{count}} Dateien",
+    "masterPassword": "Master-Passwort",
+    "masterPasswordHint": "Diese Datei ist mit einem Master-Passwort geschützt. Es wird nur zum Lesen der Datei verwendet.",
+    "unlock": "Öffnen",
+    "readFailed": "Die Datei konnte nicht gelesen werden",
+    "found_one": "{{count}} Host in {{app}} gefunden",
+    "found_other": "{{count}} Hosts in {{app}} gefunden",
+    "defaultUsername": "Benutzername für Hosts ohne einen",
+    "defaultUsernameHint_one": "{{count}} SSH-Host hat keinen Benutzernamen, und SSH-Hosts benötigen einen.",
+    "defaultUsernameHint_other": "{{count}} SSH-Hosts haben keinen Benutzernamen, und SSH-Hosts benötigen einen.",
+    "overwrite": "Vorhandene Hosts aktualisieren",
+    "overwriteHint": "Ein Host mit derselben Adresse, demselben Port und demselben Benutzernamen wird aktualisiert, anstatt übersprungen zu werden.",
+    "withPassword": "Passwort",
+    "notImported_one": "{{count}} Eintrag ausgelassen",
+    "notImported_other": "{{count}} Einträge ausgelassen",
+    "skip": {
+      "noHost": "Keine Adresse",
+      "protocol": "{{detail}}-Verbindungen werden nicht unterstützt",
+      "password": "Ohne Passwort importiert, konnte nicht gelesen werden",
+      "invalid": "Konnte nicht gelesen werden"
+    },
+    "errors_one": "{{count}} Host fehlgeschlagen",
+    "errors_other": "{{count}} Hosts fehlgeschlagen",
+    "import": "Importieren",
+    "importCount_one": "{{count}} Host importieren",
+    "importCount_other": "{{count}} Hosts importieren"
+  },
+  "fileImport": {
+    "file": "Datei",
+    "pick": "Datei auswählen",
+    "importing": "Importiere...",
+    "jsonHint": "Wählen Sie eine Termix-JSON-Datei aus. Hosts, die Sie bereits mit derselben Adresse, demselben Port und demselben Benutzernamen haben, werden übersprungen. Bis zu 100 Hosts auf einmal.",
+    "jsonOverwriteHint": "Wählen Sie eine Termix-JSON-Datei aus. Hosts, die Sie bereits mit derselben Adresse, demselben Port und demselben Benutzernamen haben, werden aktualisiert. Bis zu 100 Hosts auf einmal.",
+    "sshHint": "Wählen Sie eine OpenSSH-Konfigurationsdatei aus. Jeder Host-Eintrag wird zu einem Host."
   }
 }

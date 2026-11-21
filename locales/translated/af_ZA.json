@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Invoer en uitvoer",
-    "description": "Voer gasheer in vanaf 'n JSON-lêer of 'n SSH-konfigurasielêer, en voer dit uit om te deel of te gelykstawig."
+    "description": "Voer gaste in uit Termix, SSH-konfigurasie, Termius, MobaXterm, PuTTY, SecureCRT of mRemoteNG en voer hulle uit om te deel of te rugsteun."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-konfigurasieteks",
     "overwrite": "Dateer gasheers op wat reeds bestaan"
+  },
+  "backup": {
+    "menuItem": "Rugsteun na voorwerpberging",
+    "title": "Rugsteun gaste na voorwerpberging",
+    "loadFailed": "Kon nie die rugsteunopstelling laai nie",
+    "needsStorage": "Installeer en skakel die Voorwerpberging-plug-in aan en voeg 'n aanmelding daar by om jou gaste na 'n houer te rugsteun.",
+    "noAccounts": "Voeg eers 'n S3- of ander voorwerpberging-aanmelding by in die Voorwerpberging-plug-in.",
+    "where": "Waar",
+    "account": "Berging-aanmelding",
+    "bucket": "Houer",
+    "pickBucket": "Kies 'n houer",
+    "folder": "Gids",
+    "when": "Wanneer",
+    "schedule": "Rooster",
+    "scheduleOff": "Slegs wanneer ek op Rugsteun nou druk",
+    "scheduleDaily": "Elke dag",
+    "scheduleWeekly": "Elke Sondag",
+    "hour": "Uur (UTC)",
+    "hourHint": "0 tot 23, in UTC",
+    "keep": "Rugsteunings om te hou",
+    "passphrase": "Wagwoordfrase",
+    "passphraseKept": "Stoor. Teken 'n nuwe een in om dit te verander",
+    "passphraseHint": "Rugsteunings bevat jou gaste met hul wagwoorde en sleutels, gesluit met hierdie wagwoordfrase. Hou dit ergens veilig: sonder dit kan 'n rugsteuning nie oopgemaak word nie. Minstens 8 karakters.",
+    "save": "Stoor",
+    "close": "Maak toe",
+    "saved": "Rugsteuninstellings gestoor",
+    "saveFailed": "Kon nie die rugsteuninstellings stoor nie",
+    "files": "Rugsteunings",
+    "runNow": "Rugsteun nou",
+    "running": "Besig om te rugsteun",
+    "done_one": "{{count}} gas gerugsteun",
+    "done_other": "{{count}} gaste gerugsteun",
+    "runFailed": "Die rugsteuning het misluk",
+    "noFiles": "Nog geen rugsteunings nie.",
+    "overwrite": "Oorskryf gaste wat reeds bestaan",
+    "overwriteHint": "Af slaan gaste oor met dieselfde naam en adres.",
+    "restore": "Herstel",
+    "restoreTitle": "Herstel gaste uit hierdie rugsteuning?",
+    "restoreDesc": "Gaste uit die rugsteuning van {{when}} word bygevoeg. Gaste wat jy reeds het, word soos hulle is gelaat.",
+    "restoreDescOverwrite": "Gaste uit die rugsteuning van {{when}} word bygevoeg, en gaste wat jy reeds het, word oorskryf met die rugsteuning se kopie.",
+    "restored": "Herstel: {{added}} bygevoeg, {{updated}} opgedateer, {{failed}} misluk",
+    "restoreFailed": "Kon nie die rugsteuning herstel nie",
+    "lastGood": "Laaste rugsteuning {{when}}",
+    "lastFailed": "Laaste rugsteuning het misluk {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Voer in uit 'n ander app...",
+    "title": "Voer in uit 'n ander app",
+    "source": "Bron",
+    "app": "App",
+    "apps": {
+      "auto": "Vind uit uit die lêer",
+      "termius": "Termius of CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Kies die uitvoerlêer en Termix werk uit uit watter app dit gekom het.",
+      "termius": "Termius het geen eie uitvoer nie. Kies 'n CSV gemaak van sy invoersjabloon of deur 'n Termius-uitvoertool. Kolomme soos Etiket, Gasnaam/IP, Poort, Gebruikersnaam, Wagwoord, Groepe en Merkers word gelees.",
+      "mobaxterm": "In MobaXterm, klik regs op Gebruikersessies en kies Voer alle sessies uit na lêer, of kies jou MobaXterm.ini.",
+      "putty": "Voer die sessies uit die register uit met reg export HKCU\\Software\\SimonTatham putty.reg en kies putty.reg.",
+      "securecrt": "In SecureCRT, gebruik Gereedskap, Voer Instellings Uit en kies die XML-lêer, of kies jou Konfig/Sessies-gids.",
+      "mremoteng": "Kies confCons.xml uit die mRemoteNG-gids in AppData. Gestoorde wagwoorde kom saam."
+    },
+    "pickFiles": "Kies lêers",
+    "pickFolder": "Kies gids",
+    "filesPicked_one": "{{count}} lêer",
+    "filesPicked_other": "{{count}} lêers",
+    "masterPassword": "Hoofwagwoord",
+    "masterPasswordHint": "Hierdie lêer is beskerm met 'n hoofwagwoord. Dit word slegs gebruik om die lêer te lees.",
+    "unlock": "Maak oop",
+    "readFailed": "Kon nie die lêer lees nie",
+    "found_one": "{{count}} gasheer gevind in {{app}}",
+    "found_other": "{{count}} gasheer gevind in {{app}}",
+    "defaultUsername": "Gebruikersnaam vir gasheer sonder een",
+    "defaultUsernameHint_one": "{{count}} SSH-gasheer het geen gebruikersnaam nie, en SSH-gasheer benodig een.",
+    "defaultUsernameHint_other": "{{count}} SSH-gasheer het geen gebruikersnaam nie, en SSH-gasheer benodig een.",
+    "overwrite": "Werk bestaande gasheer op",
+    "overwriteHint": "Gasheer met dieselfde adres, poort en gebruikersnaam word opgedateer in plaas van oorgeslaan.",
+    "withPassword": "wagwoord",
+    "notImported_one": "{{count}} inskrywing uitgesluit",
+    "notImported_other": "{{count}} inskrywings uitgesluit",
+    "skip": {
+      "noHost": "Geen adres nie",
+      "protocol": "{{detail}}-verbindinge word nie ondersteun nie",
+      "password": "Geïmporteer sonder sy wagwoord, dit kon nie gelees word nie",
+      "invalid": "Kon nie gelees word nie"
+    },
+    "errors_one": "{{count}} gasheer het misluk",
+    "errors_other": "{{count}} gasheer het misluk",
+    "import": "Importeer",
+    "importCount_one": "Importeer {{count}} gasheer",
+    "importCount_other": "Importeer {{count}} gasheer"
+  },
+  "fileImport": {
+    "file": "Lêer",
+    "pick": "Kies lêer",
+    "importing": "Besig om te importeer...",
+    "jsonHint": "Kies 'n Termix JSON-lêer. Gasheer wat jy reeds het, met dieselfde adres, poort en gebruikersnaam, word oorgeslaan. Tot 100 gasheer op 'n slag.",
+    "jsonOverwriteHint": "Kies 'n Termix JSON-lêer. Gasheer wat jy reeds het, met dieselfde adres, poort en gebruikersnaam, word opgedateer. Tot 100 gasheer op 'n slag.",
+    "sshHint": "Kies 'n OpenSSH-konfigurasielêer. Elke Host-inskrywing word 'n gasheer."
   }
 }

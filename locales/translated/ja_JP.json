@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "インポートとエクスポート",
-    "description": "JSON ファイルまたは SSH 設定ファイルからホストをインポートし、共有やバックアップ用にエクスポートします。"
+    "description": "Termix、SSH 設定、Termius、MobaXterm、PuTTY、SecureCRT、または mRemoteNG からホストをインポートし、共有やバックアップ用にエクスポートできます。"
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "SSH 設定テキスト",
     "overwrite": "既存のホストを更新"
+  },
+  "backup": {
+    "menuItem": "オブジェクトストレージにバックアップ",
+    "title": "ホストをオブジェクトストレージにバックアップ",
+    "loadFailed": "バックアップ設定を読み込めませんでした",
+    "needsStorage": "ホストをバケットにバックアップするには、オブジェクトストレージプラグインをインストールして有効化し、そこにログイン情報を追加してください。",
+    "noAccounts": "まず、オブジェクトストレージプラグインに S3 またはその他のオブジェクトストレージのログイン情報を追加してください。",
+    "where": "保存先",
+    "account": "ストレージログイン",
+    "bucket": "バケット",
+    "pickBucket": "バケットを選択",
+    "folder": "フォルダ",
+    "when": "タイミング",
+    "schedule": "スケジュール",
+    "scheduleOff": "「今すぐバックアップ」を押した時のみ",
+    "scheduleDaily": "毎日",
+    "scheduleWeekly": "毎週日曜日",
+    "hour": "時間 (UTC)",
+    "hourHint": "0 から 23 の間 (UTC)",
+    "keep": "保持するバックアップ数",
+    "passphrase": "パスフレーズ",
+    "passphraseKept": "保存しました。変更するには新しいパスフレーズを入力してください",
+    "passphraseHint": "バックアップには、パスワードや鍵を含むホスト情報がこのパスフレーズで暗号化されて保存されます。安全な場所に保管してください。パスフレーズなしではバックアップを開くことができません。8文字以上で設定してください。",
+    "save": "保存",
+    "close": "閉じる",
+    "saved": "バックアップ設定を保存しました",
+    "saveFailed": "バックアップ設定を保存できませんでした",
+    "files": "バックアップ",
+    "runNow": "今すぐバックアップ",
+    "running": "バックアップ中",
+    "done_other": "{{count}} 個のホストをバックアップしました",
+    "runFailed": "バックアップに失敗しました",
+    "noFiles": "まだバックアップはありません。",
+    "overwrite": "既存のホストを上書きする",
+    "overwriteHint": "オフにすると、同じ名前とアドレスを持つホストはスキップされます。",
+    "restore": "復元",
+    "restoreTitle": "このバックアップからホストを復元しますか？",
+    "restoreDesc": "{{when}} のバックアップにあるホストが追加されます。既に持っているホストはそのまま維持されます。",
+    "restoreDescOverwrite": "{{when}} のバックアップにあるホストが追加され、既に持っているホストはバックアップのデータで上書きされます。",
+    "restored": "復元完了: {{added}} 個追加、{{updated}} 個更新、{{failed}} 個失敗",
+    "restoreFailed": "バックアップを復元できませんでした",
+    "lastGood": "最後のバックアップ: {{when}}",
+    "lastFailed": "最後のバックアップは {{when}} に失敗しました"
+  },
+  "appImport": {
+    "menuItem": "他のアプリからインポート...",
+    "title": "他のアプリからインポート",
+    "source": "ソース",
+    "app": "アプリ",
+    "apps": {
+      "auto": "ファイルから自動判別",
+      "termius": "Termius または CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "エクスポートファイルを選択すると、Termix がどのアプリ由来か自動的に判別します。",
+      "termius": "Termius には独自のエクスポート機能がありません。インポートテンプレートや Termius エクスポートツールで作成した CSV ファイルを選択してください。Label、Hostname/IP、Port、Username、Password、Groups、Tags などの列が読み取られます。",
+      "mobaxterm": "MobaXterm で、User sessions を右クリックし、「Export all sessions to file」を選択するか、MobaXterm.ini ファイルを選択してください。",
+      "putty": "レジストリから `reg export HKCU\\Software\\SimonTatham putty.reg` を実行してセッションをエクスポートし、putty.reg ファイルを選択してください。",
+      "securecrt": "SecureCRT で、Tools > Export Settings を使用して XML ファイルを選択するか、Config/Sessions フォルダを選択してください。",
+      "mremoteng": "AppData 内の mRemoteNG フォルダから confCons.xml ファイルを選択してください。保存されたパスワードも一緒にインポートされます。"
+    },
+    "pickFiles": "ファイルを選択",
+    "pickFolder": "フォルダを選択",
+    "filesPicked_other": "{{count}} ファイル",
+    "masterPassword": "マスターパスワード",
+    "masterPasswordHint": "このファイルはマスターパスワードで保護されています。パスワードはファイルの読み取りにのみ使用されます。",
+    "unlock": "開く",
+    "readFailed": "ファイルを読み取れませんでした",
+    "found_other": "{{app}} で {{count}} 台のホストが見つかりました",
+    "defaultUsername": "ユーザー名がないホストのユーザー名",
+    "defaultUsernameHint_other": "{{count}} 台の SSH ホストにユーザー名がありません。SSH ホストにはユーザー名が必要です。",
+    "overwrite": "既存のホストを更新",
+    "overwriteHint": "同じアドレス、ポート、ユーザー名を持つホストはスキップされるのではなく更新されます。",
+    "withPassword": "パスワード",
+    "notImported_other": "{{count}} 件のエントリが除外されました",
+    "skip": {
+      "noHost": "アドレスがありません",
+      "protocol": "{{detail}} 接続はサポートされていません",
+      "password": "パスワードなしでインポートされたため、読み取れませんでした",
+      "invalid": "読み取れませんでした"
+    },
+    "errors_other": "{{count}} 台のホストで失敗しました",
+    "import": "インポート",
+    "importCount_other": "{{count}} 台のホストをインポート"
+  },
+  "fileImport": {
+    "file": "ファイル",
+    "pick": "ファイルを選択",
+    "importing": "インポート中...",
+    "jsonHint": "Termix JSON ファイルを選択してください。同じアドレス、ポート、ユーザー名を持つ既存のホストはスキップされます。一度に最大 100 台のホストまで対応しています。",
+    "jsonOverwriteHint": "Termix JSON ファイルを選択してください。同じアドレス、ポート、ユーザー名を持つ既存のホストは更新されます。一度に最大 100 台のホストまで対応しています。",
+    "sshHint": "OpenSSH 設定ファイルを選択してください。各 Host エントリがホストとしてインポートされます。"
   }
 }

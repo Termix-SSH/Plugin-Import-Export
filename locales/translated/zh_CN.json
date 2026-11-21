@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "导入和导出",
-    "description": "从 JSON 文件或 SSH 配置文件导入主机，并导出主机以进行分享或备份。"
+    "description": "从 Termix、SSH 配置、Termius、MobaXterm、PuTTY、SecureCRT 或 mRemoteNG 导入主机，并导出以共享或备份。"
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "SSH 配置文本",
     "overwrite": "更新已存在的主机"
+  },
+  "backup": {
+    "menuItem": "备份到对象存储",
+    "title": "将主机备份到对象存储",
+    "loadFailed": "无法加载备份设置",
+    "needsStorage": "安装并启用对象存储插件，并在其中添加登录凭据，以便将主机备份到存储桶。",
+    "noAccounts": "请先在对象存储插件中添加 S3 或其他对象存储的登录凭据。",
+    "where": "位置",
+    "account": "存储登录凭据",
+    "bucket": "存储桶",
+    "pickBucket": "选择存储桶",
+    "folder": "文件夹",
+    "when": "时间",
+    "schedule": "计划",
+    "scheduleOff": "仅在我点击“立即备份”时",
+    "scheduleDaily": "每天",
+    "scheduleWeekly": "每周日",
+    "hour": "小时（UTC）",
+    "hourHint": "0 到 23，使用 UTC 时间",
+    "keep": "保留的备份数量",
+    "passphrase": "密码短语",
+    "passphraseKept": "已保存。输入新密码短语以更改",
+    "passphraseHint": "备份包含您的主机及其密码和密钥，并使用此密码短语加密。请妥善保管：没有它，备份将无法打开。至少 8 个字符。",
+    "save": "保存",
+    "close": "关闭",
+    "saved": "备份设置已保存",
+    "saveFailed": "无法保存备份设置",
+    "files": "备份",
+    "runNow": "立即备份",
+    "running": "正在备份",
+    "done_other": "已备份 {{count}} 个主机",
+    "runFailed": "备份失败",
+    "noFiles": "暂无备份。",
+    "overwrite": "覆盖已存在的主机",
+    "overwriteHint": "关闭时，将跳过名称和地址相同的主机。",
+    "restore": "恢复",
+    "restoreTitle": "从此备份恢复主机？",
+    "restoreDesc": "将添加来自 {{when}} 备份的主机。您已有的主机将保持不变。",
+    "restoreDescOverwrite": "将添加来自 {{when}} 备份的主机，并且您已有的主机将被备份中的副本覆盖。",
+    "restored": "已恢复：{{added}} 个新增，{{updated}} 个更新，{{failed}} 个失败",
+    "restoreFailed": "无法恢复备份",
+    "lastGood": "上次备份于 {{when}}",
+    "lastFailed": "上次备份于 {{when}} 失败"
+  },
+  "appImport": {
+    "menuItem": "从其他应用导入...",
+    "title": "从其他应用导入",
+    "source": "来源",
+    "app": "应用",
+    "apps": {
+      "auto": "从文件自动检测",
+      "termius": "Termius 或 CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "选择导出文件，Termix 将自动识别其来源应用。",
+      "termius": "Termius 没有自带的导出功能。请选择由其导入模板或 Termius 导出工具生成的 CSV 文件。将读取 Label、Hostname/IP、Port、Username、Password、Groups 和 Tags 等列。",
+      "mobaxterm": "在 MobaXterm 中，右键点击“用户会话”并选择“将所有会话导出到文件”，或者选择您的 MobaXterm.ini 文件。",
+      "putty": "使用 reg export HKCU\\Software\\SimonTatham putty.reg 从注册表导出会话，然后选择 putty.reg 文件。",
+      "securecrt": "在 SecureCRT 中，使用“工具”>“导出设置”，然后选择 XML 文件，或者选择您的 Config/Sessions 文件夹。",
+      "mremoteng": "从 AppData 中的 mRemoteNG 文件夹选择 confCons.xml。保存的密码也会一并导入。"
+    },
+    "pickFiles": "选择文件",
+    "pickFolder": "选择文件夹",
+    "filesPicked_other": "{{count}} 个文件",
+    "masterPassword": "主密码",
+    "masterPasswordHint": "此文件受主密码保护。该密码仅用于读取文件。",
+    "unlock": "打开",
+    "readFailed": "无法读取文件",
+    "found_other": "在 {{app}} 中找到 {{count}} 个主机",
+    "defaultUsername": "未设置用户名的主机的默认用户名",
+    "defaultUsernameHint_other": "{{count}} 个 SSH 主机未设置用户名，而 SSH 主机必须设置用户名。",
+    "overwrite": "更新现有主机",
+    "overwriteHint": "如果存在地址、端口和用户名相同的主机，则更新该主机而不是跳过。",
+    "withPassword": "密码",
+    "notImported_other": "跳过 {{count}} 个条目",
+    "skip": {
+      "noHost": "无地址",
+      "protocol": "不支持 {{detail}} 连接",
+      "password": "导入时未包含密码，无法读取",
+      "invalid": "无法读取"
+    },
+    "errors_other": "{{count}} 个主机失败",
+    "import": "导入",
+    "importCount_other": "导入 {{count}} 个主机"
+  },
+  "fileImport": {
+    "file": "文件",
+    "pick": "选择文件",
+    "importing": "正在导入...",
+    "jsonHint": "选择一个 Termix JSON 文件。地址、端口和用户名相同的主机将被跳过。一次最多导入 100 个主机。",
+    "jsonOverwriteHint": "选择一个 Termix JSON 文件。地址、端口和用户名相同的主机将被更新。一次最多导入 100 个主机。",
+    "sshHint": "选择一个 OpenSSH 配置文件。每个 Host 条目将转换为主机。"
   }
 }

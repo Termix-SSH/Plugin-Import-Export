@@ -211,3 +211,90 @@ describe("permission", () => {
     expect(result.status).toBe(403);
   });
 });
+
+describe("app import", () => {
+  const csv = (rows: number) =>
+    "Label,Hostname/IP,Username,Password\n" +
+    Array.from(
+      { length: rows },
+      (_, i) => `h${i},10.0.${Math.floor(i / 250)}.${i % 250},root,pw${i}`,
+    ).join("\n");
+
+  it("previews what it found without sending passwords", async () => {
+    const spy = vi.spyOn(mock.ctx.hosts, "importMany");
+    const result = await request("POST", "/app-import", {
+      files: [{ name: "termius.csv", content: csv(2) }],
+      preview: true,
+    });
+    expect(result.status).toBe(200);
+    expect(result.body.format).toBe("termius");
+    expect(result.body.hosts).toHaveLength(2);
+    expect(result.body.hosts[0]).toMatchObject({
+      name: "h0",
+      hasPassword: true,
+    });
+    expect(result.body.hosts[0].password).toBeUndefined();
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it("imports in batches of 100 and adds up the counts", async () => {
+    const spy = vi.spyOn(mock.ctx.hosts, "importMany");
+    const result = await request("POST", "/app-import", {
+      files: [{ name: "termius.csv", content: csv(150) }],
+      format: "termius",
+      overwrite: true,
+    });
+    expect(result.status).toBe(200);
+    expect(spy).toHaveBeenCalledTimes(2);
+    expect(spy.mock.calls[0][0]).toHaveLength(100);
+    expect(spy.mock.calls[1][1]).toEqual({ overwrite: true });
+    expect(spy.mock.calls[0][0][0]).toMatchObject({
+      ip: "10.0.0.0",
+      authType: "password",
+      password: "pw0",
+    });
+    expect(result.body).toMatchObject({ success: 150, failed: 0 });
+  });
+
+  it("names the host in core's errors", async () => {
+    vi.spyOn(mock.ctx.hosts, "importMany").mockResolvedValue({
+      success: 0,
+      updated: 0,
+      skipped: 0,
+      failed: 1,
+      errors: ["Host 2: Username required for SSH connections"],
+      createdHostIds: [],
+    });
+    const result = await request("POST", "/app-import", {
+      files: [{ name: "termius.csv", content: csv(2) }],
+    });
+    expect(result.body.errors).toEqual([
+      "h1: Username required for SSH connections",
+    ]);
+  });
+
+  it("says when a master password is needed", async () => {
+    const xml =
+      '<mrng:Connections xmlns:mrng="http://mremoteng.org" EncryptionEngine="AES" BlockCipherMode="GCM" KdfIterations="1000" Protected="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ConfVersion="2.6"></mrng:Connections>';
+    const result = await request("POST", "/app-import", {
+      files: [{ name: "confCons.xml", content: xml }],
+    });
+    expect(result.status).toBe(200);
+    expect(result.body).toEqual({ needsPassword: true });
+  });
+
+  it("refuses files it cannot read", async () => {
+    const unknown = await request("POST", "/app-import", {
+      files: [{ name: "x.txt", content: "hello" }],
+    });
+    expect(unknown.status).toBe(400);
+    expect(unknown.body.code).toBe("unknownFormat");
+    const empty = await request("POST", "/app-import", { files: [] });
+    expect(empty.status).toBe(400);
+    const badFormat = await request("POST", "/app-import", {
+      files: [{ name: "x", content: "a" }],
+      format: "winscp",
+    });
+    expect(badFormat.status).toBe(400);
+  });
+});

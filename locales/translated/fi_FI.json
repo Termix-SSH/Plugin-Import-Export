@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Tuo ja vie",
-    "description": "Tuo isäntiä JSON-tiedostosta tai SSH-asetustiedostosta ja vie niitä jaettavaksi tai varmuuskopioidaksesi."
+    "description": "Tuo isäntiä Termixistä, SSH-asetuksista, Termiukselta, MobaXtermistä, PuTTYltä, SecureCRT:stä tai mRemoteNG:stä ja vie niitä jakamista tai varmuuskopiointia varten."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-asetusteksti",
     "overwrite": "Päivitä jo olemassa olevat isännät"
+  },
+  "backup": {
+    "menuItem": "Varmuuskopioi objektivarastoon",
+    "title": "Varmuuskopioi isännät objektivarastoon",
+    "loadFailed": "Varmuuskopiointiasetuksia ei voitu ladata",
+    "needsStorage": "Asenna ja ota käyttöön Objektivarasto-lisäosa ja lisää sinne kirjautumistiedot, jotta voit varmuuskopioida isäntäsi säiliöön.",
+    "noAccounts": "Lisää ensin S3- tai muu objektivarastotili Objektivarasto-lisäosaan.",
+    "where": "Mihin",
+    "account": "Varastotili",
+    "bucket": "Säiliö",
+    "pickBucket": "Valitse säiliö",
+    "folder": "Kansio",
+    "when": "Milloin",
+    "schedule": "Aikataulu",
+    "scheduleOff": "Vain painamalla Varmuuskopioi nyt",
+    "scheduleDaily": "Joka päivä",
+    "scheduleWeekly": "Joka sunnuntai",
+    "hour": "Tunti (UTC)",
+    "hourHint": "0–23, UTC-aikaa",
+    "keep": "Säilytettävät varmuuskopiot",
+    "passphrase": "Salasana",
+    "passphraseKept": "Tallennettu. Kirjoita uusi vaihtaaksesi sen",
+    "passphraseHint": "Varmuuskopiot sisältävät isäntäsi niiden salasanoin ja avaimin, lukittuna tällä salasanalla. Säilytä se turvallisessa paikassa: ilman sitä varmuuskopiota ei voi avata. Vähintään 8 merkkiä.",
+    "save": "Tallenna",
+    "close": "Sulje",
+    "saved": "Varmuuskopiointiasetukset tallennettu",
+    "saveFailed": "Varmuuskopiointiasetuksia ei voitu tallentaa",
+    "files": "Varmuuskopiot",
+    "runNow": "Varmuuskopioi nyt",
+    "running": "Varmuuskopioidaan",
+    "done_one": "{{count}} isäntä varmuuskopioitu",
+    "done_other": "{{count}} isäntää varmuuskopioitu",
+    "runFailed": "Varmuuskopiointi epäonnistui",
+    "noFiles": "Ei vielä varmuuskopioita.",
+    "overwrite": "Korvaa olemassa olevat isännät",
+    "overwriteHint": "Kun pois päältä, samannimiset ja saman osoitteen omaavat isännät ohitetaan.",
+    "restore": "Palauta",
+    "restoreTitle": "Palautetaanko isännät tästä varmuuskopiosta?",
+    "restoreDesc": "Isännät varmuuskopiosta ajalta {{when}} lisätään. Jo olemassa olevat isännät jätetään ennalleen.",
+    "restoreDescOverwrite": "Isännät varmuuskopiosta ajalta {{when}} lisätään, ja jo olemassa olevat isännät korvataan varmuuskopion versioilla.",
+    "restored": "Palautettu: {{added}} lisätty, {{updated}} päivitetty, {{failed}} epäonnistunut",
+    "restoreFailed": "Varmuuskopiota ei voitu palauttaa",
+    "lastGood": "Viimeisin varmuuskopio {{when}}",
+    "lastFailed": "Viimeisin varmuuskopiointi epäonnistui {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Tuo toisesta sovelluksesta...",
+    "title": "Tuo toisesta sovelluksesta",
+    "source": "Lähde",
+    "app": "Sovellus",
+    "apps": {
+      "auto": "Havaitse tiedostosta",
+      "termius": "Termius tai CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Valitse vientitiedosto, ja Termix selvittää, mistä sovelluksesta se on peräisin.",
+      "termius": "Termiuksella ei ole omaa vientitoimintoa. Valitse CSV-tiedosto, joka on luotu sen tuontipohjasta tai Termiuksen vientityökalulla. Sarakkeet kuten Label, Hostname/IP, Port, Username, Password, Groups ja Tags luetellaan.",
+      "mobaxterm": "MobaXtermissä klikkaa oikealla hiirennapilla User sessions ja valitse Export all sessions to file, tai valitse MobaXterm.ini-tiedostosi.",
+      "putty": "Vie istunnot rekisteristä komennolla reg export HKCU\\Software\\SimonTatham putty.reg ja valitse putty.reg.",
+      "securecrt": "SecureCRT:ssä käytä Tools, Export Settings ja valitse XML-tiedosto, tai valitse Config/Sessions-kansiosi.",
+      "mremoteng": "Valitse confCons.xml mRemoteNG:n kansioista AppDatasta. Tallennetut salasanat tulevat mukaan."
+    },
+    "pickFiles": "Valitse tiedostot",
+    "pickFolder": "Valitse kansio",
+    "filesPicked_one": "{{count}} tiedosto",
+    "filesPicked_other": "{{count}} tiedostoa",
+    "masterPassword": "Pääsalasana",
+    "masterPasswordHint": "Tämä tiedosto on suojattu pääsalasanalla. Salasanaa käytetään vain tiedoston lukemiseen.",
+    "unlock": "Avaa",
+    "readFailed": "Tiedostoa ei voitu lukea",
+    "found_one": "{{count}} isäntä löydetty sovelluksesta {{app}}",
+    "found_other": "{{count}} isäntää löydetty sovelluksesta {{app}}",
+    "defaultUsername": "Käyttäjänimi isännille, joilla ei ole käyttäjänimeä",
+    "defaultUsernameHint_one": "{{count}} SSH-isännällä ei ole käyttäjänimeä, mutta SSH-isännät tarvitsevat sen.",
+    "defaultUsernameHint_other": "{{count}} SSH-isännällä ei ole käyttäjänimeä, mutta SSH-isännät tarvitsevat sen.",
+    "overwrite": "Päivitä olemassa olevat isännät",
+    "overwriteHint": "Isäntä, jolla on sama osoite, portti ja käyttäjänimi, päivitetään sen sijaan, että se ohitettaisiin.",
+    "withPassword": "salasana",
+    "notImported_one": "{{count}} merkintä jätetty pois",
+    "notImported_other": "{{count}} merkintää jätetty pois",
+    "skip": {
+      "noHost": "Ei osoitetta",
+      "protocol": "{{detail}}-yhteyksiä ei tueta",
+      "password": "Tuotu ilman salasanaa, sitä ei voitu lukea",
+      "invalid": "Ei voitu lukea"
+    },
+    "errors_one": "{{count}} isännän tuonti epäonnistui",
+    "errors_other": "{{count}} isännän tuonti epäonnistui",
+    "import": "Tuo",
+    "importCount_one": "Tuo {{count}} isäntä",
+    "importCount_other": "Tuo {{count}} isäntää"
+  },
+  "fileImport": {
+    "file": "Tiedosto",
+    "pick": "Valitse tiedosto",
+    "importing": "Tuodaan...",
+    "jsonHint": "Valitse Termixin JSON-tiedosto. Isännät, joilla on sama osoite, portti ja käyttäjänimi kuin jo omistamillasi, ohitetaan. Kerralla enintään 100 isäntää.",
+    "jsonOverwriteHint": "Valitse Termixin JSON-tiedosto. Isännät, joilla on sama osoite, portti ja käyttäjänimi kuin jo omistamillasi, päivitetään. Kerralla enintään 100 isäntää.",
+    "sshHint": "Valitse OpenSSH:n asetustiedosto. Jokainen Host-määritelmä muunnetaan isännäksi."
   }
 }

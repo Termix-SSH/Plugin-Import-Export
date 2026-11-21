@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "가져오기 및 내보내기",
-    "description": "JSON 파일 또는 SSH 구성 파일에서 호스트를 가져와 공유하거나 백업할 수 있도록 내보냅니다."
+    "description": "Termix, SSH 구성, Termius, MobaXterm, PuTTY, SecureCRT 또는 mRemoteNG에서 호스트를 가져와 공유하거나 백업할 수 있도록 내보낼 수 있습니다."
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "SSH 구성 텍스트",
     "overwrite": "이미 존재하는 호스트 업데이트"
+  },
+  "backup": {
+    "menuItem": "객체 스토리지로 백업",
+    "title": "호스트를 객체 스토리지로 백업",
+    "loadFailed": "백업 설정을 로드할 수 없습니다",
+    "needsStorage": "호스트를 버킷으로 백업하려면 객체 스토리지 플러그인을 설치하고 활성화한 후 로그인 정보를 추가하세요.",
+    "noAccounts": "먼저 객체 스토리지 플러그인에서 S3 또는 기타 객체 스토리지 로그인을 추가하세요.",
+    "where": "위치",
+    "account": "스토리지 로그인",
+    "bucket": "버킷",
+    "pickBucket": "버킷 선택",
+    "folder": "폴더",
+    "when": "시기",
+    "schedule": "일정",
+    "scheduleOff": "지금 백업 버튼을 누를 때만",
+    "scheduleDaily": "매일",
+    "scheduleWeekly": "매주 일요일",
+    "hour": "시간 (UTC)",
+    "hourHint": "0에서 23까지 (UTC 기준)",
+    "keep": "보관할 백업 수",
+    "passphrase": "암구호",
+    "passphraseKept": "저장되었습니다. 변경하려면 새 암구호를 입력하세요",
+    "passphraseHint": "백업에는 이 암구호로 잠긴 호스트의 비밀번호와 키가 포함되어 있습니다. 안전한 곳에 보관하세요: 암구호가 없으면 백업을 열 수 없습니다. 최소 8자 이상이어야 합니다.",
+    "save": "저장",
+    "close": "닫기",
+    "saved": "백업 설정이 저장되었습니다",
+    "saveFailed": "백업 설정을 저장할 수 없습니다",
+    "files": "백업",
+    "runNow": "지금 백업",
+    "running": "백업 중",
+    "done_other": "{{count}}개 호스트 백업 완료",
+    "runFailed": "백업에 실패했습니다",
+    "noFiles": "아직 백업이 없습니다.",
+    "overwrite": "이미 존재하는 호스트 덮어쓰기",
+    "overwriteHint": "끄면 이름과 주소가 같은 호스트는 건너뜁니다.",
+    "restore": "복원",
+    "restoreTitle": "이 백업에서 호스트를 복원하시겠습니까?",
+    "restoreDesc": "{{when}}의 백업에서 호스트가 추가됩니다. 이미 보유한 호스트는 그대로 유지됩니다.",
+    "restoreDescOverwrite": "{{when}}의 백업에서 호스트가 추가되고, 이미 보유한 호스트는 백업의 복사본으로 덮어씁니다.",
+    "restored": "복원 완료: {{added}}개 추가, {{updated}}개 업데이트, {{failed}}개 실패",
+    "restoreFailed": "백업을 복원할 수 없습니다",
+    "lastGood": "마지막 백업 {{when}}",
+    "lastFailed": "마지막 백업 실패 {{when}}"
+  },
+  "appImport": {
+    "menuItem": "다른 앱에서 가져오기...",
+    "title": "다른 앱에서 가져오기",
+    "source": "출처",
+    "app": "앱",
+    "apps": {
+      "auto": "파일에서 자동 감지",
+      "termius": "Termius 또는 CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "내보내기 파일을 선택하면 Termix가 해당 파일이 어떤 앱에서 왔는지 자동으로 판단합니다.",
+      "termius": "Termius에는 자체 내보내기 기능이 없습니다. Termius 가져오기 템플릿이나 Termius 내보내기 도구로 만든 CSV 파일을 선택하세요. Label, Hostname/IP, Port, Username, Password, Groups, Tags 등의 열이 읽힙니다.",
+      "mobaxterm": "MobaXterm에서 사용자 세션을 마우스 오른쪽 버튼으로 클릭하고 모든 세션 파일로 내보내기를 선택하거나 MobaXterm.ini 파일을 선택하세요.",
+      "putty": "reg export HKCU\\Software\\SimonTatham putty.reg 명령으로 레지스트리에서 세션을 내보낸 후 putty.reg 파일을 선택하세요.",
+      "securecrt": "SecureCRT에서 도구, 설정 내보내기를 사용하거나 Config/Sessions 폴더를 선택하세요.",
+      "mremoteng": "AppData의 mRemoteNG 폴더에서 confCons.xml 파일을 선택하세요. 저장된 비밀번호도 함께 가져옵니다."
+    },
+    "pickFiles": "파일 선택",
+    "pickFolder": "폴더 선택",
+    "filesPicked_other": "{{count}}개 파일",
+    "masterPassword": "마스터 비밀번호",
+    "masterPasswordHint": "이 파일은 마스터 비밀번호로 보호됩니다. 이 비밀번호는 파일 읽기에만 사용됩니다.",
+    "unlock": "열기",
+    "readFailed": "파일을 읽을 수 없습니다",
+    "found_other": "{{app}}에서 {{count}}개 호스트를 찾았습니다",
+    "defaultUsername": "사용자 이름이 없는 호스트의 기본 사용자 이름",
+    "defaultUsernameHint_other": "{{count}}개 SSH 호스트에 사용자 이름이 없습니다. SSH 호스트에는 사용자 이름이 필요합니다.",
+    "overwrite": "기존 호스트 업데이트",
+    "overwriteHint": "주소, 포트 및 사용자 이름이 동일한 호스트는 건너뛰지 않고 업데이트됩니다.",
+    "withPassword": "비밀번호",
+    "notImported_other": "{{count}}개 항목 제외",
+    "skip": {
+      "noHost": "주소 없음",
+      "protocol": "{{detail}} 연결은 지원되지 않습니다",
+      "password": "비밀번호 없이 가져와서 읽을 수 없습니다",
+      "invalid": "읽을 수 없습니다"
+    },
+    "errors_other": "{{count}}개 호스트 실패",
+    "import": "가져오기",
+    "importCount_other": "{{count}}개 호스트 가져오기"
+  },
+  "fileImport": {
+    "file": "파일",
+    "pick": "파일 선택",
+    "importing": "가져오는 중...",
+    "jsonHint": "Termix JSON 파일을 선택하세요. 주소, 포트 및 사용자 이름이 동일한 기존 호스트는 건너뜁니다. 한 번에 최대 100개 호스트까지 가져올 수 있습니다.",
+    "jsonOverwriteHint": "Termix JSON 파일을 선택하세요. 주소, 포트 및 사용자 이름이 동일한 기존 호스트는 업데이트됩니다. 한 번에 최대 100개 호스트까지 가져올 수 있습니다.",
+    "sshHint": "OpenSSH 구성 파일을 선택하세요. 각 Host 항목이 호스트가 됩니다."
   }
 }

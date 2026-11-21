@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "匯入與匯出",
-    "description": "從 JSON 檔案或 SSH 設定檔匯入主機，並匯出以分享或備份。"
+    "description": "從 Termix、SSH 設定檔、Termius、MobaXterm、PuTTY、SecureCRT 或 mRemoteNG 匯入主機，並匯出以分享或備份。"
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "SSH 設定文字",
     "overwrite": "更新已存在的主機"
+  },
+  "backup": {
+    "menuItem": "備份至物件儲存",
+    "title": "將主機備份至物件儲存",
+    "loadFailed": "無法載入備份設定",
+    "needsStorage": "請安裝並啟用「物件儲存」外掛程式，並在該處新增登入資訊，以便將主機備份至儲存桶。",
+    "noAccounts": "請先在「物件儲存」外掛程式中新增 S3 或其他物件儲存的登入資訊。",
+    "where": "位置",
+    "account": "儲存登入資訊",
+    "bucket": "儲存桶",
+    "pickBucket": "選擇儲存桶",
+    "folder": "資料夾",
+    "when": "時間",
+    "schedule": "排程",
+    "scheduleOff": "僅在我按下「立即備份」時",
+    "scheduleDaily": "每天",
+    "scheduleWeekly": "每週日",
+    "hour": "小時（UTC）",
+    "hourHint": "0 至 23，使用 UTC 時間",
+    "keep": "保留的備份數量",
+    "passphrase": "密碼片語",
+    "passphraseKept": "已儲存。輸入新的密碼片語即可變更",
+    "passphraseHint": "備份檔案包含您的主機及其密碼與金鑰，並以此密碼片語加密。請妥善保管：若遺失密碼片語，將無法開啟備份。至少需 8 個字元。",
+    "save": "儲存",
+    "close": "關閉",
+    "saved": "備份設定已儲存",
+    "saveFailed": "無法儲存備份設定",
+    "files": "備份",
+    "runNow": "立即備份",
+    "running": "正在備份",
+    "done_other": "已備份 {{count}} 台主機",
+    "runFailed": "備份失敗",
+    "noFiles": "尚無備份。",
+    "overwrite": "覆蓋已存在的主機",
+    "overwriteHint": "關閉時，會跳過名稱與位址相同的主機。",
+    "restore": "還原",
+    "restoreTitle": "要從此備份還原主機嗎？",
+    "restoreDesc": "將新增來自 {{when}} 備份的主機。您現有的主機將保持不變。",
+    "restoreDescOverwrite": "將新增來自 {{when}} 備份的主機，並使用備份中的副本覆蓋您現有的主機。",
+    "restored": "還原完成：新增 {{added}} 台，更新 {{updated}} 台，失敗 {{failed}} 台",
+    "restoreFailed": "無法還原備份",
+    "lastGood": "上次備份時間：{{when}}",
+    "lastFailed": "上次備份失敗時間：{{when}}"
+  },
+  "appImport": {
+    "menuItem": "從其他應用程式匯入...",
+    "title": "從其他應用程式匯入",
+    "source": "來源",
+    "app": "應用程式",
+    "apps": {
+      "auto": "從檔案自動偵測",
+      "termius": "Termius 或 CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "選擇匯出檔案，Termix 將自動判斷其來源應用程式。",
+      "termius": "Termius 沒有內建匯出功能。請選擇由其匯入範本或 Termius 匯出工具產生的 CSV 檔案。系統會讀取 Label、Hostname/IP、Port、Username、Password、Groups 和 Tags 等欄位。",
+      "mobaxterm": "在 MobaXterm 中，右鍵點擊「使用者工作階段」並選擇「匯出所有工作階段至檔案」，或直接選擇您的 MobaXterm.ini 檔案。",
+      "putty": "使用 reg export HKCU\\Software\\SimonTatham putty.reg 從登錄檔匯出工作階段，然後選擇 putty.reg 檔案。",
+      "securecrt": "在 SecureCRT 中，使用「工具」>「匯出設定」並選擇 XML 檔案，或直接選擇您的 Config/Sessions 資料夾。",
+      "mremoteng": "從 AppData 中的 mRemoteNG 資料夾選擇 confCons.xml 檔案。已儲存的密碼也會一併匯入。"
+    },
+    "pickFiles": "選擇檔案",
+    "pickFolder": "選擇資料夾",
+    "filesPicked_other": "{{count}} 個檔案",
+    "masterPassword": "主密碼",
+    "masterPasswordHint": "此檔案受主密碼保護。該密碼僅用於讀取檔案。",
+    "unlock": "開啟",
+    "readFailed": "無法讀取檔案",
+    "found_other": "在 {{app}} 中找到 {{count}} 個主機",
+    "defaultUsername": "未設定使用者名稱之主機的使用者名稱",
+    "defaultUsernameHint_other": "{{count}} 個 SSH 主機未設定使用者名稱，但 SSH 主機必須設定。",
+    "overwrite": "更新現有主機",
+    "overwriteHint": "若已存在位址、連接埠與使用者名稱相同的主機，將更新該主機而非略過。",
+    "withPassword": "密碼",
+    "notImported_other": "略過 {{count}} 個項目",
+    "skip": {
+      "noHost": "無位址",
+      "protocol": "不支援 {{detail}} 連線",
+      "password": "匯入時未包含密碼，無法讀取",
+      "invalid": "無法讀取"
+    },
+    "errors_other": "{{count}} 個主機失敗",
+    "import": "匯入",
+    "importCount_other": "匯入 {{count}} 個主機"
+  },
+  "fileImport": {
+    "file": "檔案",
+    "pick": "選擇檔案",
+    "importing": "正在匯入...",
+    "jsonHint": "選擇 Termix JSON 檔案。位址、連接埠與使用者名稱相同的主機將被略過。一次最多匯入 100 個主機。",
+    "jsonOverwriteHint": "選擇 Termix JSON 檔案。位址、連接埠與使用者名稱相同的主機將被更新。一次最多匯入 100 個主機。",
+    "sshHint": "選擇 OpenSSH 設定檔。每個 Host 項目將成為一個主機。"
   }
 }

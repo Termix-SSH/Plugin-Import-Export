@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "นำเข้าและส่งออก",
-    "description": "นำเข้าโฮสต์จากไฟล์ JSON หรือไฟล์กำหนดค่า SSH และส่งออกเพื่อแชร์หรือสำรองข้อมูล"
+    "description": "นำเข้าโฮสต์จาก Termix, SSH config, Termius, MobaXterm, PuTTY, SecureCRT หรือ mRemoteNG และส่งออกเพื่อแชร์หรือสำรองข้อมูล"
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "ข้อความกำหนดค่า SSH",
     "overwrite": "อัปเดตโฮสต์ที่มีอยู่แล้ว"
+  },
+  "backup": {
+    "menuItem": "สำรองข้อมูลไปยัง object storage",
+    "title": "สำรองโฮสต์ไปยัง object storage",
+    "loadFailed": "ไม่สามารถโหลดการตั้งค่าการสำรองข้อมูลได้",
+    "needsStorage": "ติดตั้งและเปิดใช้งานปลั๊กอิน Object Storage แล้วเพิ่มการเข้าสู่ระบบที่นั่นเพื่อสำรองโฮสต์ของคุณไปยัง bucket",
+    "noAccounts": "เพิ่มการเข้าสู่ระบบ S3 หรือ object storage อื่นๆ ในปลั๊กอิน Object Storage ก่อน",
+    "where": "ตำแหน่ง",
+    "account": "การเข้าสู่ระบบที่เก็บข้อมูล",
+    "bucket": "Bucket",
+    "pickBucket": "เลือก bucket",
+    "folder": "โฟลเดอร์",
+    "when": "เมื่อไหร่",
+    "schedule": "กำหนดเวลา",
+    "scheduleOff": "เฉพาะเมื่อฉันกดสำรองข้อมูลตอนนี้",
+    "scheduleDaily": "ทุกวัน",
+    "scheduleWeekly": "ทุกวันอาทิตย์",
+    "hour": "ชั่วโมง (UTC)",
+    "hourHint": "0 ถึง 23 ใน UTC",
+    "keep": "จำนวนการสำรองข้อมูลที่จะเก็บไว้",
+    "passphrase": "วลีผ่าน",
+    "passphraseKept": "บันทึกแล้ว พิมพ์ใหม่เพื่อเปลี่ยน",
+    "passphraseHint": "การสำรองข้อมูลจะเก็บโฮสต์ของคุณพร้อมรหัสผ่านและคีย์ โดยล็อกด้วยวลีผ่านนี้ เก็บไว้ที่ปลอดภัย: หากไม่มีวลีผ่านนี้ จะไม่สามารถเปิดการสำรองข้อมูลได้ ต้องมีอย่างน้อย 8 ตัวอักษร",
+    "save": "บันทึก",
+    "close": "ปิด",
+    "saved": "บันทึกการตั้งค่าการสำรองข้อมูลแล้ว",
+    "saveFailed": "ไม่สามารถบันทึกการตั้งค่าการสำรองข้อมูลได้",
+    "files": "การสำรองข้อมูล",
+    "runNow": "สำรองข้อมูลตอนนี้",
+    "running": "กำลังสำรองข้อมูล",
+    "done_other": "สำรองโฮสต์ {{count}} ตัวแล้ว",
+    "runFailed": "การสำรองข้อมูลล้มเหลว",
+    "noFiles": "ยังไม่มีข้อมูลสำรอง",
+    "overwrite": "เขียนทับโฮสต์ที่มีอยู่แล้ว",
+    "overwriteHint": "หากปิด จะข้ามโฮสต์ที่มีชื่อและที่อยู่เดียวกัน",
+    "restore": "กู้คืน",
+    "restoreTitle": "ต้องการกู้คืนโฮสต์从这个การสำรองข้อมูลนี้หรือไม่?",
+    "restoreDesc": "โฮสต์จากการสำรองข้อมูลเมื่อ {{when}} จะถูกเพิ่ม โฮสต์ที่คุณมีอยู่แล้วจะคงไว้ตามเดิม",
+    "restoreDescOverwrite": "โฮสต์จากการสำรองข้อมูลเมื่อ {{when}} จะถูกเพิ่ม และโฮสต์ที่คุณมีอยู่แล้วจะถูกเขียนทับด้วยสำเนาจากการสำรองข้อมูล",
+    "restored": "กู้คืนแล้ว: เพิ่ม {{added}} อัปเดต {{updated}} ล้มเหลว {{failed}}",
+    "restoreFailed": "ไม่สามารถกู้คืนการสำรองข้อมูลได้",
+    "lastGood": "การสำรองข้อมูลล่าสุด {{when}}",
+    "lastFailed": "การสำรองข้อมูลล่าสุดล้มเหลว {{when}}"
+  },
+  "appImport": {
+    "menuItem": "นำเข้าจากแอปอื่น...",
+    "title": "นำเข้าจากแอปอื่น",
+    "source": "แหล่งที่มา",
+    "app": "แอป",
+    "apps": {
+      "auto": "ตรวจสอบจากไฟล์",
+      "termius": "Termius หรือ CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "เลือกไฟล์ส่งออกและ Termix จะตรวจสอบว่ามาจากแอปใด",
+      "termius": "Termius ไม่มีฟังก์ชันส่งออกของตัวเอง เลือก CSV ที่สร้างจากเทมเพลตนำเข้าของ Termius หรือเครื่องมือส่งออกของ Termius คอลัมน์เช่น Label, Hostname/IP, Port, Username, Password, Groups และ Tags จะถูกอ่าน",
+      "mobaxterm": "ใน MobaXterm คลิกขวาที่ User sessions และเลือก Export all sessions to file หรือเลือกไฟล์ MobaXterm.ini ของคุณ",
+      "putty": "ส่งออกเซสชันจากรีจิสทรีด้วยคำสั่ง reg export HKCU\\Software\\SimonTatham putty.reg แล้วเลือกไฟล์ putty.reg",
+      "securecrt": "ใน SecureCRT ใช้ Tools, Export Settings และเลือกไฟล์ XML หรือเลือกโฟลเดอร์ Config/Sessions ของคุณ",
+      "mremoteng": "เลือกไฟล์ confCons.xml จากโฟลเดอร์ mRemoteNG ใน AppData รหัสผ่านที่บันทึกไว้จะถูกนำเข้ามาด้วย"
+    },
+    "pickFiles": "เลือกไฟล์",
+    "pickFolder": "เลือกโฟลเดอร์",
+    "filesPicked_other": "{{count}} ไฟล์",
+    "masterPassword": "รหัสผ่านหลัก",
+    "masterPasswordHint": "ไฟล์นี้มีการป้องกันด้วยรหัสผ่านหลัก ใช้รหัสผ่านนี้เพื่ออ่านไฟล์เท่านั้น",
+    "unlock": "เปิด",
+    "readFailed": "ไม่สามารถอ่านไฟล์ได้",
+    "found_other": "พบโฮสต์ {{count}} ตัวใน {{app}}",
+    "defaultUsername": "ชื่อผู้ใช้สำหรับโฮสต์ที่ไม่มี",
+    "defaultUsernameHint_other": "โฮสต์ SSH {{count}} ตัวไม่มีชื่อผู้ใช้ และโฮสต์ SSH จำเป็นต้องมีชื่อผู้ใช้",
+    "overwrite": "อัปเดตโฮสต์ที่มีอยู่",
+    "overwriteHint": "โฮสต์ที่มีที่อยู่ พอร์ต และชื่อผู้ใช้เหมือนกันจะถูกอัปเดตแทนที่จะข้ามไป",
+    "withPassword": "รหัสผ่าน",
+    "notImported_other": "ข้ามรายการ {{count}} รายการ",
+    "skip": {
+      "noHost": "ไม่มีที่อยู่",
+      "protocol": "ไม่รองรับการเชื่อมต่อ {{detail}}",
+      "password": "นำเข้าโดยไม่มีรหัสผ่าน จึงไม่สามารถอ่านได้",
+      "invalid": "ไม่สามารถอ่านได้"
+    },
+    "errors_other": "โฮสต์ล้มเหลว {{count}} ตัว",
+    "import": "นำเข้า",
+    "importCount_other": "นำเข้าโฮสต์ {{count}} ตัว"
+  },
+  "fileImport": {
+    "file": "ไฟล์",
+    "pick": "เลือกไฟล์",
+    "importing": "กำลังนำเข้า...",
+    "jsonHint": "เลือกไฟล์ JSON ของ Termix โฮสต์ที่คุณมีอยู่แล้วที่มีที่อยู่ พอร์ต และชื่อผู้ใช้เหมือนกันจะถูกข้าม นำเข้าได้สูงสุด 100 โฮสต์ในครั้งเดียว",
+    "jsonOverwriteHint": "เลือกไฟล์ JSON ของ Termix โฮสต์ที่คุณมีอยู่แล้วที่มีที่อยู่ พอร์ต และชื่อผู้ใช้เหมือนกันจะถูกอัปเดต นำเข้าได้สูงสุด 100 โฮสต์ในครั้งเดียว",
+    "sshHint": "เลือกไฟล์กำหนดค่า OpenSSH แต่ละรายการ Host จะกลายเป็นโฮสต์หนึ่งตัว"
   }
 }

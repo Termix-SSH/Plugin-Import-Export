@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Import ja eksport",
-    "description": "Impordi peremeesmängijad JSON-failist või SSH-konfiguratsioonifailist ja ekspordi neid jagamiseks või varundamiseks."
+    "description": "Impordi hostid Termixist, SSH-konfiguratsioonist, Termiusest, MobaXtermist, PuTTYst, SecureCRTst või mRemoteNGst ja ekspordi neid jagamiseks või varundamiseks."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH-konfiguratsiooni tekst",
     "overwrite": "Uuenda juba olemasolevaid hoste"
+  },
+  "backup": {
+    "menuItem": "Varunda objektide salvestusruumi",
+    "title": "Varunda hostid objektide salvestusruumi",
+    "loadFailed": "Varunduse seadistust ei õnnestunud laadida",
+    "needsStorage": "Varunda oma hostid ämbrisse, paigaldades ja sisselülitades Objektide salvestusruumi plugin ja lisades sinna sisselogimisandmed.",
+    "noAccounts": "Lisa esmalt S3 või muu objektide salvestusruumi sisselogimisandmed Objektide salvestusruumi pluginasse.",
+    "where": "Kus",
+    "account": "Salvestusruumi sisselogimine",
+    "bucket": "Ämber",
+    "pickBucket": "Vali ämber",
+    "folder": "Kaust",
+    "when": "Millal",
+    "schedule": "Ajakava",
+    "scheduleOff": "Ainult siis, kui vajutan Varunda nüüd",
+    "scheduleDaily": "Iga päev",
+    "scheduleWeekly": "Iga pühapäev",
+    "hour": "Tund (UTC)",
+    "hourHint": "0–23, UTC aja järgi",
+    "keep": "Varukoopiad, mida säilitada",
+    "passphrase": "Parool",
+    "passphraseKept": "Salvestatud. Sisesta uus, et muuta",
+    "passphraseHint": "Varukoopiad sisaldavad sinu hoste koos nende paroolide ja võtmega, mis on lukustatud selle parooliga. Hoiusta see turvalises kohas: ilma selleta varukoopiat ei avata. Vähemalt 8 märki.",
+    "save": "Salvesta",
+    "close": "Sulge",
+    "saved": "Varunduse seaded salvestatud",
+    "saveFailed": "Varunduse seadeid ei õnnestunud salvestada",
+    "files": "Varukoopiad",
+    "runNow": "Varunda nüüd",
+    "running": "Varundamine",
+    "done_one": "Varundatud {{count}} host",
+    "done_other": "Varundatud {{count}} hosti",
+    "runFailed": "Varundamine ebaõnnestus",
+    "noFiles": "Varukoopiad puuduvad.",
+    "overwrite": "Kirjuta üle olemasolevad hostid",
+    "overwriteHint": "Kui välja lülitatud, jäetakse samanimelised ja sama aadressiga hostid vahele.",
+    "restore": "Taasta",
+    "restoreTitle": "Kas taastada hostid sellest varukoopiast?",
+    "restoreDesc": "Varukoopiast {{when}} hostid lisatakse. Olemasolevad hostid jäetakse muutumatuteks.",
+    "restoreDescOverwrite": "Varukoopiast {{when}} hostid lisatakse ja olemasolevad hostid kirjutatakse varukoopia versiooniga üle.",
+    "restored": "Taastatud: {{added}} lisatud, {{updated}} uuendatud, {{failed}} ebaõnnestunud",
+    "restoreFailed": "Varukoopiat ei õnnestunud taastada",
+    "lastGood": "Viimane varukoopia {{when}}",
+    "lastFailed": "Viimane varundamine ebaõnnestus {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Impordi teisest rakendusest...",
+    "title": "Impordi teisest rakendusest",
+    "source": "Allikas",
+    "app": "Rakendus",
+    "apps": {
+      "auto": "Määra faili põhjal",
+      "termius": "Termius või CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Vali ekspordifail ja Termix tuvastab, millest see pärineb.",
+      "termius": "Termiusel pole oma ekspordivõimalust. Vali CSV-fail, mis on loodud Termiuse impordimallist või Termiuse eksporditööriistaga. Loe veerud nagu Silt, Hostinimi/IP, Port, Kasutajanimi, Parool, Grupid ja Sildid.",
+      "mobaxterm": "MobaXtermis klõpsa parema nupuga kasutaja seansidel ja vali Ekspordi kõik seansid faili või vali oma MobaXterm.ini.",
+      "putty": "Ekspordi seansid registriga käsuga reg export HKCU\\Software\\SimonTatham putty.reg ja vali putty.reg.",
+      "securecrt": "SecureCRTs kasuta Tööriistad, Ekspordi seaded ja vali XML-fail või vali oma Config/Sessions kaust.",
+      "mremoteng": "Vali mRemoteNG kausta AppData-st fail confCons.xml. Salvestatud paroolid kaasnevad."
+    },
+    "pickFiles": "Vali failid",
+    "pickFolder": "Vali kaust",
+    "filesPicked_one": "{{count}} fail",
+    "filesPicked_other": "{{count}} faili",
+    "masterPassword": "Põhisalasona",
+    "masterPasswordHint": "See fail on kaitstud põhisalasonaga. Seda kasutatakse ainult faili lugemiseks.",
+    "unlock": "Ava",
+    "readFailed": "Faili lugemine ei õnnestunud",
+    "found_one": "{{app}} leiti {{count}} peremeesmasin",
+    "found_other": "{{app}} leiti {{count}} peremeesmasinat",
+    "defaultUsername": "Kasutajanimi peremeesmasinatele, millel seda pole",
+    "defaultUsernameHint_one": "{{count}} SSH-peremeesmasinatel puudub kasutajanimi, kuid SSH-peremeesmasinate puhul on see vajalik.",
+    "defaultUsernameHint_other": "{{count}} SSH-peremeesmasinatel puudub kasutajanimi, kuid SSH-peremeesmasinate puhul on see vajalik.",
+    "overwrite": "Uuenda olemasolevaid peremeesmasinaid",
+    "overwriteHint": "Peremeesmasin, millel on sama aadress, port ja kasutajanimi, uuendatakse selle asemel, et see vahele jätta.",
+    "withPassword": "salasõna",
+    "notImported_one": "{{count}} kirje jäeti vahele",
+    "notImported_other": "{{count}} kirjet jäeti vahele",
+    "skip": {
+      "noHost": "Aadress puudub",
+      "protocol": "{{detail}}-ühendusi ei toetata",
+      "password": "Imporditi ilma salasõnata, seda ei õnnestunud lugeda",
+      "invalid": "Lugemine ei õnnestunud"
+    },
+    "errors_one": "{{count}} peremeesmasin ebaõnnestus",
+    "errors_other": "{{count}} peremeesmasinat ebaõnnestus",
+    "import": "Impordi",
+    "importCount_one": "Impordi {{count}} peremeesmasin",
+    "importCount_other": "Impordi {{count}} peremeesmasinat"
+  },
+  "fileImport": {
+    "file": "Fail",
+    "pick": "Vali fail",
+    "importing": "Importimine...",
+    "jsonHint": "Vali Termixi JSON-fail. Peremeesmasinad, mis sul juba on ja millel on sama aadress, port ja kasutajanimi, jäetakse vahele. Korraga kuni 100 peremeesmasinat.",
+    "jsonOverwriteHint": "Vali Termixi JSON-fail. Peremeesmasinad, mis sul juba on ja millel on sama aadress, port ja kasutajanimi, uuendatakse. Korraga kuni 100 peremeesmasinat.",
+    "sshHint": "Vali OpenSSH konfiguratsioonifail. Iga Host-kirje muutub peremeesmasinaks."
   }
 }

@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "Nhập và Xuất",
-    "description": "Nhập máy chủ từ tệp JSON hoặc tệp cấu hình SSH và xuất chúng để chia sẻ hoặc sao lưu."
+    "description": "Nhập host từ Termix, cấu hình SSH, Termius, MobaXterm, PuTTY, SecureCRT hoặc mRemoteNG và xuất chúng để chia sẻ hoặc sao lưu."
   },
   "permissions": {
     "use": {
@@ -58,5 +58,101 @@
     },
     "content": "Nội dung cấu hình SSH",
     "overwrite": "Cập nhật các máy chủ đã tồn tại"
+  },
+  "backup": {
+    "menuItem": "Sao lưu lên kho lưu trữ đối tượng",
+    "title": "Sao lưu host lên kho lưu trữ đối tượng",
+    "loadFailed": "Không thể tải thiết lập sao lưu",
+    "needsStorage": "Cài đặt và bật plugin Kho lưu trữ đối tượng, sau đó thêm thông tin đăng nhập ở đó để sao lưu host của bạn vào một bucket.",
+    "noAccounts": "Hãy thêm thông tin đăng nhập S3 hoặc kho lưu trữ đối tượng khác trong plugin Kho lưu trữ đối tượng trước.",
+    "where": "Nơi lưu trữ",
+    "account": "Thông tin đăng nhập lưu trữ",
+    "bucket": "Bucket",
+    "pickBucket": "Chọn một bucket",
+    "folder": "Thư mục",
+    "when": "Khi nào",
+    "schedule": "Lịch trình",
+    "scheduleOff": "Chỉ khi tôi nhấn Sao lưu ngay",
+    "scheduleDaily": "Mỗi ngày",
+    "scheduleWeekly": "Mỗi Chủ nhật",
+    "hour": "Giờ (UTC)",
+    "hourHint": "0 đến 23, theo giờ UTC",
+    "keep": "Số bản sao lưu cần giữ lại",
+    "passphrase": "Cụm mật khẩu",
+    "passphraseKept": "Đã lưu. Nhập cụm mật khẩu mới để thay đổi",
+    "passphraseHint": "Bản sao lưu chứa host cùng với mật khẩu và khóa của chúng, được khóa bằng cụm mật khẩu này. Hãy giữ nó ở nơi an toàn: không có nó, bản sao lưu sẽ không thể mở được. Tối thiểu 8 ký tự.",
+    "save": "Lưu",
+    "close": "Đóng",
+    "saved": "Đã lưu cài đặt sao lưu",
+    "saveFailed": "Không thể lưu cài đặt sao lưu",
+    "files": "Bản sao lưu",
+    "runNow": "Sao lưu ngay",
+    "running": "Đang sao lưu",
+    "done_other": "Đã sao lưu {{count}} host",
+    "runFailed": "Sao lưu thất bại",
+    "noFiles": "Chưa có bản sao lưu nào.",
+    "overwrite": "Ghi đè lên các host đã tồn tại",
+    "overwriteHint": "Tắt sẽ bỏ qua các host có cùng tên và địa chỉ.",
+    "restore": "Khôi phục",
+    "restoreTitle": "Khôi phục host từ bản sao lưu này?",
+    "restoreDesc": "Các host từ bản sao lưu ngày {{when}} sẽ được thêm vào. Các host bạn đã có sẽ được giữ nguyên.",
+    "restoreDescOverwrite": "Các host từ bản sao lưu ngày {{when}} sẽ được thêm vào, và các host bạn đã có sẽ bị ghi đè bằng bản sao từ bản sao lưu.",
+    "restored": "Đã khôi phục: {{added}} đã thêm, {{updated}} đã cập nhật, {{failed}} thất bại",
+    "restoreFailed": "Không thể khôi phục bản sao lưu",
+    "lastGood": "Bản sao lưu cuối cùng {{when}}",
+    "lastFailed": "Bản sao lưu cuối cùng thất bại {{when}}"
+  },
+  "appImport": {
+    "menuItem": "Nhập từ ứng dụng khác...",
+    "title": "Nhập từ ứng dụng khác",
+    "source": "Nguồn",
+    "app": "Ứng dụng",
+    "apps": {
+      "auto": "Tự động phát hiện từ tệp",
+      "termius": "Termius hoặc CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Chọn tệp xuất và Termix sẽ tự động xác định ứng dụng nguồn.",
+      "termius": "Termius không có tính năng xuất riêng. Hãy chọn tệp CSV được tạo từ mẫu nhập của Termius hoặc bằng công cụ xuất của Termius. Các cột như Nhãn, Tên host/IP, Cổng, Tên người dùng, Mật khẩu, Nhóm và Thẻ sẽ được đọc.",
+      "mobaxterm": "Trong MobaXterm, nhấp chuột phải vào User sessions và chọn Export all sessions to file, hoặc chọn tệp MobaXterm.ini của bạn.",
+      "putty": "Xuất các phiên từ registry bằng lệnh reg export HKCU\\Software\\SimonTatham putty.reg và chọn tệp putty.reg.",
+      "securecrt": "Trong SecureCRT, sử dụng Tools, Export Settings và chọn tệp XML, hoặc chọn thư mục Config/Sessions của bạn.",
+      "mremoteng": "Chọn tệp confCons.xml từ thư mục mRemoteNG trong AppData. Các mật khẩu đã lưu cũng sẽ được nhập cùng."
+    },
+    "pickFiles": "Chọn tệp",
+    "pickFolder": "Chọn thư mục",
+    "filesPicked_other": "{{count}} tệp",
+    "masterPassword": "Mật khẩu chính",
+    "masterPasswordHint": "Tệp này được bảo vệ bằng mật khẩu chính. Mật khẩu này chỉ dùng để đọc tệp.",
+    "unlock": "Mở",
+    "readFailed": "Không thể đọc tệp",
+    "found_other": "Tìm thấy {{count}} máy chủ trong {{app}}",
+    "defaultUsername": "Tên người dùng cho các máy chủ không có tên",
+    "defaultUsernameHint_other": "{{count}} máy chủ SSH không có tên người dùng, và máy chủ SSH cần có tên người dùng.",
+    "overwrite": "Cập nhật máy chủ hiện có",
+    "overwriteHint": "Máy chủ có cùng địa chỉ, cổng và tên người dùng sẽ được cập nhật thay vì bị bỏ qua.",
+    "withPassword": "mật khẩu",
+    "notImported_other": "{{count}} mục bị bỏ qua",
+    "skip": {
+      "noHost": "Không có địa chỉ",
+      "protocol": "Kết nối {{detail}} không được hỗ trợ",
+      "password": "Đã nhập mà không có mật khẩu, không thể đọc được",
+      "invalid": "Không thể đọc được"
+    },
+    "errors_other": "{{count}} máy chủ thất bại",
+    "import": "Nhập",
+    "importCount_other": "Nhập {{count}} máy chủ"
+  },
+  "fileImport": {
+    "file": "Tệp",
+    "pick": "Chọn tệp",
+    "importing": "Đang nhập...",
+    "jsonHint": "Chọn một tệp JSON của Termix. Các máy chủ bạn đã có, với cùng địa chỉ, cổng và tên người dùng, sẽ bị bỏ qua. Tối đa 100 máy chủ cùng lúc.",
+    "jsonOverwriteHint": "Chọn một tệp JSON của Termix. Các máy chủ bạn đã có, với cùng địa chỉ, cổng và tên người dùng, sẽ được cập nhật. Tối đa 100 máy chủ cùng lúc.",
+    "sshHint": "Chọn một tệp cấu hình OpenSSH. Mỗi mục Host sẽ trở thành một máy chủ."
   }
 }

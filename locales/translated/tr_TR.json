@@ -1,7 +1,7 @@
 {
   "plugin": {
     "name": "İçe Aktar ve Dışa Aktar",
-    "description": "Ana bilgisayarları bir JSON dosyasından veya SSH yapılandırma dosyasından içe aktarın ve paylaşmak veya yedeklemek için dışa aktarın."
+    "description": "Termix, SSH yapılandırması, Termius, MobaXterm, PuTTY, SecureCRT veya mRemoteNG'den ana bilgisayarları içe aktarın ve paylaşmak veya yedeklemek için dışa aktarın."
   },
   "permissions": {
     "use": {
@@ -59,5 +59,108 @@
     },
     "content": "SSH yapılandırma metni",
     "overwrite": "Zaten var olan ana bilgisayarları güncelle"
+  },
+  "backup": {
+    "menuItem": "Nesne depolamaya yedekle",
+    "title": "Ana bilgisayarları nesne depolamaya yedekle",
+    "loadFailed": "Yedekleme ayarları yüklenemedi",
+    "needsStorage": "Ana bilgisayarlarınızı bir kovaya yedeklemek için Nesne Depolama eklentisini yükleyin, etkinleştirin ve oraya bir giriş ekleyin.",
+    "noAccounts": "Önce Nesne Depolama eklentisine bir S3 veya başka bir nesne depolama girişi ekleyin.",
+    "where": "Nerede",
+    "account": "Depolama girişi",
+    "bucket": "Kova",
+    "pickBucket": "Bir kova seçin",
+    "folder": "Klasör",
+    "when": "Ne zaman",
+    "schedule": "Zamanlama",
+    "scheduleOff": "Sadece Şimdi Yedekle'ye bastığımda",
+    "scheduleDaily": "Her gün",
+    "scheduleWeekly": "Her Pazar",
+    "hour": "Saat (UTC)",
+    "hourHint": "0 ile 23 arası, UTC'de",
+    "keep": "Tutulacak yedekler",
+    "passphrase": "Parola ifadesi",
+    "passphraseKept": "Kaydedildi. Değiştirmek için yeni bir tane yazın",
+    "passphraseHint": "Yedekler, ana bilgisayarlarınızı şifreleri ve anahtarlarıyla birlikte bu parola ifadesiyle kilitli olarak tutar. Bir yedek açmak için buna ihtiyacınız olacak, bu yüzden güvenli bir yerde saklayın. En az 8 karakter.",
+    "save": "Kaydet",
+    "close": "Kapat",
+    "saved": "Yedekleme ayarları kaydedildi",
+    "saveFailed": "Yedekleme ayarları kaydedilemedi",
+    "files": "Yedekler",
+    "runNow": "Şimdi yedekle",
+    "running": "Yedekleniyor",
+    "done_one": "{{count}} ana bilgisayar yedeklendi",
+    "done_other": "{{count}} ana bilgisayar yedeklendi",
+    "runFailed": "Yedekleme başarısız oldu",
+    "noFiles": "Henüz yedek yok.",
+    "overwrite": "Zaten var olan ana bilgisayarların üzerine yaz",
+    "overwriteHint": "Kapalıyken aynı ada ve adrese sahip ana bilgisayarlar atlanır.",
+    "restore": "Geri yükle",
+    "restoreTitle": "Bu yedekten ana bilgisayarlar geri yüklensin mi?",
+    "restoreDesc": "{{when}} tarihli yedekten ana bilgisayarlar eklenir. Zaten sahip olduğunuz ana bilgisayarlar olduğu gibi bırakılır.",
+    "restoreDescOverwrite": "{{when}} tarihli yedekten ana bilgisayarlar eklenir ve zaten sahip olduğunuz ana bilgisayarlar yedek kopyasıyla değiştirilir.",
+    "restored": "Geri yüklendi: {{added}} eklendi, {{updated}} güncellendi, {{failed}} başarısız oldu",
+    "restoreFailed": "Yedek geri yüklenemedi",
+    "lastGood": "Son yedekleme {{when}}",
+    "lastFailed": "Son yedekleme {{when}} başarısız oldu"
+  },
+  "appImport": {
+    "menuItem": "Başka bir uygulamadan içe aktar...",
+    "title": "Başka bir uygulamadan içe aktar",
+    "source": "Kaynak",
+    "app": "Uygulama",
+    "apps": {
+      "auto": "Dosyadan tespit et",
+      "termius": "Termius veya CSV",
+      "mobaxterm": "MobaXterm",
+      "putty": "PuTTY",
+      "securecrt": "SecureCRT",
+      "mremoteng": "mRemoteNG"
+    },
+    "hints": {
+      "auto": "Dışa aktarma dosyasını seçin, Termix hangi uygulamadan geldiğini otomatik olarak belirler.",
+      "termius": "Termius'un kendi dışa aktarma özelliği yok. İçe aktarma şablonundan veya bir Termius dışa aktarma aracından oluşturulmuş bir CSV seçin. Etiket, Ana Bilgisayar Adı/IP, Bağlantı Noktası, Kullanıcı Adı, Şifre, Gruplar ve Etiketler gibi sütunlar okunur.",
+      "mobaxterm": "MobaXterm'de Kullanıcı oturumlarına sağ tıklayın ve Tüm oturumları dosyaya dışa aktar'ı seçin veya MobaXterm.ini dosyanızı seçin.",
+      "putty": "Oturumları kayıt defterinden reg export HKCU\\Software\\SimonTatham putty.reg komutuyla dışa aktarın ve putty.reg dosyasını seçin.",
+      "securecrt": "SecureCRT'de Araçlar, Ayarları Dışa Aktar'ı kullanın ve XML dosyasını seçin veya Config/Sessions klasörünüzü seçin.",
+      "mremoteng": "AppData'daki mRemoteNG klasöründen confCons.xml dosyasını seçin. Kaydedilmiş şifreler de gelir."
+    },
+    "pickFiles": "Dosyaları seç",
+    "pickFolder": "Klasör seç",
+    "filesPicked_one": "{{count}} dosya",
+    "filesPicked_other": "{{count}} dosya",
+    "masterPassword": "Ana şifre",
+    "masterPasswordHint": "Bu dosya bir ana şifre ile korunmaktadır. Sadece dosyayı okumak için kullanılır.",
+    "unlock": "Aç",
+    "readFailed": "Dosya okunamadı",
+    "found_one": "{{app}} içinde {{count}} ana bilgisayar bulundu",
+    "found_other": "{{app}} içinde {{count}} ana bilgisayar bulundu",
+    "defaultUsername": "Kullanıcı adı olmayan ana bilgisayarlar için kullanıcı adı",
+    "defaultUsernameHint_one": "{{count}} SSH ana bilgisayarının kullanıcı adı yok, ancak SSH ana bilgisayarlarının bir kullanıcı adına ihtiyacı vardır.",
+    "defaultUsernameHint_other": "{{count}} SSH ana bilgisayarının kullanıcı adı yok, ancak SSH ana bilgisayarlarının bir kullanıcı adına ihtiyacı vardır.",
+    "overwrite": "Mevcut ana bilgisayarları güncelle",
+    "overwriteHint": "Adresi, bağlantı noktası ve kullanıcı adı aynı olan bir ana bilgisayar atlanmak yerine güncellenir.",
+    "withPassword": "şifre",
+    "notImported_one": "{{count}} giriş atlandı",
+    "notImported_other": "{{count}} giriş atlandı",
+    "skip": {
+      "noHost": "Adres yok",
+      "protocol": "{{detail}} bağlantıları desteklenmiyor",
+      "password": "Şifresi olmadan içe aktarıldı, okunamadı",
+      "invalid": "Okunamadı"
+    },
+    "errors_one": "{{count}} ana bilgisayar başarısız oldu",
+    "errors_other": "{{count}} ana bilgisayar başarısız oldu",
+    "import": "İçe Aktar",
+    "importCount_one": "{{count}} ana bilgisayarı içe aktar",
+    "importCount_other": "{{count}} ana bilgisayarı içe aktar"
+  },
+  "fileImport": {
+    "file": "Dosya",
+    "pick": "Dosya seç",
+    "importing": "İçe aktarılıyor...",
+    "jsonHint": "Bir Termix JSON dosyası seçin. Adresi, bağlantı noktası ve kullanıcı adı aynı olan ve zaten sahip olduğunuz ana bilgisayarlar atlanır. Tek seferde en fazla 100 ana bilgisayar.",
+    "jsonOverwriteHint": "Bir Termix JSON dosyası seçin. Adresi, bağlantı noktası ve kullanıcı adı aynı olan ve zaten sahip olduğunuz ana bilgisayarlar güncellenir. Tek seferde en fazla 100 ana bilgisayar.",
+    "sshHint": "Bir OpenSSH yapılandırma dosyası seçin. Her Host girişi bir ana bilgisayara dönüşür."
   }
 }
